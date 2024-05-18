@@ -1,9 +1,9 @@
 @import 'breakpoints';
 @import 'colors';
-
-*{
-  font-family: "Andale Mono", serif;
+.fa{
+  font-family: FontAwesome !important;
 }
+
 
 h1 {
   font-size: 32px;

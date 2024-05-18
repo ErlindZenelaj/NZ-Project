@@ -1,38 +1,31 @@
 <nav class="navbar navbar-expand-lg ">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-      <img src="assets/images/Logo.png" alt="Bootstrap" width="250" height="100">
+      <img alt="Bootstrap" height="100" src="assets/images/Logo.png" width="250" class="img-fluid">
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+            data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li *ngFor="let link of links" class="nav-item">
+          <a [class.active]="link === 'Home'" [href]="link | lowercase" class="nav-link">
+            {{ link }}
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
         </li>
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nav-right-side">
+        <div class="phone-numbers">
+          <h2>+38349491331</h2>
+          <h2>+38344102372</h2>
+        </div>
+        <div class="button">
+          <button class="primary-color">Contact Us</button>
+        </div>
+      </ul>
+
     </div>
   </div>
 </nav>
+<app-slider></app-slider>
