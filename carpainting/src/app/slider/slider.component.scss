@@ -1,0 +1,199 @@
+@import "../../styles/breakpoints";
+@import "../../styles/colors";
+@import "../../styles/index";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+.swiper {
+  .swiper-container {
+    width: 100%;
+    height: 806px;
+    position: relative;
+    @include tablet-view {
+      height: 592px;
+    }
+    @include mobile-view {
+      height: 422px;
+    }
+  }
+
+  .swiper-slide {
+    width: 100%;
+    background-color: #d6d3e3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 806px;
+    @include tablet-view {
+      height: 592px;
+    }
+    @include mobile-view {
+      height: 422px;
+    }
+
+    .text {
+      margin: 150px auto;
+      padding-left: 80px;
+      max-width: 900px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 100;
+      color: $white-color;
+      @include tablet-view {
+        max-width: 540px;
+        padding-left: 30px;
+      }
+      @include mobile-view {
+        margin: 90px auto;
+        max-width: 320px;
+        padding-left: 19px;
+      }
+
+      h1 {
+        text-transform: uppercase;
+        font-size: 155px;
+        line-height: 155px;
+        font-family: "Bebas Neue", sans-serif;
+        @include tablet-view {
+          font-size: 97px;
+          line-height: 96px;
+        }
+        @include mobile-view {
+          font-size: 57px;
+          line-height: 56px;
+        }
+
+      }
+
+      h2 {
+        font-size: 22px;
+        font-weight: 300;
+        line-height: 40px;
+        font-family: "DM Sans", sans-serif;
+        @include mobile-view {
+          font-size: 16px;
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .progressbar {
+    position: absolute;
+    left: 80%;
+    bottom: 10%;
+    max-width: 230px;
+    width: 100%;
+    z-index: 1;
+    @include tablet-view {
+      left: 67%;
+    }
+    @include mobile-view {
+      left: 19px;
+      bottom: 4%;
+    }
+
+    .progress-container {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      @include mobile-view{
+        align-items: center;
+      }
+
+      span {
+        color: $white-color;
+        padding-top: 3px;
+        @include mobile-view{
+          padding-top: 0;
+        }
+      }
+
+      .progress {
+        max-width: 230px;
+        width: 100%;
+        margin-top: 15px;
+        background-color: $gray-color;
+        @include mobile-view {
+          max-width: 230px;
+          width: 100%;
+          margin-top: 0;
+        }
+
+        .progress-bar {
+          background-color: $white-color;
+        }
+      }
+    }
+  }
+
+  .scroll-down {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    left: 80px;
+    bottom: 10%;
+    z-index: 1;
+    @include mobile-view{
+      bottom: 18%;
+      left: 19px;
+    }
+
+    .scroll {
+      display: flex;
+      gap: 10px;
+      font-size: 17px;
+
+      h3 {
+        font-family: "Barlow Condensed", sans-serif;
+        color: $white-color;
+        line-height: 25px;
+      }
+
+      i {
+        color: $white-color;
+        padding-top: 10px;
+        display: inline-block;
+        animation: upDown 1s ease-in-out infinite;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .swiper-container {
+    height: 706px !important;
+
+    .swiper-slide {
+      height: 706px !important;
+
+      .text {
+        margin: 120px auto !important;
+        max-width: 870px !important;
+        padding-left: 40px !important;
+      }
+    }
+  }
+  .progressbar {
+    left: 75% !important;
+  }
+}
+
+
+@keyframes upDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}

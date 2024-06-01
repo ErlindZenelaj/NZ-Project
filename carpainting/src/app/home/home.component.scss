@@ -1,23 +1,31 @@
 @import "../../styles/breakpoints";
 @import "../../styles/colors";
 @import "../../styles/index";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 
 .navbar {
   padding: 0 50px;
   height: 122px;
-  @include tablet-view{
+  @include tablet-view {
     padding: 0;
     height: 79px;
   }
-  @include mobile-view{
+  @include mobile-view {
     padding: 0;
     height: 79px;
   }
-  .container-fluid{
+
+  .container-fluid {
     padding: 0 16px;
+    z-index: 1000;
+    background-color: white;
   }
-  img{
-    @include tablet-view{
+
+  img {
+    @include tablet-view {
       height: 80px;
     }
   }
@@ -26,8 +34,8 @@
     position: relative;
     margin-right: 15px;
 
-    .navbar-nav{
-      @include mobile-view{
+    .navbar-nav {
+      @include mobile-view {
         padding: 0 20px;
       }
     }
@@ -60,7 +68,7 @@
         height: 2px;
         background-color: $primary-color;
         position: absolute;
-        bottom: -10px;
+        bottom: 3px;
         left: 0;
         transition: width 0.3s ease;
       }
@@ -70,16 +78,32 @@
       }
     }
   }
-  .nav-right-side{
-    .phone-numbers{
+
+  .nav-right-side {
+    .phone-numbers {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
       position: relative;
       right: 50px;
-      @include mobile-view{
+      @include tablet-view {
         position: unset;
         margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
       }
 
-      h2{
+      @include mobile-view {
+        position: unset;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      h2 {
         cursor: pointer;
       }
 
@@ -111,25 +135,293 @@
         width: 100%;
       }
     }
-   .button {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     .primary-color{
-       max-width: 179px;
-       height: 55px;
-       font-size: 18px;
-       border: none;
-       background-color: #FE600E;
-       color: #FFFFFF;
-       padding: 0 40px;
-     }
-   }
+
+    .language-switcher {
+      display: flex;
+      gap: 10px;
+    }
+
+    .language-option {
+      text-decoration: none;
+      border: 1px solid #ccc;
+      padding: 5px;
+      border-radius: 5px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .language-option:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .language-option.active {
+      transform: scale(1.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border: 1px solid $secondary-color;
+    }
+
+    .flag {
+      width: 60px;
+      height: 40px;
+      display: block;
+    }
   }
 
 
 }
 
 
+.custom-field {
+  background-image: url("../../assets/images/up-section.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .c-custom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    @include tablet-view {
+      padding: 0;
+      margin: 0 auto;
+    }
+    @include mobile-view {
+      padding: 0;
+      margin: 0 auto;
+
+    }
+
+    .text {
+      margin-top: 120px;
+      @include mobile-view {
+        margin-top: 50px;
+      }
+
+      h3 {
+        font-family: "DM Sans", sans-serif;
+        text-transform: uppercase;
+        font-size: 18px;
+        color: $primary-color;
+        @include mobile-view {
+          font-size: 13px;
+        }
+      }
+
+      h1 {
+        max-width: 928px;
+        font-size: 57px;
+        color: $primary-color;
+        text-transform: uppercase;
+        @include mobile-view {
+          font-size: 26px;
+        }
+
+      }
+    }
+
+    .image-transition {
+      margin-top: 80px;
+      position: relative;
+      width: 100%;
+      max-width: 1290px;
+      height: 100%;
+      @include tablet-view {
+        max-width: 720px;
+        width: 100%;
+      }
+      @include mobile-view {
+        margin-top: 20px;
+        max-width: 335px;
+        width: 100%;
+      }
+    }
+
+    .image-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .image {
+      max-width: 1290px;
+      height: 100%;
+      @include tablet-view {
+        max-width: 720px;
+      }
+      @include mobile-view {
+        max-width: 335px;
+      }
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .slider {
+      width: 100%;
+      margin-top: 20px;
+      appearance: none;
+      height: 10px;
+      outline: none;
+      opacity: 0.7;
+      transition: opacity .2s;
+      position: absolute;
+      top: 45%;
+      left: 0;
+      background: transparent;
+    }
+
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 50px;
+      height: 50px;
+      background: url('../../assets/images/chevron-left-solid.svg') no-repeat left center,
+      url('../../assets/images/chevron-right-solid.svg') no-repeat right center;
+      background-size: 50% 50%;
+      cursor: pointer;
+    }
+  }
+}
 
 
+.we-can-fix-it {
+  margin-top: 120px;
+  @include tablet-view{
+    margin-top: 40px;
+  }
+  @include mobile-view{
+    margin-top: 40px;
+  }
+
+  .c-custom {
+    .images {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      max-width: 100%;
+      width: 100%;
+
+      img {
+        object-fit: cover;
+        width: 50%;
+        height: auto;
+      }
+    }
+
+    .text{
+      @include tablet-view{
+        margin-top: 20px;
+        text-align: center;
+      }
+      h3{
+        font-family: "DM Sans", sans-serif;
+        font-size: 14px;
+        line-height: 18px;
+        text-transform: uppercase;
+        letter-spacing: 1.4px;
+      }
+      h1{
+        text-transform: uppercase;
+        font-size: 57px;
+        line-height: 57px;
+        letter-spacing: -0.6px;
+        margin-bottom: 15px;
+        @include tablet-view{
+          font-size: 38px;
+          line-height: 42px;
+          letter-spacing: -0.6px;
+        }
+      }
+      p{
+        color: $gray-color;
+        font-size: 18px;
+        line-height: 29.16px;
+        letter-spacing: 0.1px;
+      }
+    }
+    .features-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px 0;
+    }
+
+    .features-list li {
+      font-family: "DM Sans", sans-serif;
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+      font-size: 18px;
+      line-height: 29px;
+      letter-spacing: 0.1px;
+      gap: 8px;
+      @include tablet-view{
+        line-height: 20px;
+      }
+    }
+
+    .checkmark {
+      color: #f37321;
+      margin-right: 10px;
+    }
+
+    .book-now {
+      max-width: 187px;
+      width: 100%;
+      height: 56px;
+      background-color: $secondary-color;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+      font-family: "DM Sans", sans-serif;
+      line-height: 21px;
+      letter-spacing: 1.4px;
+      font-weight: 300;
+      @include tablet-view{
+        margin: 0 auto;
+      }
+
+    }
+
+    .book-now:hover {
+      background-color: #d95f1b;
+    }
+  }
+
+}
+
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .yes {
+    max-width: 935px !important;
+  }
+
+  .image {
+    max-width: 935px !important;
+  }
+
+}
+
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  //.we-can-fix-it {
+  //  .c-custom {
+  //    .img2 {
+  //      left: 70px !important;
+  //    }
+  //  }
+  //}
+}

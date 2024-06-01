@@ -4,17 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26b434ad-825d-406b-901a-42062640744f" name="Changes" comment="Added HomePage">
-      <change afterPath="$PROJECT_DIR$/carpainting/src/assets/images/slide-images/slide-img1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/carpainting/src/assets/images/slide-images/slide-img2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/carpainting/src/assets/images/slide-images/slide-img3.jpg" afterDir="false" />
+    <list default="true" id="26b434ad-825d-406b-901a-42062640744f" name="Changes" comment="Added Slider">
+      <change afterPath="$PROJECT_DIR$/carpainting/src/assets/images/chevron-left-solid.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/carpainting/src/assets/images/chevron-right-solid.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/carpainting/src/assets/images/lower-section.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/carpainting/src/assets/images/painting.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/carpainting/src/assets/images/painting1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/carpainting/src/assets/images/up-section.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carpainting/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carpainting/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/carpainting/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/app/home/home.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/carpainting/src/app/home/home.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/app/home/home.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/carpainting/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/app/home/home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carpainting/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/carpainting/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/styles.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/carpainting/src/styles/_colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/styles/_colors.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/carpainting/src/styles/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/styles/index.scss" afterDir="false" />
@@ -55,8 +55,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/carpainting/src/assets/images/slide-images" />
       <recent name="$PROJECT_DIR$/carpainting/src/assets/images" />
+      <recent name="$PROJECT_DIR$/carpainting/src/assets/images/slide-images" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
@@ -86,7 +86,12 @@
       <workItem from="1715890047539" duration="7000" />
       <workItem from="1715890088642" duration="906000" />
       <workItem from="1715891387487" duration="999000" />
-      <workItem from="1715977308619" duration="13343000" />
+      <workItem from="1715977308619" duration="22343000" />
+      <workItem from="1716310857822" duration="10913000" />
+      <workItem from="1716364870697" duration="7000" />
+      <workItem from="1716405924115" duration="5016000" />
+      <workItem from="1716471249746" duration="29000" />
+      <workItem from="1717228152894" duration="1413000" />
     </task>
     <task id="LOCAL-00001" summary="Started The Project">
       <option name="closed" value="true" />
@@ -104,7 +109,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715892297135</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added Slider">
+      <option name="closed" value="true" />
+      <created>1716042071348</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1716042071348</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,6 +126,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Started The Project" />
     <MESSAGE value="Added HomePage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added HomePage" />
+    <MESSAGE value="Added Slider" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Slider" />
   </component>
 </project>

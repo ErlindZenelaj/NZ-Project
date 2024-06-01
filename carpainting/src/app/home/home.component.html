@@ -1,9 +1,10 @@
 <nav class="navbar navbar-expand-lg ">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-      <img alt="Bootstrap" height="100" src="assets/images/Logo.png" width="250" class="img-fluid">
+      <img alt="Bootstrap" class="img-fluid" height="100" src="assets/images/Logo.png" width="250">
     </a>
-    <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+    <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+            class="navbar-toggler"
             data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -17,15 +18,72 @@
       </ul>
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nav-right-side">
         <div class="phone-numbers">
+          <img alt="" height="24" ngSrc="assets/images/ipko-icon.svg" width="25">
           <h2>+38349491331</h2>
+          <img alt="" height="25" ngSrc="assets/images/vala-icon.png" width="25">
           <h2>+38344102372</h2>
         </div>
-        <div class="button">
-          <button class="primary-color">Contact Us</button>
+        <div class="language-switcher">
+          <a (click)="setActiveLanguage('en')" [ngClass]="{'active': activeLanguage === 'en'}" class="language-option"
+             href="#">
+            <img alt="English" class="flag" src="assets/images/england-flag.png">
+          </a>
+          <a (click)="setActiveLanguage('al')" [ngClass]="{'active': activeLanguage === 'al'}" class="language-option"
+             href="#">
+            <img alt="Albania" class="flag" src="assets/images/albanian-flag.png">
+          </a>
         </div>
       </ul>
-
     </div>
   </div>
 </nav>
 <app-slider></app-slider>
+
+
+<div class="container-fluid custom-field">
+  <div class="container c-custom">
+    <div class="text">
+      <h3>Welcome to Naseri</h3>
+      <h1>Repairs, maintenance and detailing services, provided with experience, care, precision and expertise.</h1>
+    </div>
+    <div class="image-transition">
+      <div class="image-container">
+        <img src="assets/images/slide-images/slide-img1.jpg" class="image image1" alt="Before Image">
+        <div class="overlay" [style.width.%]="sliderValue">
+          <img src="assets/images/slide-images/slide-img2.jpg" class="image image2" alt="After Image">
+        </div>
+      </div>
+      <input type="range" min="0" max="100" [(ngModel)]="sliderValue" class="slider">
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid we-can-fix-it">
+  <div class="container c-custom">
+    <div class="row">
+      <div class="col-lg-7 col-md-12 col-12">
+        <div class="images">
+          <img class="img-fluid" ngSrc="assets/images/painting.jpeg" alt="Painting" height="1172" width="880">
+          <img class="img-fluid" ngSrc="assets/images/painting1.jpeg" alt="Painting1" height="900" width="820">
+        </div>
+      </div>
+      <div class="col-lg-5 col-md-12 col-12">
+        <div class="text">
+          <h3>We can fix it</h3>
+          <h1>We can help with a collision repair</h1>
+          <p>Our detailing services include paint restoration techniques that revive the luster of your vehicle’s paint,
+            removing oxidation and minor imperfections.</p>
+        </div>
+        <ul class="features-list">
+          <li><i class="fas fa-check checkmark"></i> Professional collision repair services</li>
+          <li><i class="fas fa-check checkmark"></i> Paint restoration and correction</li>
+          <li><i class="fas fa-check checkmark"></i> Removal of oxidation and minor imperfections</li>
+        </ul>
+        <button class="book-now">BOOK NOW</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
