@@ -4,20 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26b434ad-825d-406b-901a-42062640744f" name="Changes" comment="Added Slider">
-      <change afterPath="$PROJECT_DIR$/carpainting/src/assets/images/chevron-left-solid.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/carpainting/src/assets/images/chevron-right-solid.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/carpainting/src/assets/images/lower-section.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/carpainting/src/assets/images/painting.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/carpainting/src/assets/images/painting1.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/carpainting/src/assets/images/up-section.jpeg" afterDir="false" />
+    <list default="true" id="26b434ad-825d-406b-901a-42062640744f" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/carpainting/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/app/home/home.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/carpainting/src/app/home/home.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/app/home/home.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/carpainting/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/app/home/home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carpainting/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carpainting/src/styles/_colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/styles/_colors.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carpainting/src/styles/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/styles/index.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +83,7 @@
       <workItem from="1716405924115" duration="5016000" />
       <workItem from="1716471249746" duration="29000" />
       <workItem from="1717228152894" duration="1413000" />
+      <workItem from="1717613220467" duration="4512000" />
     </task>
     <task id="LOCAL-00001" summary="Started The Project">
       <option name="closed" value="true" />

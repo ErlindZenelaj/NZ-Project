@@ -1,0 +1,228 @@
+@import "../../styles/breakpoints";
+@import "../../styles/colors";
+@import "../../styles/index";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.contact-form {
+  max-width: 1200px;
+  margin-top: 200px;
+  @include mobile-view {
+    margin-top: 40px;
+  }
+
+  .form-row {
+    @include mobile-view {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 680px;
+    padding: 15% 11%;
+    background-color: #F4F4F4;
+    border: none;
+    @include mobile-view{
+      padding: 10% 7%;
+      gap: 15px;
+    }
+
+
+    .input-container {
+      position: relative;
+      width: 100%;
+
+      i {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #747577;
+      }
+
+      .special {
+        top: 25%;
+      }
+
+      .border-animation {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        background-color: black;
+        width: 0%;
+        transition: width 0.4s ease-in-out;
+      }
+
+      input:hover + .border-animation,
+      input:focus + .border-animation,
+      textarea:hover + .border-animation,
+      textarea:focus + .border-animation {
+        width: 100%;
+      }
+
+      input, textarea {
+        background-color: #F4F4F4;
+        width: 100%;
+        border: none;
+        padding-left: 45px;
+        border-bottom: 1px solid #c9c9c9;
+        outline: none;
+      }
+
+      input {
+        height: 51px;
+
+        &::placeholder {
+          color: #c9c9c9;
+          font-size: 18px;
+        }
+      }
+
+      textarea {
+        height: 90px;
+        padding-top: 10px;
+        resize: none;
+        box-sizing: border-box;
+
+        &::placeholder {
+          color: #c9c9c9;
+          font-size: 18px;
+        }
+      }
+
+      .error-message {
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        color: red;
+        font-size: 12px;
+      }
+    }
+
+    span {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 46px;
+      line-height: 47px;
+      font-weight: 600;
+      @include mobile-view{
+        font-size: 24px;
+      }
+    }
+
+    .get-in-touch {
+      max-width: 187px;
+      width: 100%;
+      height: 56px;
+      background-color: $secondary-color;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+      font-family: "DM Sans", sans-serif;
+      line-height: 21px;
+      letter-spacing: 1.4px;
+      font-weight: 300;
+
+      @include tablet-view {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+      }
+
+      @include mobile-view {
+        font-size: 13px;
+        max-width: 170px;
+        width: 100%;
+      }
+    }
+  }
+  .col-md-7{
+    @include mobile-view{
+      padding: 0;
+    }
+  }
+
+
+  .col-md-5 {
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    @include mobile-view{
+      padding: 0;
+    }
+
+    .card-body {
+      @include tablet-view {
+        margin-top: 20px;
+      }
+      @include mobile-view {
+        margin-top: 20px;
+
+      }
+
+      h3 {
+        font-family: "DM Sans", sans-serif;
+        font-size: 14px;
+        line-height: 18px;
+        text-transform: uppercase;
+        letter-spacing: 1.4px;
+        margin-bottom: 20px;
+        @include mobile-view {
+          margin-bottom: 8px;
+        }
+      }
+
+      h2 {
+        margin-bottom: 20px;
+        font-weight: 400;
+        @include mobile-view {
+          margin-bottom: 15px;
+          font-size: 18px;
+        }
+      }
+
+      h1 {
+        text-transform: uppercase;
+        font-size: 57px;
+        line-height: 57px;
+        letter-spacing: -0.6px;
+        margin-bottom: 36px;
+        @include tablet-view {
+          font-size: 38px;
+          line-height: 42px;
+          letter-spacing: -0.6px;
+        }
+        @include mobile-view {
+          max-width: 290px;
+          font-size: 26px;
+          line-height: 35px;
+          letter-spacing: -0.6px;
+          margin-bottom: 15px;
+        }
+      }
+
+      p {
+        color: $gray-color;
+        font-size: 18px;
+        line-height: 29.16px;
+        letter-spacing: 0.1px;
+        margin-bottom: 35px;
+        @include mobile-view {
+          font-size: 16px;
+        }
+      }
+    }
+
+  }
+
+}

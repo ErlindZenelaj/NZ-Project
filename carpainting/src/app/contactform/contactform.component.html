@@ -1,0 +1,51 @@
+<div class="container-fluid">
+  <div class="container contact-form">
+    <div class="row form-row">
+      <div class="col-md-7">
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+          <div class="card">
+            <span>Contact Form</span>
+            <div class="input-container">
+              <i class="fa-regular fa-user"></i>
+              <input type="text" placeholder="Name" formControlName="name">
+              <div class="border-animation"></div>
+              <small class="error-message"
+                     *ngIf="contactForm.controls['name'].invalid && contactForm.controls['name'].touched">Name is
+                required.</small>
+            </div>
+            <div class="input-container">
+              <i class="fa-regular fa-envelope"></i>
+              <input type="email" placeholder="Email" formControlName="email">
+              <div class="border-animation"></div>
+              <small class="error-message"
+                     *ngIf="contactForm.controls['email'].invalid && contactForm.controls['email'].touched">Email is
+                required.</small>
+            </div>
+            <div class="input-container">
+              <i class="fa-solid fa-pencil special"></i>
+              <textarea placeholder="How Can I Help You? Feel free to get in touch!" formControlName="message" id=""
+                        cols="30" rows="10"></textarea>
+              <div class="border-animation"></div>
+              <small class="error-message"
+                     *ngIf="contactForm.controls['message'].invalid && contactForm.controls['message'].touched">Message
+                is required.</small>
+            </div>
+
+            <button class="get-in-touch" type="submit">GET IN TOUCH</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-md-5">
+        <div class="card-body">
+          <h3>What we do</h3>
+          <h1>Full service detail for cars</h1>
+          <h2>Welcome to Naseri!</h2>
+          <p>Our detailing services employ state-of-the-art paint restoration methods to rejuvenate your vehicle’s
+            finish. We meticulously remove oxidation and minor blemishes, restoring the original brilliance and
+            smoothness of your car’s paint.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
