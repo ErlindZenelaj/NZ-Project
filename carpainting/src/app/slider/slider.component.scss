@@ -19,6 +19,13 @@
     }
   }
 
+  .swiper-wrapper {
+    transition: opacity 2s ease-in-out;
+  }
+
+  .swiper-slide-active {
+    opacity: 1 !important; /* Show the active slide */
+  }
   .swiper-slide {
     width: 100%;
     background-color: #d6d3e3;
@@ -27,6 +34,8 @@
     justify-content: center;
     position: relative;
     height: 806px;
+    transition: opacity 2s ease-in-out !important;
+    opacity: 0.5;
     @include tablet-view {
       height: 592px;
     }

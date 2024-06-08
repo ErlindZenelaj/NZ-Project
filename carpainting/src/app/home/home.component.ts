@@ -4,22 +4,23 @@ import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} fr
 import 'swiper/swiper-bundle.css';
 import {SliderComponent} from "../slider/slider.component";
 import {ContactformComponent} from "../contactform/contactform.component";
+import {FooterComponent} from "../footer/footer.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule, FormsModule, NgOptimizedImage, SliderComponent, ContactformComponent],
+  imports: [ReactiveFormsModule, CommonModule, FormsModule, NgOptimizedImage, SliderComponent, ContactformComponent, FooterComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
+
 })
 export class HomeComponent  {
-  activeLanguage: string = 'en';
-  links = ['Home', 'Details', 'Info', 'Contact'];
+  currentLayout: string = 'layout1';
 
-
-  setActiveLanguage(language: string) {
-    this.activeLanguage = language;
+  setLayout(layout: string): void {
+    this.currentLayout = layout;
   }
+
 
   ngOnInit(): void {
   }

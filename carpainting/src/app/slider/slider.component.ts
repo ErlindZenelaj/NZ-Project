@@ -1,14 +1,15 @@
 import {AfterViewInit, Component, ElementRef, OnDestroy, OnInit, Renderer2, ViewChild} from '@angular/core';
-import {NgOptimizedImage} from "@angular/common";
+import {NgClass, NgOptimizedImage} from "@angular/common";
 import Swiper from "swiper";
 import 'swiper/swiper-bundle.css';
 
 @Component({
   selector: 'app-slider',
   standalone: true,
-    imports: [
-        NgOptimizedImage
-    ],
+  imports: [
+    NgOptimizedImage,
+    NgClass
+  ],
   templateUrl: './slider.component.html',
   styleUrl: './slider.component.scss'
 })
@@ -39,10 +40,10 @@ export class SliderComponent implements OnInit, AfterViewInit, OnDestroy {
     }
   }
 
+
   initSwiper(): void {
     this.swiper = new Swiper(this.swiperContainer.nativeElement, {
-      effect: 'fade',
-      fadeEffect: { crossFade: true },
+      effect: "fade",
       loop: true,
       speed: 1000,
       slidesPerView: 1,
@@ -54,26 +55,26 @@ export class SliderComponent implements OnInit, AfterViewInit, OnDestroy {
         onlyInViewport: true
       },
       watchOverflow: true,
-      watchSlidesProgress: true,
       roundLengths: true,
       autoplay: {
         delay: 3000,
         disableOnInteraction: false
       },
+      fadeEffect: {
+        crossFade: true
+      }
     });
 
     this.updateTotalSlidesNumber();
 
     this.swiper.on('slideChange', () => {
-      if (this.activeIndex !== this.swiper.realIndex) {
-        this.activeIndex = this.swiper.realIndex;
-        this.updateProgressBar();
-        this.updateCurrentSlideNumber();
-      }
+      this.updateProgressBar();
+      this.updateCurrentSlideNumber();
     });
 
     this.startProgress();
   }
+
 
   startProgress(): void {
     clearInterval(this.interval);

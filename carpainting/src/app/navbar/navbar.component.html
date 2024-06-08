@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img alt="Bootstrap" class="img-fluid" height="100" src="assets/images/Logo.png" width="250">
+    </a>
+    <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+            class="navbar-toggler"
+            data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li *ngFor="let link of links" class="nav-item">
+          <a [class.active]="link === 'Home'" [href]="link | lowercase" class="nav-link">
+            {{ link }}
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nav-right-side">
+        <div class="phone-numbers">
+          <img alt="" height="24" ngSrc="assets/images/ipko-icon.svg" width="25">
+          <h2>+38349491331</h2>
+          <img alt="" height="25" ngSrc="assets/images/vala-icon.png" width="25">
+          <h2>+38344102372</h2>
+        </div>
+        <div class="language-switcher">
+          <a (click)="setActiveLanguage('en')" [ngClass]="{'active': activeLanguage === 'en'}" class="language-option"
+             href="#">
+            <img alt="English" class="flag" src="assets/images/england-flag.png">
+          </a>
+          <a (click)="setActiveLanguage('al')" [ngClass]="{'active': activeLanguage === 'al'}" class="language-option"
+             href="#">
+            <img alt="Albania" class="flag" src="assets/images/albanian-flag.png">
+          </a>
+        </div>
+      </ul>
+    </div>
+  </div>
+</nav>

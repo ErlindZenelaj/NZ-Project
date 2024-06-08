@@ -26,12 +26,14 @@
     padding: 15% 11%;
     background-color: #F4F4F4;
     border: none;
+    @include tablet-view{
+      padding: 10% 7%;
+      gap: 15px;
+    }
     @include mobile-view{
       padding: 10% 7%;
       gap: 15px;
     }
-
-
     .input-container {
       position: relative;
       width: 100%;
@@ -48,11 +50,25 @@
         top: 25%;
       }
 
+      .invalid-input {
+        border-bottom: 1px solid red !important;
+      }
       .border-animation {
         content: '';
         position: absolute;
         left: 0;
         bottom: 0;
+        height: 1px;
+        background-color: black;
+        width: 0%;
+        transition: width 0.4s ease-in-out;
+      }
+
+      .border-animation.special-s {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 5px;
         height: 1px;
         background-color: black;
         width: 0%;
@@ -85,8 +101,8 @@
       }
 
       textarea {
+        padding-top: 12px;
         height: 90px;
-        padding-top: 10px;
         resize: none;
         box-sizing: border-box;
 

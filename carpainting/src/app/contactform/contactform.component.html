@@ -7,7 +7,7 @@
             <span>Contact Form</span>
             <div class="input-container">
               <i class="fa-regular fa-user"></i>
-              <input type="text" placeholder="Name" formControlName="name">
+              <input type="text" placeholder="Name" formControlName="name" [ngClass]="{ 'invalid-input': contactForm.get('name')?.invalid && contactForm.get('name')?.touched }">
               <div class="border-animation"></div>
               <small class="error-message"
                      *ngIf="contactForm.controls['name'].invalid && contactForm.controls['name'].touched">Name is
@@ -15,7 +15,7 @@
             </div>
             <div class="input-container">
               <i class="fa-regular fa-envelope"></i>
-              <input type="email" placeholder="Email" formControlName="email">
+              <input type="email" placeholder="Email" formControlName="email" [ngClass]="{ 'invalid-input': contactForm.get('email')?.invalid && contactForm.get('email')?.touched }">
               <div class="border-animation"></div>
               <small class="error-message"
                      *ngIf="contactForm.controls['email'].invalid && contactForm.controls['email'].touched">Email is
@@ -24,8 +24,8 @@
             <div class="input-container">
               <i class="fa-solid fa-pencil special"></i>
               <textarea placeholder="How Can I Help You? Feel free to get in touch!" formControlName="message" id=""
-                        cols="30" rows="10"></textarea>
-              <div class="border-animation"></div>
+                        cols="30" rows="10" [ngClass]="{ 'invalid-input': contactForm.get('message')?.invalid && contactForm.get('message')?.touched }"></textarea>
+              <div class="border-animation special-s"></div>
               <small class="error-message"
                      *ngIf="contactForm.controls['message'].invalid && contactForm.controls['message'].touched">Message
                 is required.</small>
