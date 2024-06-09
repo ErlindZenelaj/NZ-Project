@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26b434ad-825d-406b-901a-42062640744f" name="Changes" comment="Update contactform">
-      <change afterPath="$PROJECT_DIR$/carpainting/src/assets/images/galleryThird-first.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/carpainting/src/assets/images/galleryThird-second.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/carpainting/src/assets/images/galleryThird-third.jpg" afterDir="false" />
+    <list default="true" id="26b434ad-825d-406b-901a-42062640744f" name="Changes" comment="fixed contact form added gallery and more">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carpainting/src/app/contactform/contactform.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/app/contactform/contactform.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carpainting/src/app/contactform/contactform.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/app/contactform/contactform.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carpainting/src/app/contactform/contactform.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/app/contactform/contactform.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/carpainting/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/app/home/home.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/carpainting/src/app/home/home.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/app/home/home.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/carpainting/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/app/home/home.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carpainting/src/app/navbar/navbar.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/app/navbar/navbar.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/carpainting/src/app/slider/slider.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/app/slider/slider.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/carpainting/src/app/slider/slider.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/app/slider/slider.component.ts" afterDir="false" />
     </list>
@@ -94,7 +89,7 @@
       <workItem from="1717613220467" duration="5128000" />
       <workItem from="1717704600227" duration="153000" />
       <workItem from="1717704777745" duration="4490000" />
-      <workItem from="1717845880610" duration="6933000" />
+      <workItem from="1717845880610" duration="11854000" />
     </task>
     <task id="LOCAL-00001" summary="Started The Project">
       <option name="closed" value="true" />
@@ -128,7 +123,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717617947652</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fixed contact form added gallery and more">
+      <option name="closed" value="true" />
+      <created>1717853258690</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1717853258690</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +142,7 @@
     <MESSAGE value="Added HomePage" />
     <MESSAGE value="Added Slider" />
     <MESSAGE value="Update contactform" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update contactform" />
+    <MESSAGE value="fixed contact form added gallery and more" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed contact form added gallery and more" />
   </component>
 </project>

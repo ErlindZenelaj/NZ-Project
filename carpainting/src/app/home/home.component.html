@@ -1,3 +1,5 @@
+<app-navbar></app-navbar>
+
 <app-slider></app-slider>
 
 
@@ -71,18 +73,30 @@
   <!-- Layout 1 -->
   <div *ngIf="currentLayout === 'layout1'" class="row all">
     <div class="col-lg-6 col-md-6">
-      <img src="assets/images/gallery-first-image.jpeg" alt="" data-text="Image 1">
+      <div class="image-container" (mousemove)="onMouseMove($event, 'desc1')" (mouseleave)="onMouseLeave('desc1')">
+        <img src="assets/images/gallery-first-image.jpeg" alt="" data-text="Image 1">
+        <div class="overlay" id="desc1">Car Painting</div>
+      </div>
     </div>
     <div class="col-lg-3 col-md-6">
-      <img src="assets/images/gallery-second-image.jpeg" alt="">
+      <div class="image-container" (mousemove)="onMouseMove($event, 'desc2')" (mouseleave)="onMouseLeave('desc2')">
+        <img src="assets/images/gallery-second-image.jpeg" alt="">
+        <div class="overlay" id="desc2">Modern Technology</div>
+      </div>
     </div>
     <div class="col-lg-3 col-md-12">
       <div class="row right-side">
         <div class="col-md-12">
-          <img src="assets/images/gallery-third-image.jpeg" alt="">
+          <div class="image-container" (mousemove)="onMouseMove($event, 'desc3')" (mouseleave)="onMouseLeave('desc3')">
+            <img src="assets/images/gallery-third-image.jpeg" alt="">
+            <div class="overlay" id="desc3">Partial Painting</div>
+          </div>
         </div>
         <div class="col-md-12">
-          <img src="assets/images/gallery-fourth-image.jpeg" alt="">
+          <div class="image-container" (mousemove)="onMouseMove($event, 'desc4')" (mouseleave)="onMouseLeave('desc4')">
+            <img src="assets/images/gallery-fourth-image.jpeg" alt="">
+            <div class="overlay" id="desc4">Body Parts</div>
+          </div>
         </div>
       </div>
     </div>
@@ -91,35 +105,53 @@
   <!-- Layout 2 -->
   <div *ngIf="currentLayout === 'layout2'" class="row all">
     <div class="col-lg-6 col-md-12">
-      <img src="assets/images/galleryThird-third.jpg" alt="">
+      <div class="image-container" (mousemove)="onMouseMove($event, 'desc5')" (mouseleave)="onMouseLeave('desc5')">
+        <img src="assets/images/galleryThird-third.jpg" alt="">
+        <div class="overlay" id="desc5">Headlight cleaning</div>
+      </div>
     </div>
     <div class="col-lg-6 col-md-12">
       <div class="row right-side-second">
         <div class="col-lg-12 col-md-6">
-          <img src="assets/images/galleryThird-first.jpg" alt="">
+          <div class="image-container" (mousemove)="onMouseMove($event, 'desc6')" (mouseleave)="onMouseLeave('desc6')">
+            <img src="assets/images/galleryThird-first.jpg" alt="">
+            <div class="overlay" id="desc6">Car polishing
+            </div>
+          </div>
         </div>
         <div class="col-lg-12 col-md-6">
-          <img src="assets/images/galleryThird-second.jpg" alt="">
+          <div class="image-container" (mousemove)="onMouseMove($event, 'desc7')" (mouseleave)="onMouseLeave('desc7')">
+            <img src="assets/images/galleryThird-second.jpg" alt="">
+            <div class="overlay" id="desc7">Headlight cleaning</div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-
   <!-- Layout 3 -->
   <div *ngIf="currentLayout === 'layout3'" class="row all">
     <div class="col-lg-4 col-md-6">
-      <img src="assets/images/gallerySecond-first.jpeg" alt="">
+      <div class="image-container" (mousemove)="onMouseMove($event, 'desc8')" (mouseleave)="onMouseLeave('desc8')">
+        <img src="assets/images/gallerySecond-first.jpeg" alt="">
+        <div class="overlay" id="desc8">Masking for Painting</div>
+      </div>
     </div>
     <div class="col-lg-4 col-md-6">
-      <img src="assets/images/gallerySecond-second.jpeg" alt="">
+      <div class="image-container" (mousemove)="onMouseMove($event, 'desc9')" (mouseleave)="onMouseLeave('desc9')">
+        <img src="assets/images/gallerySecond-second.jpeg" alt="">
+        <div class="overlay" id="desc9">Rear Collision Repair</div>
+      </div>
     </div>
     <div class="col-lg-4 col-md-12">
-      <img src="assets/images/gallerySecond-third.jpeg" alt="">
+      <div class="image-container" (mousemove)="onMouseMove($event, 'desc10')" (mouseleave)="onMouseLeave('desc10')">
+        <img src="assets/images/gallerySecond-third.jpeg" alt="">
+        <div class="overlay" id="desc10">Body Panels Preparation:</div>
+      </div>
     </div>
   </div>
-
 </div>
+
 
 
 <app-footer></app-footer>

@@ -364,7 +364,12 @@
     }
   }
 
-  img{
+
+  .image-container {
+    position: relative;
+  }
+
+  .image-container img {
     max-width: 630px;
     width: 100%;
     height: 635px;
@@ -372,16 +377,58 @@
     transition: transform 0.3s ease;
     @include tablet-view{
       max-width: 100%;
+      height: 535px;
     }
     @include mobile-view{
       max-width: 100%;
       height: 260px;
     }
-    &:hover{
-      transform: scale(1.01);
-    }
-
   }
+
+  .image-container:hover img {
+    transform: scale(1.01);
+  }
+
+  .overlay {
+    position: absolute;
+    display: none;
+    @include tablet-view{
+      display: flex;
+    }
+    @include mobile-view{
+      display: flex;
+    }
+  }
+
+  .overlay.visible {
+    display: block;
+  }
+
+  .overlay {
+    position: absolute;
+    color: white;
+    pointer-events: none;
+    transform: translate(10%, 0%);
+    transition: transform 0.1s ease;
+    white-space: nowrap;
+    background-color: black;
+    padding: 10px;
+    @include tablet-view{
+      position: absolute;
+      z-index: 99;
+      bottom: 25px;
+    }
+    @include mobile-view{
+      position: absolute;
+      z-index: 99;
+      bottom: 25px;
+    }
+  }
+
+  .image-container:hover .overlay {
+    opacity: 1;
+  }
+
   .right-side{
     display: flex;
     gap: 8px;

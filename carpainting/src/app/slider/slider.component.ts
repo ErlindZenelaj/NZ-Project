@@ -23,6 +23,7 @@ export class SliderComponent implements OnInit, AfterViewInit, OnDestroy {
   currentSlideAutoplay: number = 3000;
   isPaused = false;
   interval: any;
+
   constructor(private renderer: Renderer2) {}
 
   ngOnInit(): void {}
@@ -40,14 +41,13 @@ export class SliderComponent implements OnInit, AfterViewInit, OnDestroy {
     }
   }
 
-
   initSwiper(): void {
     this.swiper = new Swiper(this.swiperContainer.nativeElement, {
       effect: "fade",
       loop: true,
       speed: 1000,
       slidesPerView: 1,
-      spaceBetween: 0,
+      spaceBetween: 30,
       navigation: true,
       grabCursor: true,
       keyboard: {
@@ -57,7 +57,7 @@ export class SliderComponent implements OnInit, AfterViewInit, OnDestroy {
       watchOverflow: true,
       roundLengths: true,
       autoplay: {
-        delay: 3000,
+        delay: 3000,  // Default delay (will be overridden by individual slide delays)
         disableOnInteraction: false
       },
       fadeEffect: {
@@ -75,7 +75,6 @@ export class SliderComponent implements OnInit, AfterViewInit, OnDestroy {
     this.startProgress();
   }
 
-
   startProgress(): void {
     clearInterval(this.interval);
     this.startProgressBar();
@@ -84,34 +83,47 @@ export class SliderComponent implements OnInit, AfterViewInit, OnDestroy {
         this.swiper.slideNext();
         this.startProgressBar();
       }
-    }, 3000);
+    }, this.currentSlideAutoplay || 3000);
   }
 
   startProgressBar(): void {
     this.progress = 0;
-    this.updateProgressBarWidth();
+    this.updateProgressBarWidth(0);
     setTimeout(() => {
       this.progress = 100;
-      this.updateProgressBarWidth();
+      this.updateProgressBarWidth(this.currentSlideAutoplay);
     }, 30);
   }
+
   resetProgressBar(): void {
     this.progress = 0;
-    this.updateProgressBarWidth();
+    this.updateProgressBarWidth(0);
   }
 
   updateProgressBar(): void {
     clearInterval(this.progressInterval);
-    this.currentSlideAutoplay = parseInt(this.swiper.slides[this.activeIndex].dataset.swiperAutoplay, 10);
+    const currentSlide = this.swiper.slides[this.swiper.realIndex];
+    this.currentSlideAutoplay = parseInt(currentSlide.dataset.swiperAutoplay, 10) || 3000; // Get the autoplay duration for the current slide or use default
     this.resetProgressBar();
     this.startProgressBar();
-    this.updateCurrentSlideNumber();
+    this.updateProgressInterval();
   }
 
-  updateProgressBarWidth(): void {
+  updateProgressInterval(): void {
+    clearInterval(this.interval);
+    this.interval = setInterval(() => {
+      if (!this.isPaused) {
+        this.swiper.slideNext();
+        this.startProgressBar();
+      }
+    }, this.currentSlideAutoplay);
+  }
+
+  updateProgressBarWidth(duration: number): void {
     const progressBarElement = this.progressBar.nativeElement.querySelector('.progress-bar') as HTMLElement;
     if (progressBarElement) {
       this.renderer.setStyle(progressBarElement, 'width', `${this.progress}%`);
+      this.renderer.setStyle(progressBarElement, 'transition', `width ${duration}ms linear`);
     }
   }
 
