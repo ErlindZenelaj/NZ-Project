@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
 .custom-field {
   background-image: url("../../assets/images/up-section.jpeg");
   background-repeat: no-repeat;
@@ -16,15 +17,30 @@
     align-items: center;
     text-align: center;
     flex-direction: column;
+    @include tablet-view {
+      padding: 0;
+      margin: 0 auto;
+    }
+    @include mobile-view {
+      padding: 0;
+      margin: 0 auto;
+
+    }
 
     .text {
       margin-top: 120px;
+      @include mobile-view {
+        margin-top: 50px;
+      }
 
       h3 {
         font-family: "DM Sans", sans-serif;
         text-transform: uppercase;
         font-size: 18px;
         color: $primary-color;
+        @include mobile-view {
+          font-size: 13px;
+        }
       }
 
       h1 {
@@ -32,49 +48,61 @@
         font-size: 57px;
         color: $primary-color;
         text-transform: uppercase;
+        @include mobile-view {
+          font-size: 26px;
+        }
+
       }
     }
 
-    .slider-wrapper {
+    .carousel-inner{
+      max-width: 1200px;
+    }
+
+    .carousel-control-next {
+      position: absolute;
+      right: -130px !important;
+      bottom: -65px;
+    }
+
+    .carousel-control-prev {
+      position: absolute;
+      left: -130px !important;
+      bottom: -65px;
+    }
+
+    .carousel-control-next-icon {
+      background-image: url('../../assets/images/car-painting-tool-right.svg'); /* Replace 'path/to/next-arrow-image.png' with your image path */
+    }
+
+    .carousel-control-prev-icon {
+      background-image: url('../../assets/images/car-painting-tool-left.svg'); /* Replace 'path/to/next-arrow-image.png' with your image path */
+      transform: scaleX(-1);
+    }
+
+    .carousel-control-next-icon, .carousel-control-prev-icon {
+      display: inline-block;
+      width: 3rem;
+      height: 3rem;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: 100% 100%;
+    }
+
+    .image-transition {
+      margin-top: 80px;
       position: relative;
       width: 100%;
       max-width: 1290px;
       height: 100%;
-      margin-top: 80px;
-
-      .slider-container {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
+      @include tablet-view {
+        max-width: 720px;
         width: 100%;
       }
-
-      .image-transition {
-        position: relative;
-        min-width: 100%;
-      }
-
-      .prev, .next {
-        cursor: pointer;
-        position: relative;
-        top: 50%;
-        width: auto;
-        margin-top: -22px;
-        padding: 16px;
-        color: white;
-        font-weight: bold;
-        font-size: 18px;
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
-        user-select: none;
-      }
-
-      .next {
-        right: 0;
-        border-radius: 3px 0 0 3px;
-      }
-
-      .prev:hover, .next:hover {
-        background-color: rgba(0,0,0,0.8);
+      @include mobile-view {
+        margin-top: 20px;
+        max-width: 335px;
+        width: 100%;
       }
     }
 
@@ -88,8 +116,14 @@
     }
 
     .image {
-      max-width: 1290px;
+      max-width: 1200px;
       height: 100%;
+      @include tablet-view {
+        max-width: 720px;
+      }
+      @include mobile-view {
+        max-width: 335px;
+      }
     }
 
     .overlay {
@@ -290,15 +324,14 @@
 }
 
 
-
-.gallery{
+.gallery {
   max-width: 1200px;
   margin: 40px auto 40px auto;
   padding: 0 16px;
 
 
   .all {
-    @include mobile-view{
+    @include mobile-view {
       gap: 12px;
     }
   }
@@ -354,12 +387,12 @@
 
 
   .col-lg-6,
-  .col-lg-3{
+  .col-lg-3 {
     padding: 0 8px;
   }
 
-  .col-md-6{
-    @include tablet-view{
+  .col-md-6 {
+    @include tablet-view {
       margin-bottom: 12px;
     }
   }
@@ -375,11 +408,11 @@
     height: 635px;
     object-fit: cover;
     transition: transform 0.3s ease;
-    @include tablet-view{
+    @include tablet-view {
       max-width: 100%;
       height: 535px;
     }
-    @include mobile-view{
+    @include mobile-view {
       max-width: 100%;
       height: 260px;
     }
@@ -392,10 +425,10 @@
   .overlay {
     position: absolute;
     display: none;
-    @include tablet-view{
+    @include tablet-view {
       display: flex;
     }
-    @include mobile-view{
+    @include mobile-view {
       display: flex;
     }
   }
@@ -413,12 +446,12 @@
     white-space: nowrap;
     background-color: black;
     padding: 10px;
-    @include tablet-view{
+    @include tablet-view {
       position: absolute;
       z-index: 99;
       bottom: 25px;
     }
-    @include mobile-view{
+    @include mobile-view {
       position: absolute;
       z-index: 99;
       bottom: 25px;
@@ -429,43 +462,41 @@
     opacity: 1;
   }
 
-  .right-side{
+  .right-side {
     display: flex;
     gap: 8px;
-    img{
+
+    img {
       height: 313.5px;
     }
   }
 
-  .right-side-second{
+  .right-side-second {
     display: flex;
     gap: 8px;
-    @include tablet-view{
+    @include tablet-view {
       gap: 0;
       margin-top: 12px;
     }
-    .col-md-6{
-      @include tablet-view{
+
+    .col-md-6 {
+      @include tablet-view {
         margin-bottom: 0;
         padding: 0 12px;
       }
     }
-    img{
+
+    img {
       height: 313.5px;
     }
-    img{
-      @include tablet-view{
+
+    img {
+      @include tablet-view {
 
       }
     }
   }
 }
-
-
-
-
-
-
 
 
 @media (min-width: 1024px) and (max-width: 1440px) {

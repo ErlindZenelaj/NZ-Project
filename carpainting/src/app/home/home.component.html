@@ -9,20 +9,52 @@
       <h3>Welcome to Naseri</h3>
       <h1>Repairs, maintenance and detailing services, provided with experience, care, precision and expertise.</h1>
     </div>
-    <div class="slider-wrapper">
-      <div class="slider-container" [style.transform]="'translateX(-' + (currentSlide * 100) + '%)'">
-        <div class="image-transition" *ngFor="let slide of slides; let i = index">
-          <div class="image-container">
-            <img [src]="slide.beforeImage" class="image image1" alt="Before Image">
-            <div class="overlay" [style.width.%]="sliderValues[i]">
-              <img [src]="slide.afterImage" class="image image2" alt="After Image">
+    <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="image-transition">
+            <div class="image-container">
+              <img src="assets/images/slide-images/slide-img1.jpg" class="image image1" alt="Before Image">
+              <div class="overlay" [style.width.%]="sliderValue">
+                <img src="assets/images/slide-images/slide-img2.jpg" class="image image2" alt="After Image">
+              </div>
             </div>
+            <input type="range" min="0" max="100" [(ngModel)]="sliderValue" class="slider">
           </div>
-          <input type="range" min="0" max="100" [(ngModel)]="sliderValues[i]" class="slider">
+        </div>
+        <div class="carousel-item">
+          <div class="image-transition">
+            <div class="image-container">
+              <img src="assets/images/slide-images/slide-img1.jpg" class="image image1" alt="Before Image">
+              <div class="overlay" [style.width.%]="sliderValue">
+                <img src="assets/images/slide-images/slide-img2.jpg" class="image image2" alt="After Image">
+              </div>
+            </div>
+            <input type="range" min="0" max="100" [(ngModel)]="sliderValue" class="slider">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="image-transition">
+            <div class="image-container">
+              <img src="assets/images/slide-images/slide-img1.jpg" class="image image1" alt="Before Image">
+              <div class="overlay" [style.width.%]="sliderValue">
+                <img src="assets/images/slide-images/slide-img2.jpg" class="image image2" alt="After Image">
+              </div>
+            </div>
+            <input type="range" min="0" max="100" [(ngModel)]="sliderValue" class="slider">
+          </div>
         </div>
       </div>
-      <button class="prev" (click)="prevSlide()">&#10094;</button>
-      <button class="next" (click)="nextSlide()">&#10095;</button>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+              data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+              data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
   </div>
 </div>
@@ -157,7 +189,6 @@
     </div>
   </div>
 </div>
-
 
 
 <app-footer></app-footer>
