@@ -9,14 +9,20 @@
       <h3>Welcome to Naseri</h3>
       <h1>Repairs, maintenance and detailing services, provided with experience, care, precision and expertise.</h1>
     </div>
-    <div class="image-transition">
-      <div class="image-container">
-        <img src="assets/images/slide-images/slide-img1.jpg" class="image image1" alt="Before Image">
-        <div class="overlay" [style.width.%]="sliderValue">
-          <img src="assets/images/slide-images/slide-img2.jpg" class="image image2" alt="After Image">
+    <div class="slider-wrapper">
+      <div class="slider-container" [style.transform]="'translateX(-' + (currentSlide * 100) + '%)'">
+        <div class="image-transition" *ngFor="let slide of slides; let i = index">
+          <div class="image-container">
+            <img [src]="slide.beforeImage" class="image image1" alt="Before Image">
+            <div class="overlay" [style.width.%]="sliderValues[i]">
+              <img [src]="slide.afterImage" class="image image2" alt="After Image">
+            </div>
+          </div>
+          <input type="range" min="0" max="100" [(ngModel)]="sliderValues[i]" class="slider">
         </div>
       </div>
-      <input type="range" min="0" max="100" [(ngModel)]="sliderValue" class="slider">
+      <button class="prev" (click)="prevSlide()">&#10094;</button>
+      <button class="next" (click)="nextSlide()">&#10095;</button>
     </div>
   </div>
 </div>

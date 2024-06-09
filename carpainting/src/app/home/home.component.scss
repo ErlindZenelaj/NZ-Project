@@ -5,7 +5,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
 .custom-field {
   background-image: url("../../assets/images/up-section.jpeg");
   background-repeat: no-repeat;
@@ -17,30 +16,15 @@
     align-items: center;
     text-align: center;
     flex-direction: column;
-    @include tablet-view {
-      padding: 0;
-      margin: 0 auto;
-    }
-    @include mobile-view {
-      padding: 0;
-      margin: 0 auto;
-
-    }
 
     .text {
       margin-top: 120px;
-      @include mobile-view {
-        margin-top: 50px;
-      }
 
       h3 {
         font-family: "DM Sans", sans-serif;
         text-transform: uppercase;
         font-size: 18px;
         color: $primary-color;
-        @include mobile-view {
-          font-size: 13px;
-        }
       }
 
       h1 {
@@ -48,27 +32,49 @@
         font-size: 57px;
         color: $primary-color;
         text-transform: uppercase;
-        @include mobile-view {
-          font-size: 26px;
-        }
-
       }
     }
 
-    .image-transition {
-      margin-top: 80px;
+    .slider-wrapper {
       position: relative;
       width: 100%;
       max-width: 1290px;
       height: 100%;
-      @include tablet-view {
-        max-width: 720px;
+      margin-top: 80px;
+
+      .slider-container {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
         width: 100%;
       }
-      @include mobile-view {
-        margin-top: 20px;
-        max-width: 335px;
-        width: 100%;
+
+      .image-transition {
+        position: relative;
+        min-width: 100%;
+      }
+
+      .prev, .next {
+        cursor: pointer;
+        position: relative;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+
+      .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
       }
     }
 
@@ -84,12 +90,6 @@
     .image {
       max-width: 1290px;
       height: 100%;
-      @include tablet-view {
-        max-width: 720px;
-      }
-      @include mobile-view {
-        max-width: 335px;
-      }
     }
 
     .overlay {
