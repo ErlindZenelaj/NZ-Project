@@ -12,50 +12,283 @@
     <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <div class="image-transition">
-            <div class="image-container">
-              <img src="assets/images/slide-images/slide-img1.jpg" class="image image1" alt="Before Image">
-              <div class="overlay" [style.width.%]="sliderValue">
-                <img src="assets/images/slide-images/slide-img2.jpg" class="image image2" alt="After Image">
+          <main>
+            <div class="container" [ngStyle]="{'--position': position + '%'}">
+              <div class="image-container">
+                <img
+                  class="image-before slider-image"
+                  src="assets/images/before-after/light-polir3.png"
+                  alt="color photo"
+                />
+                <img
+                  class="image-after slider-image"
+                  src="assets/images/before-after/light-polir3-fixed.png"
+                  alt="black and white"
+                />
+              </div>
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value="50"
+                aria-label="Percentage of before photo shown"
+                class="slider"
+                (input)="onSliderInput($event)"
+              />
+              <div class="slider-line" aria-hidden="true"></div>
+              <div class="slider-button" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  fill="currentColor"
+                  viewBox="0 0 256 256"
+                >
+                  <rect width="256" height="256" fill="none"></rect>
+                  <line
+                    x1="128"
+                    y1="40"
+                    x2="128"
+                    y2="216"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="16"
+                  ></line>
+                  <line
+                    x1="96"
+                    y1="128"
+                    x2="16"
+                    y2="128"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="16"
+                  ></line>
+                  <polyline
+                    points="48 160 16 128 48 96"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="16"
+                  ></polyline>
+                  <line
+                    x1="160"
+                    y1="128"
+                    x2="240"
+                    y2="128"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="16"
+                  ></line>
+                  <polyline
+                    points="208 96 240 128 208 160"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="16"
+                  ></polyline>
+                </svg>
               </div>
             </div>
-            <input type="range" min="0" max="100" [(ngModel)]="sliderValue" class="slider">
-          </div>
+
+          </main>
         </div>
         <div class="carousel-item">
-          <div class="image-transition">
-            <div class="image-container">
-              <img src="assets/images/slide-images/slide-img1.jpg" class="image image1" alt="Before Image">
-              <div class="overlay" [style.width.%]="sliderValue">
-                <img src="assets/images/slide-images/slide-img2.jpg" class="image image2" alt="After Image">
+          <main>
+            <div class="container" [ngStyle]="{'--position': position + '%'}">
+              <div class="image-container">
+                <img
+                  class="image-before slider-image"
+                  src="assets/images/before-after/light-polir2.png"
+                  alt="color photo"
+                />
+                <img
+                  class="image-after slider-image"
+                  src="assets/images/before-after/light-polir2-fixed.png"
+                  alt="black and white"
+                />
+              </div>
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value="50"
+                aria-label="Percentage of before photo shown"
+                class="slider"
+                (input)="onSliderInput($event)"
+              />
+              <div class="slider-line" aria-hidden="true"></div>
+              <div class="slider-button" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  fill="currentColor"
+                  viewBox="0 0 256 256"
+                >
+                  <rect width="256" height="256" fill="none"></rect>
+                  <line
+                    x1="128"
+                    y1="40"
+                    x2="128"
+                    y2="216"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="16"
+                  ></line>
+                  <line
+                    x1="96"
+                    y1="128"
+                    x2="16"
+                    y2="128"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="16"
+                  ></line>
+                  <polyline
+                    points="48 160 16 128 48 96"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="16"
+                  ></polyline>
+                  <line
+                    x1="160"
+                    y1="128"
+                    x2="240"
+                    y2="128"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="16"
+                  ></line>
+                  <polyline
+                    points="208 96 240 128 208 160"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="16"
+                  ></polyline>
+                </svg>
               </div>
             </div>
-            <input type="range" min="0" max="100" [(ngModel)]="sliderValue" class="slider">
-          </div>
+
+          </main>
         </div>
         <div class="carousel-item">
-          <div class="image-transition">
-            <div class="image-container">
-              <img src="assets/images/slide-images/slide-img1.jpg" class="image image1" alt="Before Image">
-              <div class="overlay" [style.width.%]="sliderValue">
-                <img src="assets/images/slide-images/slide-img2.jpg" class="image image2" alt="After Image">
+          <main>
+            <div class="container" [ngStyle]="{'--position': position + '%'}">
+              <div class="image-container">
+                <img
+                  class="image-before slider-image"
+                  src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                  alt="color photo"
+                />
+                <img
+                  class="image-after slider-image"
+                  src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                  alt="black and white"
+                />
+              </div>
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value="50"
+                aria-label="Percentage of before photo shown"
+                class="slider"
+                (input)="onSliderInput($event)"
+              />
+              <div class="slider-line" aria-hidden="true"></div>
+              <div class="slider-button" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  fill="currentColor"
+                  viewBox="0 0 256 256"
+                >
+                  <rect width="256" height="256" fill="none"></rect>
+                  <line
+                    x1="128"
+                    y1="40"
+                    x2="128"
+                    y2="216"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="16"
+                  ></line>
+                  <line
+                    x1="96"
+                    y1="128"
+                    x2="16"
+                    y2="128"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="16"
+                  ></line>
+                  <polyline
+                    points="48 160 16 128 48 96"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="16"
+                  ></polyline>
+                  <line
+                    x1="160"
+                    y1="128"
+                    x2="240"
+                    y2="128"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="16"
+                  ></line>
+                  <polyline
+                    points="208 96 240 128 208 160"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="16"
+                  ></polyline>
+                </svg>
               </div>
             </div>
-            <input type="range" min="0" max="100" [(ngModel)]="sliderValue" class="slider">
-          </div>
+
+          </main>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching"
-              data-bs-slide="prev">
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching"
-              data-bs-slide="next">
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
     </div>
+
   </div>
 </div>
 
@@ -109,7 +342,7 @@
   </ul>
 
   <!-- Layout 1 -->
-  <div *ngIf="currentLayout === 'layout1'" class="row all">
+  <div *ngIf="currentLayout === 'layout1'" class="row all" >
     <div class="col-lg-6 col-md-6">
       <div class="image-container" (mousemove)="onMouseMove($event, 'desc1')" (mouseleave)="onMouseLeave('desc1')">
         <img src="assets/images/gallery-first-image.jpeg" alt="" data-text="Image 1">

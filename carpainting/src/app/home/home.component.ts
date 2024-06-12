@@ -18,23 +18,20 @@ import {NavbarComponent} from "../navbar/navbar.component";
 export class HomeComponent  {
   currentLayout: string = 'layout1';
 
+
   constructor(private renderer: Renderer2) {}
 
+
   slides = [
-    { beforeImage: 'assets/images/slide-images/slide-img1.jpg', afterImage: 'assets/images/slide-images/slide-img2.jpg' },
-    { beforeImage: 'assets/images/slide-images/slide-img3.jpg', afterImage: 'assets/images/slide-images/slide-img4.jpg' },
-    // Add more slides as needed
+    { before: 'assets/images/slide-images/slide-img1.jpg', after: 'assets/images/slide-images/slide-img2.jpg' },
+    { before: 'assets/images/slide-images/slide-img3.jpg', after: 'assets/images/slide-images/slide-img3.jpg' },
   ];
 
-  sliderValues = [50, 50]; // Initial slider values for each slide
-  currentSlide = 0;
+  position: number = 50;
 
-  prevSlide() {
-    this.currentSlide = (this.currentSlide > 0) ? this.currentSlide - 1 : this.slides.length - 1;
-  }
-
-  nextSlide() {
-    this.currentSlide = (this.currentSlide < this.slides.length - 1) ? this.currentSlide + 1 : 0;
+  onSliderInput(event: Event): void {
+    const inputElement = event.target as HTMLInputElement;
+    this.position = inputElement.valueAsNumber;
   }
 
   onMouseMove(event: MouseEvent, overlayId: string): void {

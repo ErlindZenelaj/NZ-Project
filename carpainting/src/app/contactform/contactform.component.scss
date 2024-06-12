@@ -14,7 +14,8 @@
 
   .form-row {
     @include mobile-view {
-      flex-direction: column-reverse;
+      flex-direction: column;
+      gap: 16px;
     }
   }
 
@@ -177,67 +178,6 @@
       padding: 0;
     }
 
-    .card-body {
-      @include tablet-view {
-        margin-top: 20px;
-      }
-      @include mobile-view {
-        margin-top: 20px;
-
-      }
-
-      h3 {
-        font-family: "DM Sans", sans-serif;
-        font-size: 14px;
-        line-height: 18px;
-        text-transform: uppercase;
-        letter-spacing: 1.4px;
-        margin-bottom: 20px;
-        @include mobile-view {
-          margin-bottom: 8px;
-        }
-      }
-
-      h2 {
-        margin-bottom: 20px;
-        font-weight: 400;
-        @include mobile-view {
-          margin-bottom: 15px;
-          font-size: 18px;
-        }
-      }
-
-      h1 {
-        text-transform: uppercase;
-        font-size: 57px;
-        line-height: 57px;
-        letter-spacing: -0.6px;
-        margin-bottom: 36px;
-        @include tablet-view {
-          font-size: 38px;
-          line-height: 42px;
-          letter-spacing: -0.6px;
-        }
-        @include mobile-view {
-          max-width: 290px;
-          font-size: 26px;
-          line-height: 35px;
-          letter-spacing: -0.6px;
-          margin-bottom: 15px;
-        }
-      }
-
-      p {
-        color: $gray-color;
-        font-size: 18px;
-        line-height: 29.16px;
-        letter-spacing: 0.1px;
-        margin-bottom: 35px;
-        @include mobile-view {
-          font-size: 16px;
-        }
-      }
-    }
 
   }
 
