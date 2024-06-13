@@ -5,20 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26b434ad-825d-406b-901a-42062640744f" name="Changes" comment="bug fixes">
-      <change afterPath="$PROJECT_DIR$/carpainting/src/assets/images/before-after/furra_ngjyres.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/carpainting/src/assets/images/before-after/light-polir1-fixed.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/carpainting/src/assets/images/before-after/light-polir1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/carpainting/src/assets/images/before-after/light-polir2-fixed.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/carpainting/src/assets/images/before-after/light-polir2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/carpainting/src/assets/images/before-after/light-polir3-fixed.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/carpainting/src/assets/images/before-after/light-polir3.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/carpainting/src/app/contactform/contactform.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/app/contactform/contactform.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/carpainting/src/app/contactform/contactform.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/app/contactform/contactform.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carpainting/src/app/footer/footer.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/app/footer/footer.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/carpainting/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/app/home/home.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/carpainting/src/app/home/home.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/app/home/home.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/carpainting/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/app/home/home.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carpainting/src/app/navbar/navbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/app/navbar/navbar.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/carpainting/src/app/navbar/navbar.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/app/navbar/navbar.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carpainting/src/assets/images/galleryThird-second.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/assets/images/galleryThird-second.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carpainting/src/assets/images/galleryThird-third.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/assets/images/galleryThird-third.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,8 +53,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/carpainting/src/assets/images/before-after" />
       <recent name="$PROJECT_DIR$/carpainting/src/assets/images" />
+      <recent name="$PROJECT_DIR$/carpainting/src/assets/images/before-after" />
       <recent name="$PROJECT_DIR$/carpainting/src/assets/images/slide-images" />
     </key>
   </component>

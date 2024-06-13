@@ -5,9 +5,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+.container-fluid{
+  @include tablet-view{
+    padding: 0 20px;
+  }
+}
+
 .contact-form {
   max-width: 1200px;
   margin-top: 200px;
+  @include tablet-view{
+    margin-top: 100px;
+  }
   @include mobile-view {
     margin-top: 40px;
   }
@@ -28,8 +37,9 @@
     background-color: #F4F4F4;
     border: none;
     @include tablet-view{
+      max-width: 100%;
       padding: 10% 7%;
-      gap: 15px;
+      margin-bottom: 16px;
     }
     @include mobile-view{
       padding: 10% 7%;
@@ -163,19 +173,35 @@
       }
     }
   }
-  .col-md-7{
+  .col-lg-7{
+    @include tablet-view{
+      padding: 0;
+    }
     @include mobile-view{
       padding: 0;
     }
   }
 
 
-  .col-md-5 {
+  .col-lg-5 {
     padding-left: 30px;
     display: flex;
     align-items: center;
+    @include tablet-view{
+      padding: 0;
+    }
     @include mobile-view{
       padding: 0;
+    }
+
+    .iframe{
+      width: 650px;
+      height: 613.3px;
+      border: 0;
+      @include tablet-view{
+        width: 100%;
+
+      }
     }
 
 

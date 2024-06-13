@@ -24,12 +24,6 @@
     background-color: white;
   }
 
-  img {
-    @include tablet-view {
-      height: 80px;
-    }
-  }
-
   .nav-item {
     position: relative;
     margin-right: 15px;
@@ -90,9 +84,9 @@
       @include tablet-view {
         position: unset;
         margin-top: 20px;
+        margin-bottom: 20px;
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        justify-content: flex-start;
       }
 
       @include mobile-view {
@@ -169,6 +163,15 @@
       display: block;
     }
   }
-
-
+}
+@media screen and (min-width: 1024px) {
+  .navbar{
+    padding: 0;
+  }
+  .navbar-expand-lg .navbar-collapse{
+    gap: 40px !important;
+  }
+  .img-fluid{
+    max-width: 90%;
+  }
 }

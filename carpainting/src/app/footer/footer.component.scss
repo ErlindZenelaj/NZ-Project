@@ -27,6 +27,9 @@ a {
     padding-bottom: 10px;
     background: #000;
     color: #777;
+    @include tablet-view{
+      padding: 64px 12px 10px 12px;
+    }
     .container{
       max-width: 1290px;
     }
