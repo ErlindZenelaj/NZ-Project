@@ -1,15 +1,3 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "carpainting/dist/carpainting/**",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/carpainting/dist/carpainting/$1"
-    }
-  ]
+  "builds": [{ "src": "custom-build-script.sh", "use": "@vercel/static-build" }]
 }
