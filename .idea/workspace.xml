@@ -5,8 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26b434ad-825d-406b-901a-42062640744f" name="Changes" comment="Update">
+      <change afterPath="$PROJECT_DIR$/carpainting/src/assets/i18n/al.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/carpainting/src/assets/i18n/en.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carpainting/vercel.json" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/vercel.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carpainting/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carpainting/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carpainting/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/app/app.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carpainting/src/app/contactform/contactform.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/app/contactform/contactform.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carpainting/src/app/contactform/contactform.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/app/contactform/contactform.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carpainting/src/app/footer/footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/app/footer/footer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carpainting/src/app/footer/footer.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/app/footer/footer.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carpainting/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/app/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carpainting/src/app/home/home.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/app/home/home.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carpainting/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/app/home/home.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carpainting/src/app/navbar/navbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/app/navbar/navbar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carpainting/src/app/navbar/navbar.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/app/navbar/navbar.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carpainting/src/app/navbar/navbar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/app/navbar/navbar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carpainting/src/app/slider/slider.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/app/slider/slider.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carpainting/src/app/slider/slider.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/app/slider/slider.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carpainting/src/app/slider/slider.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/app/slider/slider.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carpainting/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/carpainting/src/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +34,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ErlindZenelaj&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ErlindZenelaj/NZ-Project.git&quot;,
+    &quot;accountId&quot;: &quot;e38f45ed-245c-4178-ab9e-2f9c453eae15&quot;
+  }
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -38,6 +68,7 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Users/erlindzenelaj/Documents/GitHub/NZ-Project/carpainting/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -65,6 +96,13 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.18034.50" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -91,7 +129,17 @@
       <workItem from="1718218754981" duration="5622000" />
       <workItem from="1718821074249" duration="6146000" />
       <workItem from="1718979814744" duration="16000" />
-      <workItem from="1719343092309" duration="1639000" />
+      <workItem from="1719343092309" duration="2852000" />
+      <workItem from="1719346135664" duration="2226000" />
+      <workItem from="1719661046330" duration="1212000" />
+      <workItem from="1719946866855" duration="600000" />
+      <workItem from="1720034503651" duration="2083000" />
+      <workItem from="1720265358293" duration="6143000" />
+      <workItem from="1723205130864" duration="21000" />
+      <workItem from="1723205537483" duration="917000" />
+      <workItem from="1723210543399" duration="14000" />
+      <workItem from="1723210560304" duration="428000" />
+      <workItem from="1723210995952" duration="2600000" />
     </task>
     <task id="LOCAL-00001" summary="Started The Project">
       <option name="closed" value="true" />
@@ -189,7 +237,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719344293269</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Update">
+      <option name="closed" value="true" />
+      <created>1719344737996</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1719344737996</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

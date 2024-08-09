@@ -190,7 +190,7 @@
       margin: 0px;
       width: 140px;
       height: 40px;
-      background-color: #00247D;
+      background-color: #E41B17;
       border-radius: 26px;
       overflow: hidden;
       position: relative;
@@ -207,6 +207,7 @@
       top: 5px;
       right: 20px;
       color: $white-color;
+      cursor: pointer;
     }
 
     .btn-color-mode-switch > label.btn-color-mode-switch-inner:after {
@@ -241,7 +242,7 @@
     }
 
     .btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner {
-      background-color: #E41B17;
+      background-color: #00247D;
     }
 
     .btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:after {

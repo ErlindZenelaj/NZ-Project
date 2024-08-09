@@ -1,37 +1,37 @@
-<div class="container-fluid">
+<div id="contact-form" class="container-fluid">
   <div class="container contact-form">
     <div class="row form-row">
       <div class="col-lg-7 col-md-12">
         <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
           <div class="card">
-            <span>Contact Form</span>
+            <span>{{ 'contact.contact_form' | translate }}</span>
             <div class="input-container">
               <i class="fa-regular fa-user"></i>
-              <input type="text" placeholder="Name" formControlName="name" [ngClass]="{ 'invalid-input': contactForm.get('name')?.invalid && contactForm.get('name')?.touched }">
+              <input type="text" placeholder="{{'contact.name' | translate}}" formControlName="name" [ngClass]="{ 'invalid-input': contactForm.get('name')?.invalid && contactForm.get('name')?.touched }">
               <div class="border-animation"></div>
               <small class="error-message"
-                     *ngIf="contactForm.controls['name'].invalid && contactForm.controls['name'].touched">Name is
-                required.</small>
+                     *ngIf="contactForm.controls['name'].invalid && contactForm.controls['name'].touched">
+               {{'contact.error_1' | translate}}</small>
             </div>
             <div class="input-container">
               <i class="fa-regular fa-envelope"></i>
-              <input type="email" placeholder="Email" formControlName="email" [ngClass]="{ 'invalid-input': contactForm.get('email')?.invalid && contactForm.get('email')?.touched }">
+              <input type="email" placeholder="{{'contact.email' | translate}}" formControlName="email" [ngClass]="{ 'invalid-input': contactForm.get('email')?.invalid && contactForm.get('email')?.touched }">
               <div class="border-animation"></div>
               <small class="error-message"
-                     *ngIf="contactForm.controls['email'].invalid && contactForm.controls['email'].touched">Email is
-                required.</small>
+                     *ngIf="contactForm.controls['email'].invalid && contactForm.controls['email'].touched">
+                {{'contact.error_2' | translate}}</small>
             </div>
             <div class="input-container">
               <i class="fa-solid fa-pencil special"></i>
-              <textarea placeholder="How Can I Help You? Feel free to get in touch!" formControlName="message" id=""
+              <textarea placeholder="{{'contact.description' | translate}}" formControlName="message" id=""
                         cols="30" rows="10" [ngClass]="{ 'invalid-input': contactForm.get('message')?.invalid && contactForm.get('message')?.touched }"></textarea>
               <div class="border-animation special-s"></div>
               <small class="error-message"
-                     *ngIf="contactForm.controls['message'].invalid && contactForm.controls['message'].touched">Message
-                is required.</small>
+                     *ngIf="contactForm.controls['message'].invalid && contactForm.controls['message'].touched">
+                {{'contact.error_3' | translate}}</small>
             </div>
 
-            <button class="get-in-touch" type="submit">GET IN TOUCH</button>
+            <button class="get-in-touch" type="submit">{{ 'contact.button' | translate }}</button>
           </div>
         </form>
       </div>

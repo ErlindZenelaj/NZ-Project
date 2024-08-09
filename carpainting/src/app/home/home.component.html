@@ -6,8 +6,8 @@
 <div class="container-fluid custom-field">
   <div class="container c-custom">
     <div class="text">
-      <h3>Welcome to Naseri</h3>
-      <h1>Repairs, maintenance and detailing services, provided with experience, care, precision and expertise.</h1>
+      <h3>{{ 'home.welcome' | translate }}</h3>
+      <h1>{{ 'home.heading' | translate }}</h1>
     </div>
     <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
       <div class="carousel-inner">
@@ -299,27 +299,26 @@
       <div class="left-side">
         <div class="row">
           <div class="col-lg-6 col-md-6 col-6 left">
-            <img src="assets/images/painting.jpeg" alt="Painting">
+            <img ngSrc="assets/images/painting.jpeg" alt="Painting" height="1172" width="880">
           </div>
           <div class="col-lg-6 col-md-6 col-6 right">
-            <img src="assets/images/painting1.jpeg" alt="Painting1" class="second-img">
+            <img ngSrc="assets/images/painting1.jpeg" alt="Painting1" class="second-img" height="900" width="820">
           </div>
         </div>
       </div>
     </div>
     <div class="col-lg-5 col-md-6 col-12">
       <div class="card-body">
-        <h3>We can fix it</h3>
-        <h1>We can help with a collision repair</h1>
-        <p>Our detailing services include paint restoration techniques that revive the luster of your vehicle’s paint,
-          removing oxidation and minor imperfections.</p>
+        <h3>{{ 'home.fix_it' | translate}}</h3>
+        <h1>{{ 'home.heading_fix' | translate }}</h1>
+        <p>{{ 'home.heading_paragraph' | translate }}</p>
       </div>
       <ul class="features-list">
-        <li><i class="fas fa-check checkmark"></i> Professional collision repair services</li>
-        <li><i class="fas fa-check checkmark"></i> Paint restoration and correction</li>
-        <li><i class="fas fa-check checkmark"></i> Removal of oxidation and minor imperfections</li>
+        <li><i class="fas fa-check checkmark"></i> {{ 'home.features_list_1' | translate }}</li>
+        <li><i class="fas fa-check checkmark"></i> {{ 'home.features_list_2' | translate }}</li>
+        <li><i class="fas fa-check checkmark"></i> {{ 'home.features_list_3' | translate }}</li>
       </ul>
-      <button class="book-now">BOOK NOW</button>
+      <button class="book-now">{{ 'home.book_now' | translate }}</button>
     </div>
   </div>
 </div>
@@ -331,13 +330,13 @@
 <div class="container gallery">
   <ul class="navbar-nav mb-2">
     <li class="nav-item" (click)="setLayout('layout1')">
-      <a [class.active]="currentLayout === 'layout1'" class="nav-link">Paint Job</a>
+      <a [class.active]="currentLayout === 'layout1'" class="nav-link">{{'painting.layout_1.paint' | translate}}</a>
     </li>
     <li class="nav-item" (click)="setLayout('layout2')">
-      <a [class.active]="currentLayout === 'layout2'" class="nav-link">Polishing</a>
+      <a [class.active]="currentLayout === 'layout2'" class="nav-link">{{'painting.layout_2.paint' | translate}}</a>
     </li>
     <li class="nav-item" (click)="setLayout('layout3')">
-      <a [class.active]="currentLayout === 'layout3'" class="nav-link">Repair</a>
+      <a [class.active]="currentLayout === 'layout3'" class="nav-link">{{'painting.layout_3.paint' | translate}}</a>
     </li>
   </ul>
 
@@ -345,28 +344,28 @@
   <div *ngIf="currentLayout === 'layout1'" class="all"  [ngClass]="{'fade-in': currentLayout === 'layout1'}">
     <div class="col-lg-6 col-md-6 col-12">
       <div class="image-container" (mousemove)="onMouseMove($event, 'desc1')" (mouseleave)="onMouseLeave('desc1')">
-        <img src="assets/images/gallery-first-image.jpeg" alt="" data-text="Image 1">
-        <div class="overlay" id="desc1">Car Painting</div>
+        <img ngSrc="assets/images/gallery-first-image.jpeg" alt="" data-text="Image 1" height="1217" width="1920">
+        <div class="overlay" id="desc1">{{'painting.layout_1.img_1' | translate}}</div>
       </div>
     </div>
     <div class="col-lg-3 col-md-6 col-12">
       <div class="image-container" (mousemove)="onMouseMove($event, 'desc2')" (mouseleave)="onMouseLeave('desc2')">
-        <img src="assets/images/gallery-second-image.jpeg" alt="">
-        <div class="overlay" id="desc2">Modern Technology</div>
+        <img ngSrc="assets/images/gallery-second-image.jpeg" alt="" height="1281" width="1920">
+        <div class="overlay" id="desc2">{{'painting.layout_1.img_2' | translate}}</div>
       </div>
     </div>
     <div class="col-lg-3 col-md-12 col-12">
       <div class="row right-side">
         <div class="col-md-12">
           <div class="image-container" (mousemove)="onMouseMove($event, 'desc3')" (mouseleave)="onMouseLeave('desc3')">
-            <img src="assets/images/gallery-third-image.jpeg" alt="">
-            <div class="overlay" id="desc3">Partial Painting</div>
+            <img ngSrc="assets/images/gallery-third-image.jpeg" alt="" height="1280" width="1920">
+            <div class="overlay" id="desc3">{{'painting.layout_1.img_3' | translate}}</div>
           </div>
         </div>
         <div class="col-md-12 col-12 special">
           <div class="image-container" (mousemove)="onMouseMove($event, 'desc4')" (mouseleave)="onMouseLeave('desc4')">
-            <img src="assets/images/gallery-fourth-image.jpeg" alt="">
-            <div class="overlay" id="desc4">Body Parts</div>
+            <img ngSrc="assets/images/gallery-fourth-image.jpeg" alt="" height="1280" width="1920">
+            <div class="overlay" id="desc4">{{'painting.layout_1.img_4' | translate}}</div>
           </div>
         </div>
       </div>
@@ -377,23 +376,22 @@
   <div *ngIf="currentLayout === 'layout2'" class="all" [ngClass]="{'fade-in': currentLayout === 'layout2'}">
     <div class="col-lg-6 col-md-12 col-12">
       <div class="image-container" (mousemove)="onMouseMove($event, 'desc5')" (mouseleave)="onMouseLeave('desc5')">
-        <img src="assets/images/galleryThird-third.jpg" alt="">
-        <div class="overlay" id="desc5">Headlight cleaning</div>
+        <img ngSrc="assets/images/galleryThird-third.jpg" alt="" height="4723" width="7081">
+        <div class="overlay" id="desc5">{{'painting.layout_2.img_1' | translate}}</div>
       </div>
     </div>
     <div class="col-lg-6 col-md-12 col-12">
       <div class="row right-side-second">
         <div class="col-lg-12 col-md-6">
           <div class="image-container" (mousemove)="onMouseMove($event, 'desc6')" (mouseleave)="onMouseLeave('desc6')">
-            <img src="assets/images/galleryThird-first.jpg" alt="">
-            <div class="overlay" id="desc6">Car polishing
-            </div>
+            <img ngSrc="assets/images/galleryThird-first.jpg" alt="" height="1600" width="2560">
+            <div class="overlay" id="desc6">{{'painting.layout_2.img_2' | translate}}</div>
           </div>
         </div>
         <div class="col-lg-12 col-md-6 col-12 special">
           <div class="image-container" (mousemove)="onMouseMove($event, 'desc7')" (mouseleave)="onMouseLeave('desc7')">
-            <img src="assets/images/galleryThird-second.jpg" alt="">
-            <div class="overlay" id="desc7">Headlight cleaning</div>
+            <img ngSrc="assets/images/galleryThird-second.jpg" alt="" height="4480" width="6720">
+            <div class="overlay" id="desc7">{{'painting.layout_2.img_3' | translate}}</div>
           </div>
         </div>
       </div>
@@ -404,20 +402,20 @@
   <div *ngIf="currentLayout === 'layout3'" class="all" [ngClass]="{'fade-in': currentLayout === 'layout3'}">
     <div class="col-lg-4 col-md-6 col-12">
       <div class="image-container" (mousemove)="onMouseMove($event, 'desc8')" (mouseleave)="onMouseLeave('desc8')">
-        <img src="assets/images/gallerySecond-first.jpeg" alt="">
-        <div class="overlay" id="desc8">Masking for Painting</div>
+        <img ngSrc="assets/images/gallerySecond-first.jpeg" alt="" height="1280" width="1920">
+        <div class="overlay" id="desc8">{{'painting.layout_3.img_1' | translate}}</div>
       </div>
     </div>
     <div class="col-lg-4 col-md-6 col-12">
       <div class="image-container" (mousemove)="onMouseMove($event, 'desc9')" (mouseleave)="onMouseLeave('desc9')">
-        <img src="assets/images/gallerySecond-second.jpeg" alt="">
-        <div class="overlay" id="desc9">Rear Collision Repair</div>
+        <img ngSrc="assets/images/gallerySecond-second.jpeg" alt="" height="1280" width="1920">
+        <div class="overlay" id="desc9">{{'painting.layout_3.img_2' | translate}}</div>
       </div>
     </div>
     <div class="col-lg-4 col-md-12 col-12 ">
       <div class="image-container" (mousemove)="onMouseMove($event, 'desc10')" (mouseleave)="onMouseLeave('desc10')">
-        <img src="assets/images/gallerySecond-third.jpeg" alt="">
-        <div class="overlay" id="desc10">Body Panels Preparation:</div>
+        <img ngSrc="assets/images/gallerySecond-third.jpeg" alt="" height="1280" width="1920">
+        <div class="overlay" id="desc10">{{'painting.layout_3.img_3' | translate}}</div>
       </div>
     </div>
   </div>

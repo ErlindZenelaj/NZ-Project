@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {LowerCasePipe, NgClass, NgForOf, NgOptimizedImage} from "@angular/common";
 import {SliderComponent} from "../slider/slider.component";
+import {LangChangeEvent, TranslateModule, TranslateService} from "@ngx-translate/core";
+import {FormsModule} from "@angular/forms";
 
 @Component({
   selector: 'app-navbar',
@@ -10,20 +12,32 @@ import {SliderComponent} from "../slider/slider.component";
     NgForOf,
     NgOptimizedImage,
     SliderComponent,
-    NgClass
+    NgClass,
+    TranslateModule,
+    FormsModule
   ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-  activeLanguage: string = 'en';
-
   links = ['Home', 'Details', 'Info', 'Contact'];
+  selectedLanguage: string = 'EN';
+  isEnglish: boolean = true;
 
-
-  setActiveLanguage(language: string) {
-    this.activeLanguage = language;
+  constructor(public translateService: TranslateService) {
+    this.translateService.setDefaultLang('en');
+    this.translateService.use('en');
   }
 
+  getTranslatedLink(link: string): string {
+    return this.translateService.instant(`navbar.${link}`);
+  }
+
+  toggleLanguage() {
+    this.isEnglish = !this.isEnglish;
+    const lang = this.isEnglish ? 'en' : 'al';
+    this.translateService.use(lang);
+    this.selectedLanguage = this.isEnglish ? 'EN' : 'AL';
+  }
 
 }

@@ -3,39 +3,39 @@
     <div class="swiper-wrapper">
       <div class="swiper-slide" data-swiper-autoplay="6000">
         <div class="text">
-          <h2>Premium car repair service</h2>
-          <h1>We make top car exterior repairs</h1>
+          <h2>{{ 'slider.slide_1.heading_1' | translate }}</h2>
+          <h1>{{ 'slider.slide_1.heading_2' | translate }}</h1>
         </div>
         <img ngSrc="assets/images/slide-images/slide-img1.jpg" alt="" height="860" width="1920">
         <div class="scroll-down">
           <div class="scroll">
-            <h3>Scroll Down</h3>
+            <h3>{{ 'slider.scroll_down' | translate }}</h3>
             <i class="fa-solid fa-arrow-down"></i>
           </div>
         </div>
       </div>
       <div class="swiper-slide" data-swiper-autoplay="6000">
-        <div class="text">
-          <h2>Premium maintenance & painting</h2>
-          <h1>Let your car shine like a new one</h1>
+        <div class="text second">
+          <h2>{{ 'slider.slide_2.heading_1' | translate }}</h2>
+          <h1>{{ 'slider.slide_2.heading_2' | translate }}</h1>
         </div>
         <img ngSrc="assets/images/slide-images/slide-img2.jpg" alt="" height="860" width="1920">
         <div class="scroll-down">
           <div class="scroll">
-            <h3>Scroll Down</h3>
+            <h3>{{ 'slider.scroll_down' | translate }}</h3>
             <i class="fa-solid fa-arrow-down"></i>
           </div>
         </div>
       </div>
       <div class="swiper-slide" data-swiper-autoplay="8000">
-        <div class="text">
-          <h2>Partial and full body parts restoration</h2>
-          <h1>After-accident effects will go unnoticed</h1>
+        <div class="text third">
+          <h2>{{ 'slider.slide_3.heading_1' | translate }}</h2>
+          <h1>{{ 'slider.slide_3.heading_2' | translate }}</h1>
         </div>
         <img ngSrc="assets/images/slide-images/slide-img3.jpg" alt="" height="860" width="1920">
-        <div class="scroll-down">
+        <div class="scroll-down" (click)="scrollToContactForm()">
           <div class="scroll">
-            <h3>Scroll Down</h3>
+            <h3>{{ 'slider.scroll_down' | translate }}</h3>
             <i class="fa-solid fa-arrow-down"></i>
           </div>
         </div>

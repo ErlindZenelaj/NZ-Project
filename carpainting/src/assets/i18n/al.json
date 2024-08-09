@@ -1,0 +1,73 @@
+{
+  "navbar": {
+    "Home": "Ballina",
+    "Details": "Detajet",
+    "Info": "Informacion",
+    "Contact": "Kontakti"
+  },
+  "slider": {
+    "scroll_down": "Lëvizni poshtë",
+    "slide_1": {
+      "heading_1": "Shërbim premium i riparimit të makinave",
+      "heading_2": "Bëjmë riparime të jashtme të makinave"
+    },
+    "slide_2": {
+      "heading_1": "Mirëmbajtje dhe lyerje premium",
+      "heading_2": "Lëreni makinën tuaj të shkëlqejë si një e re"
+    },
+    "slide_3": {
+      "heading_1": "Restaurimi i pjesshëm dhe i plotë i pjesëve të vetuarv",
+      "heading_2": "Efektet pas aksidentit do të kalojnë pa u vënë re"
+    }
+  },
+  "home": {
+    "welcome": "Mirë se vini te Naseri",
+    "heading": "Riparime, shërbime mirëmbajtjeje, të ofruara me përvojë, kujdes, saktësi dhe ekspertizë.",
+    "fix_it": "Mund ta rregullojmë",
+    "heading_fix": "Ne mund të ndihmojmë me riparimin e përplasjes",
+    "heading_paragraph": "Shërbimet tona përfshijnë teknika të restaurimit të bojës që ringjallin shkëlqimin e bojës së automjetit tuaj, duke hequr oksidimin dhe papërsosmëritë e vogla.",
+    "features_list_1": "Shërbimet profesionale të riparimit të përplasjeve",
+    "features_list_2": "Restaurimi dhe korrigjimi i bojës",
+    "features_list_3": "Heqja e oksidimit dhe defekteve të vogla",
+    "book_now": "REZERVONI TANI"
+  },
+  "contact": {
+    "contact_form": "Forma e Kontaktit",
+    "name": "Emri",
+    "email": "Email",
+    "description": "Si mund t'ju ndihmojmë? Ndjehuni të lirë të kontaktoni!",
+    "button": "NA KONTAKTONI",
+    "error_1": "Emri është i nevojshëm",
+    "error_2": "Email është i nevojshëm",
+    "error_3": "Mesazhi është i nevojshëm"
+  },
+  "painting": {
+    "layout_1": {
+      "paint": "Puna Ngjyrosjes",
+      "img_1": "Ngjyrosje e makinave",
+      "img_2": "Teknologji moderne",
+      "img_3": "Ngjyrosje e pjeseshme",
+      "img_4": "Mbulesë e Plotë"
+    },
+    "layout_2": {
+      "paint": "Polir",
+      "img_1": "Pastrimi i dritave",
+      "img_2": "Polir makinash",
+      "img_3": "Polir i pjeseve"
+    },
+    "layout_3": {
+      "paint": "Riparim",
+      "img_1": "Mbulim për ngjyrosje",
+      "img_2": "Riparimi i përplasjes së pasme",
+      "img_3": "Përgatitja e paneleve trupore"
+    }
+  },
+  "footer": {
+    "welcome": "Mirë se vini te Naseri!",
+    "welcome_p": "Shërbimet tona përdorin metoda moderne të restaurimit të bojës për të rinovuar përfundimin e automjetit tuaj. Ne heqim me përpikëri oksidimin dhe njollat \u200B\u200Be vogla, duke rikthyer shkëlqimin dhe butësinë origjinale të bojës së makinës suaj.",
+    "office": "Zyrja",
+    "links": "Linqet",
+    "get_in": "Kontaktet",
+    "all_rights": "Naseri © 2024. Të gjitha të drejtat e rezervuara."
+  }
+}

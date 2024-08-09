@@ -1,0 +1,73 @@
+{
+  "navbar": {
+    "Home": "Home",
+    "Details": "Details",
+    "Info": "Info",
+    "Contact": "Contact"
+  },
+  "slider": {
+    "scroll_down": "Scroll Down",
+    "slide_1": {
+      "heading_1": "Premium car repair service",
+      "heading_2": "We make top car exterior repairs"
+    },
+    "slide_2": {
+      "heading_1": "Premium maintenance & painting",
+      "heading_2": "Let your car shine like a new one"
+    },
+    "slide_3": {
+      "heading_1": "Partial and full body parts restoration",
+      "heading_2": "After-accident effects will go unnoticed"
+    }
+  },
+  "home": {
+    "welcome": "Welcome to Naseri",
+    "heading": "Repairs, maintenance services, provided with experience, care, precision and expertise.",
+    "fix_it": "We can fix it",
+    "heading_fix": "We can help with a collision repair",
+    "heading_paragraph": "Our detailing services include paint restoration techniques that revive the luster of your vehicle’s paint, removing oxidation and minor imperfections.",
+    "features_list_1": "Professional collision repair services",
+    "features_list_2": "Paint restoration and correction",
+    "features_list_3": "Removal of oxidation and minor imperfections",
+    "book_now": "BOOK NOW"
+  },
+  "contact": {
+    "contact_form": "Contact Form",
+    "name": "Name",
+    "email": "Email",
+    "description": "How can we help You? Feel free to get in touch!",
+    "button": "GET IN TOUCH",
+    "error_1": "Name is required",
+    "error_2": "Email is required",
+    "error_3": "Message is required"
+  },
+  "painting": {
+    "layout_1": {
+      "paint": "Paint Job",
+      "img_1": "Car Painting",
+      "img_2": "Modern Technology",
+      "img_3": "Partial Painting",
+      "img_4": "Full Cover"
+    },
+    "layout_2": {
+      "paint": "Polishing",
+      "img_1": "Headlight cleaning",
+      "img_2": "Car polishing",
+      "img_3": "Part polishing"
+    },
+    "layout_3": {
+      "paint": "Repair",
+      "img_1": "Covering for Painting",
+      "img_2": "Rear Collision Repair",
+      "img_3": "Body Panels Preparation"
+    }
+  },
+  "footer": {
+    "welcome": "Welcome to Naseri!",
+    "welcome_p": "Our services employ state-of-the-art paint restoration methods to rejuvenate your vehicle’s finish. We meticulously remove oxidation and minor blemishes, restoring the original brilliance and smoothness of your car’s paint.",
+    "office": "Office",
+    "links": "Links",
+    "get_in": "Get in touch",
+    "all_rights": "Naseri © 2024. All rights reserved."
+  }
+}

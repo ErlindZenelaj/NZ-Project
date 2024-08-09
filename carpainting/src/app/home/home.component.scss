@@ -65,7 +65,8 @@
     }
 
     .carousel-control-next {
-      right: -5% ;
+      right: -5%;
+      bottom: 0;
       @include tablet-view{
         right: 300px !important;
         top: 80%;
@@ -77,7 +78,8 @@
     }
 
     .carousel-control-prev {
-      left: -5% ;
+      left: -5%;
+      bottom: 0;
       @include tablet-view{
         left: 300px !important;
         top: 80%;
@@ -437,6 +439,7 @@
       font-size: 17px;
       line-height: 25.5px;
       text-transform: uppercase;
+      cursor: pointer;
 
 
       &.active::after,

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {NgClass, NgIf} from "@angular/common";
 import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-contactform',
@@ -9,7 +10,8 @@ import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} fr
     NgIf,
     ReactiveFormsModule,
     FormsModule,
-    NgClass
+    NgClass,
+    TranslateModule
   ],
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.scss'

@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg ">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-      <img alt="Bootstrap" class="img-fluid" height="309" src="assets/images/Logo.png" width="250">
+      <img alt="Bootstrap" class="img-fluid" height="309" ngSrc="assets/images/Logo.png" width="250">
     </a>
     <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
             class="navbar-toggler"
@@ -11,8 +11,8 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mb-2 mb-lg-0">
         <li *ngFor="let link of links" class="nav-item">
-          <a [class.active]="link === 'Home'" [href]="link | lowercase" class="nav-link">
-            {{ link }}
+          <a [class.active]="link === 'Home'" class="nav-link">
+            {{ getTranslatedLink(link) }}
           </a>
         </li>
       </ul>
@@ -72,31 +72,12 @@
 
         </div>
         <div class="btn-container">
-
           <label class="switch btn-color-mode-switch">
-            <input id="color_mode" name="color_mode" type="checkbox" value="1">
-            <label class="btn-color-mode-switch-inner" data-off="EN" data-on="AL" for="color_mode"></label>
+            <input (change)="toggleLanguage()" [checked]="isEnglish" id="color_mode" name="color_mode" type="checkbox">
+            <label [attr.data-off]="'AL'" [attr.data-on]="'EN'" class="btn-color-mode-switch-inner"
+                   for="color_mode"></label>
           </label>
-
         </div>
-
-
-        <!--                <div class="phone-numbers">-->
-        <!--                  <img alt="ipko-icon" height="24" ngSrc="assets/images/ipko-icon.svg" width="25">-->
-        <!--                  <h2>+38349491331</h2>-->
-        <!--                  <img alt="vala-icon" height="25" ngSrc="assets/images/vala-icon.png" width="25">-->
-        <!--                  <h2>+38344102372</h2>-->
-        <!--                </div>-->
-        <!--        <div class="language-switcher">-->
-        <!--          <a (click)="setActiveLanguage('en')" [ngClass]="{'active': activeLanguage === 'en'}" class="language-option"-->
-        <!--             href="#">-->
-        <!--            <img alt="English" class="flag" height="255" ngSrc="assets/images/england-flag.png" width="510">-->
-        <!--          </a>-->
-        <!--          <a (click)="setActiveLanguage('al')" [ngClass]="{'active': activeLanguage === 'al'}" class="language-option"-->
-        <!--             href="#">-->
-        <!--            <img alt="Albania" class="flag" height="340" ngSrc="assets/images/albanian-flag.png" width="476">-->
-        <!--          </a>-->
-        <!--        </div>-->
       </ul>
     </div>
   </div>

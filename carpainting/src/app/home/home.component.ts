@@ -6,11 +6,12 @@ import {SliderComponent} from "../slider/slider.component";
 import {ContactformComponent} from "../contactform/contactform.component";
 import {FooterComponent} from "../footer/footer.component";
 import {NavbarComponent} from "../navbar/navbar.component";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule, FormsModule, NgOptimizedImage, SliderComponent, ContactformComponent, FooterComponent, NavbarComponent],
+  imports: [ReactiveFormsModule, CommonModule, FormsModule, NgOptimizedImage, SliderComponent, ContactformComponent, FooterComponent, NavbarComponent, TranslateModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 

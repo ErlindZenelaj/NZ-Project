@@ -2,13 +2,15 @@ import {AfterViewInit, Component, ElementRef, OnDestroy, OnInit, Renderer2, View
 import {NgClass, NgOptimizedImage} from "@angular/common";
 import Swiper from "swiper";
 import 'swiper/swiper-bundle.css';
+import {LangChangeEvent, TranslateModule, TranslateService} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-slider',
   standalone: true,
   imports: [
     NgOptimizedImage,
-    NgClass
+    NgClass,
+    TranslateModule
   ],
   templateUrl: './slider.component.html',
   styleUrl: './slider.component.scss'
@@ -23,8 +25,16 @@ export class SliderComponent implements OnInit, AfterViewInit, OnDestroy {
   currentSlideAutoplay: number = 3000;
   isPaused = false;
   interval: any;
+  selectedLanguage: string = '';
 
-  constructor(private renderer: Renderer2) {}
+
+  constructor(public translateService: TranslateService,private renderer: Renderer2) {
+    this.translateService.onLangChange.subscribe((event: LangChangeEvent) => {
+      this.selectedLanguage = event.lang.toUpperCase();
+    });
+    this.translateService.use('en');
+  }
+
 
   ngOnInit(): void {}
 
@@ -47,7 +57,7 @@ export class SliderComponent implements OnInit, AfterViewInit, OnDestroy {
       loop: true,
       speed: 1000,
       slidesPerView: 1,
-      spaceBetween: 30,
+      spaceBetween: 0,
       navigation: true,
       grabCursor: true,
       keyboard: {
@@ -57,7 +67,7 @@ export class SliderComponent implements OnInit, AfterViewInit, OnDestroy {
       watchOverflow: true,
       roundLengths: true,
       autoplay: {
-        delay: 3000,  // Default delay (will be overridden by individual slide delays)
+        delay: 3000,
         disableOnInteraction: false
       },
       fadeEffect: {
@@ -141,5 +151,10 @@ export class SliderComponent implements OnInit, AfterViewInit, OnDestroy {
     }
   }
 
-
+  scrollToContactForm(): void {
+    const contactFormElement = document.getElementById('contact-form');
+    if (contactFormElement) {
+      contactFormElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }
