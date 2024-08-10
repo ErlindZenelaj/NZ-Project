@@ -318,7 +318,7 @@
         <li><i class="fas fa-check checkmark"></i> {{ 'home.features_list_2' | translate }}</li>
         <li><i class="fas fa-check checkmark"></i> {{ 'home.features_list_3' | translate }}</li>
       </ul>
-      <button class="book-now">{{ 'home.book_now' | translate }}</button>
+      <button (click)="scrollToContactForm()" class="book-now">{{ 'home.book_now' | translate }}</button>
     </div>
   </div>
 </div>
@@ -330,18 +330,18 @@
 <div class="container gallery">
   <ul class="navbar-nav mb-2">
     <li class="nav-item" (click)="setLayout('layout1')">
-      <a [class.active]="currentLayout === 'layout1'" class="nav-link">{{'painting.layout_1.paint' | translate}}</a>
+      <a [class.active]="currentLayout === 'layout1'" class="nav-link">{{ 'painting.layout_1.paint' | translate }}</a>
     </li>
     <li class="nav-item" (click)="setLayout('layout2')">
-      <a [class.active]="currentLayout === 'layout2'" class="nav-link">{{'painting.layout_2.paint' | translate}}</a>
+      <a [class.active]="currentLayout === 'layout2'" class="nav-link">{{ 'painting.layout_2.paint' | translate }}</a>
     </li>
     <li class="nav-item" (click)="setLayout('layout3')">
-      <a [class.active]="currentLayout === 'layout3'" class="nav-link">{{'painting.layout_3.paint' | translate}}</a>
+      <a [class.active]="currentLayout === 'layout3'" class="nav-link">{{ 'painting.layout_3.paint' | translate }}</a>
     </li>
   </ul>
 
   <!-- Layout 1 -->
-  <div *ngIf="currentLayout === 'layout1'" class="all"  [ngClass]="{'fade-in': currentLayout === 'layout1'}">
+  <div *ngIf="currentLayout === 'layout1'" class="all" [ngClass]="{'fade-in': showFadeIn}">
     <div class="col-lg-6 col-md-6 col-12">
       <div class="image-container" (mousemove)="onMouseMove($event, 'desc1')" (mouseleave)="onMouseLeave('desc1')">
         <img ngSrc="assets/images/gallery-first-image.jpeg" alt="" data-text="Image 1" height="1217" width="1920">
@@ -373,7 +373,7 @@
   </div>
 
   <!-- Layout 2 -->
-  <div *ngIf="currentLayout === 'layout2'" class="all" [ngClass]="{'fade-in': currentLayout === 'layout2'}">
+  <div *ngIf="currentLayout === 'layout2'" class="all" [ngClass]="{'fade-in': showFadeIn}">
     <div class="col-lg-6 col-md-12 col-12">
       <div class="image-container" (mousemove)="onMouseMove($event, 'desc5')" (mouseleave)="onMouseLeave('desc5')">
         <img ngSrc="assets/images/galleryThird-third.jpg" alt="" height="4723" width="7081">
@@ -399,7 +399,7 @@
   </div>
 
   <!-- Layout 3 -->
-  <div *ngIf="currentLayout === 'layout3'" class="all" [ngClass]="{'fade-in': currentLayout === 'layout3'}">
+  <div *ngIf="currentLayout === 'layout3'" class="all" [ngClass]="{'fade-in': showFadeIn}">
     <div class="col-lg-4 col-md-6 col-12">
       <div class="image-container" (mousemove)="onMouseMove($event, 'desc8')" (mouseleave)="onMouseLeave('desc8')">
         <img ngSrc="assets/images/gallerySecond-first.jpeg" alt="" height="1280" width="1920">

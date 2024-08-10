@@ -1,6 +1,6 @@
-import {Component, OnInit, Renderer2} from '@angular/core';
+import {Component, Renderer2} from '@angular/core';
 import {CommonModule, NgOptimizedImage} from "@angular/common";
-import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import 'swiper/swiper-bundle.css';
 import {SliderComponent} from "../slider/slider.component";
 import {ContactformComponent} from "../contactform/contactform.component";
@@ -17,19 +17,17 @@ import {TranslateModule} from "@ngx-translate/core";
 
 
 })
-export class HomeComponent  {
+export class HomeComponent {
   currentLayout: string = 'layout1';
-
-
-  constructor(private renderer: Renderer2) {}
-
-
+  showFadeIn: boolean = true;
   slides = [
-    { before: 'assets/images/slide-images/slide-img1.jpg', after: 'assets/images/slide-images/slide-img2.jpg' },
-    { before: 'assets/images/slide-images/slide-img3.jpg', after: 'assets/images/slide-images/slide-img3.jpg' },
+    {before: 'assets/images/slide-images/slide-img1.jpg', after: 'assets/images/slide-images/slide-img2.jpg'},
+    {before: 'assets/images/slide-images/slide-img3.jpg', after: 'assets/images/slide-images/slide-img3.jpg'},
   ];
-
   position: number = 50;
+
+  constructor(private renderer: Renderer2) {
+  }
 
   onSliderInput(event: Event): void {
     const inputElement = event.target as HTMLInputElement;
@@ -60,12 +58,24 @@ export class HomeComponent  {
   }
 
   setLayout(layout: string): void {
-    this.currentLayout = layout;
+    if (this.currentLayout !== layout) {
+      this.showFadeIn = false;
+      this.currentLayout = layout;
+      setTimeout(() => {
+        this.showFadeIn = true;
+      }, 10);
+    }
   }
 
-  ngOnInit(): void {
+  scrollToContactForm(): void {
+    const contactFormElement = document.getElementById('contact-form');
+    if (contactFormElement) {
+      window.scrollTo({
+        top: contactFormElement.offsetTop,
+        behavior: 'smooth'
+      });
+    } else {
+      console.log('Contact form element not found.');
+    }
   }
-
-  sliderValue: number = 50;
-
 }

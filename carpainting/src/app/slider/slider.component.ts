@@ -20,7 +20,6 @@ export class SliderComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('progressBar') progressBar!: ElementRef;
   swiper: any;
   progress: number = 0;
-  activeIndex: number = 0;
   progressInterval: any;
   currentSlideAutoplay: number = 3000;
   isPaused = false;
@@ -150,11 +149,16 @@ export class SliderComponent implements OnInit, AfterViewInit, OnDestroy {
       totalSlideNumberElement.textContent = String(this.swiper.slides.length).padStart(2, '0');
     }
   }
-
   scrollToContactForm(): void {
     const contactFormElement = document.getElementById('contact-form');
     if (contactFormElement) {
-      contactFormElement.scrollIntoView({ behavior: 'smooth' });
+      window.scrollTo({
+        top: contactFormElement.offsetTop,
+        behavior: 'smooth'
+      });
+    } else {
+      console.log('Contact form element not found.');
     }
   }
+
 }

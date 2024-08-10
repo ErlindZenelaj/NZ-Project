@@ -23,6 +23,7 @@
   .nav-item {
     position: relative;
     margin-right: 15px;
+    cursor: pointer;
 
     .navbar-nav {
       @include mobile-view {

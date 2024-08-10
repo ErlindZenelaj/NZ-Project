@@ -8,7 +8,7 @@
         </div>
         <img ngSrc="assets/images/slide-images/slide-img1.jpg" alt="" height="860" width="1920">
         <div class="scroll-down">
-          <div class="scroll">
+          <div class="scroll" (click)="scrollToContactForm()">
             <h3>{{ 'slider.scroll_down' | translate }}</h3>
             <i class="fa-solid fa-arrow-down"></i>
           </div>
@@ -21,7 +21,7 @@
         </div>
         <img ngSrc="assets/images/slide-images/slide-img2.jpg" alt="" height="860" width="1920">
         <div class="scroll-down">
-          <div class="scroll">
+          <div class="scroll" (click)="scrollToContactForm()">
             <h3>{{ 'slider.scroll_down' | translate }}</h3>
             <i class="fa-solid fa-arrow-down"></i>
           </div>
@@ -33,8 +33,8 @@
           <h1>{{ 'slider.slide_3.heading_2' | translate }}</h1>
         </div>
         <img ngSrc="assets/images/slide-images/slide-img3.jpg" alt="" height="860" width="1920">
-        <div class="scroll-down" (click)="scrollToContactForm()">
-          <div class="scroll">
+        <div class="scroll-down" >
+          <div class="scroll" (click)="scrollToContactForm()">
             <h3>{{ 'slider.scroll_down' | translate }}</h3>
             <i class="fa-solid fa-arrow-down"></i>
           </div>
