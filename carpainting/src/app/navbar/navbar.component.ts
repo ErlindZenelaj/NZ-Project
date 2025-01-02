@@ -20,7 +20,7 @@ import {FormsModule} from "@angular/forms";
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-  links = ['Home', 'Details', 'Info', 'Contact'];
+  links = ['Home', 'Work', 'Contact', 'Gallery'];
   selectedLanguage: string = 'EN';
   isEnglish: boolean = true;
 

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {JsonPipe, NgClass, NgIf} from "@angular/common";
 import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
 import {TranslateModule} from "@ngx-translate/core";
@@ -20,6 +20,7 @@ import emailjs from '@emailjs/browser';
 })
 export class ContactformComponent {
   contactForm: FormGroup;
+  isLoading = false;
 
   constructor(private fb: FormBuilder) {
     this.contactForm = this.fb.group({
@@ -32,14 +33,22 @@ export class ContactformComponent {
 
   async onSubmit() {
     if (this.contactForm.valid) {
+      this.isLoading = true;
       emailjs.init('thbSO3e4tg66ygkSE');
-      let response = await emailjs.send("service_ye8us49", "template_lbipmq1", {
-        name: this.contactForm.value.name,
-        email: this.contactForm.value.email,
-        message: this.contactForm.value.message,
-      });
-      console.log('Form Submitted', this.contactForm.value);
-      this.contactForm.reset();
+
+      try {
+        const response = await emailjs.send("service_ye8us49", "template_lbipmq1", {
+          name: this.contactForm.value.name,
+          email: this.contactForm.value.email,
+          message: this.contactForm.value.message,
+        });
+        console.log('Form Submitted', this.contactForm.value);
+      } catch (error) {
+        console.error('Form Submission Failed', error);
+      } finally {
+        this.isLoading = false;
+        this.contactForm.reset();
+      }
     } else {
       this.contactForm.markAllAsTouched();
     }

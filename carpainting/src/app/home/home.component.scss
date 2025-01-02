@@ -24,6 +24,65 @@
 
     }
 
+    .slider-container{
+      display: inline-block !important;
+      .carousel {
+        position: relative;
+
+
+        .carousel-inner{
+          .carousel-item {
+            img {
+              object-fit: cover;
+              width: 100%;
+              height: 850px;
+            }
+          }
+        }
+
+      }
+      #carousel-thumbs {
+        background: rgba(255, 255, 255, .3);
+        bottom: 0;
+        left: 0;
+        padding: 0 50px;
+        right: 0;
+        img {
+          border: 5px solid transparent;
+          cursor: pointer;
+          height: 250px;
+        }
+        &.img:hover {
+          border-color: rgba(255, 255, 255, .3);
+        }
+        .selected img {
+          border-color: #fff;
+        }
+      }
+      .carousel-control-prev,
+      .carousel-control-next {
+        width: 50px;
+      }
+
+      @media all and (max-width: 767px) {
+        .carousel-container #carousel-thumbs img {
+          border-width: 3px;
+        }
+      }
+      @media all and (min-width: 576px) {
+        .carousel-container #carousel-thumbs {
+          position: absolute;
+        }
+      }
+      @media all and (max-width: 576px) {
+        .carousel-container #carousel-thumbs {
+          background: #ccccce;
+        }
+      }
+    }
+
+
+
     .text {
       margin-top: 120px;
       @include mobile-view {
@@ -49,92 +108,6 @@
           font-size: 26px;
         }
 
-      }
-    }
-
-    .carousel-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .carousel-control-next,
-    .carousel-control-prev {
-      position: absolute;
-      bottom: -65px;
-      max-width: 45px;
-    }
-
-    .carousel-control-next {
-      right: -5%;
-      bottom: 0;
-      @include tablet-view {
-        right: 300px !important;
-        top: 80%;
-      }
-      @include mobile-view {
-        right: 110px !important;
-        top: 65%;
-      }
-    }
-
-    .carousel-control-prev {
-      left: -5%;
-      bottom: 0;
-      @include tablet-view {
-        left: 300px !important;
-        top: 80%;
-      }
-      @include mobile-view {
-        left: 110px !important;
-        top: 65%;
-      }
-    }
-
-    .carousel-control-next-icon,
-    .carousel-control-prev-icon {
-      display: inline-block;
-      width: 3rem;
-      height: 3rem;
-      background-repeat: no-repeat;
-      background-position: 50%;
-      background-size: 100% 100%;
-    }
-
-
-    .carousel-control-next-icon {
-      background-image: url('../../assets/images/car-painting-tool-right.svg'); /* Replace 'path/to/next-arrow-image.png' with your image path */
-    }
-
-    .carousel-control-prev-icon {
-      background-image: url('../../assets/images/car-painting-tool-left.svg'); /* Replace 'path/to/next-arrow-image.png' with your image path */
-      transform: scaleX(-1);
-    }
-
-
-    iframe {
-      aspect-ratio: 16/9;
-    }
-
-    .video-container {
-      margin: 2rem;
-      max-height: 300px;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    main {
-      display: grid;
-      place-items: center;
-      min-height: 100%;
-      margin: 50px auto;
-      @include tablet-view {
-        margin: 20px auto 60px
-      }
-      @include mobile-view {
-        margin: 20px auto 60px
       }
     }
 

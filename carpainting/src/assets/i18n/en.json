@@ -1,9 +1,9 @@
 {
   "navbar": {
     "Home": "Home",
-    "Details": "Details",
-    "Info": "Info",
-    "Contact": "Contact"
+    "Work": "Work",
+    "Contact": "Contact",
+    "Gallery": "Gallery"
   },
   "slider": {
     "scroll_down": "Scroll Down",

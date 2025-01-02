@@ -2,205 +2,215 @@
 @import "../../styles/colors";
 @import "../../styles/index";
 
-.container-fluid{
-  @include tablet-view{
+.container-fluid {
+  @include tablet-view {
     padding: 0 20px;
   }
-}
 
-.contact-form {
-  max-width: 1200px;
-  margin-top: 200px;
-  @include tablet-view{
-    margin-top: 100px;
-  }
-  @include mobile-view {
-    margin-top: 40px;
-  }
-
-  .form-row {
+  .contact-form {
+    max-width: 1200px;
+    margin-top: 200px;
+    @include tablet-view {
+      margin-top: 100px;
+    }
     @include mobile-view {
-      flex-direction: column;
-      gap: 16px;
-    }
-  }
-
-  .card {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    max-width: 680px;
-    padding: 15% 11%;
-    background-color: #F4F4F4;
-    border: none;
-    @include tablet-view{
-      max-width: 100%;
-      padding: 10% 7%;
-      margin-bottom: 16px;
-    }
-    @include mobile-view{
-      padding: 10% 4%;
-      gap: 15px;
-    }
-    .input-container {
-      position: relative;
-      width: 100%;
-
-      i {
-        position: absolute;
-        left: 15px;
-        top: 50%;
-        transform: translateY(-50%);
-        color: #747577;
-      }
-
-      .special {
-        top: 25%;
-      }
-
-      .invalid-input {
-        border-bottom: 0.8px solid red !important;
-      }
-      .border-animation {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        height: 1px;
-        background-color: black;
-        width: 0%;
-        transition: width 0.4s ease-in-out;
-      }
-
-      .border-animation.special-s {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 5px;
-        height: 1px;
-        background-color: black;
-        width: 0%;
-        transition: width 0.4s ease-in-out;
-      }
-
-      input:hover + .border-animation,
-      input:focus + .border-animation,
-      textarea:hover + .border-animation,
-      textarea:focus + .border-animation {
-        width: 100%;
-      }
-
-      input, textarea {
-        background-color: #F4F4F4;
-        width: 100%;
-        border: none;
-        padding-left: 45px;
-        border-bottom: 1px solid #c9c9c9;
-        outline: none;
-      }
-
-      input {
-        height: 51px;
-
-        &::placeholder {
-          color: #c9c9c9;
-          font-size: 18px;
-        }
-      }
-
-      textarea {
-        padding-top: 12px;
-        height: 90px;
-        resize: none;
-        box-sizing: border-box;
-
-        &::placeholder {
-          color: #c9c9c9;
-          font-size: 18px;
-        }
-      }
-
-      .error-message {
-        position: absolute;
-        bottom: -20px;
-        left: 0;
-        color: red;
-        font-size: 12px;
-      }
+      margin-top: 40px;
     }
 
-    span {
-      font-family: "Barlow Condensed", sans-serif;
-      font-size: 46px;
-      line-height: 47px;
-      font-weight: 600;
-      @include mobile-view{
-        font-size: 24px;
-      }
-    }
-
-    .get-in-touch {
-      max-width: 187px;
-      width: 100%;
-      height: 56px;
-      background-color: $secondary-color;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 10px;
-      font-family: "DM Sans", sans-serif;
-      line-height: 21px;
-      letter-spacing: 1.4px;
-      font-weight: 300;
-
-      @include tablet-view {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-      }
-
+    .form-row {
       @include mobile-view {
-        font-size: 13px;
-        max-width: 170px;
-        width: 100%;
-      }
-    }
-  }
-  .col-lg-7{
-    @include tablet-view{
-      padding: 0;
-    }
-    @include mobile-view{
-      padding: 0;
-    }
-  }
-
-
-  .col-lg-5 {
-    padding-left: 30px;
-    display: flex;
-    align-items: center;
-    @include tablet-view{
-      padding: 0;
-    }
-    @include mobile-view{
-      padding: 0;
-    }
-
-    .iframe{
-      width: 650px;
-      height: 613.3px;
-      border: 0;
-      @include tablet-view{
-        width: 100%;
-
+        flex-direction: column;
+        gap: 16px;
       }
     }
 
+    .card {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      max-width: 680px;
+      padding: 15% 11%;
+      background-color: #F4F4F4;
+      border: none;
+      @include tablet-view {
+        max-width: 100%;
+        padding: 10% 7%;
+        margin-bottom: 16px;
+      }
+      @include mobile-view {
+        padding: 10% 4%;
+        gap: 15px;
+      }
+
+      .input-container {
+        position: relative;
+        width: 100%;
+
+        i {
+          position: absolute;
+          left: 15px;
+          top: 50%;
+          transform: translateY(-50%);
+          color: #747577;
+        }
+
+        .special {
+          top: 25%;
+        }
+
+        .invalid-input {
+          border-bottom: 0.8px solid red !important;
+        }
+
+        .border-animation {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: 1px;
+          background-color: black;
+          width: 0%;
+          transition: width 0.4s ease-in-out;
+        }
+
+        .border-animation.special-s {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 5px;
+          height: 1px;
+          background-color: black;
+          width: 0%;
+          transition: width 0.4s ease-in-out;
+        }
+
+        input:hover + .border-animation,
+        input:focus + .border-animation,
+        textarea:hover + .border-animation,
+        textarea:focus + .border-animation {
+          width: 100%;
+        }
+
+        input, textarea {
+          background-color: #F4F4F4;
+          width: 100%;
+          border: none;
+          padding-left: 45px;
+          border-bottom: 1px solid #c9c9c9;
+          outline: none;
+        }
+
+        input {
+          height: 51px;
+
+          &::placeholder {
+            color: #c9c9c9;
+            font-size: 18px;
+          }
+        }
+
+        textarea {
+          padding-top: 12px;
+          height: 90px;
+          resize: none;
+          box-sizing: border-box;
+
+          &::placeholder {
+            color: #c9c9c9;
+            font-size: 18px;
+          }
+        }
+
+        .error-message {
+          position: absolute;
+          bottom: -20px;
+          left: 0;
+          color: red;
+          font-size: 12px;
+        }
+      }
+
+      span {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 46px;
+        line-height: 47px;
+        font-weight: 600;
+        @include mobile-view {
+          font-size: 24px;
+        }
+      }
+
+      .spinner-border {
+        width: 20px;
+        height: 20px;
+        border-width: 3px;
+      }
+
+      .get-in-touch {
+        max-width: 187px;
+        width: 100%;
+        height: 56px;
+        background-color: $secondary-color;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+        font-family: "DM Sans", sans-serif;
+        line-height: 21px;
+        letter-spacing: 1.4px;
+        font-weight: 300;
+
+        @include tablet-view {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0 auto;
+        }
+
+        @include mobile-view {
+          font-size: 13px;
+          max-width: 170px;
+          width: 100%;
+        }
+      }
+    }
+
+    .col-lg-7 {
+      @include tablet-view {
+        padding: 0;
+      }
+      @include mobile-view {
+        padding: 0;
+      }
+    }
+
+
+    .col-lg-5 {
+      padding-left: 15px;
+      display: flex;
+      align-items: center;
+      @include tablet-view {
+        padding: 0;
+      }
+      @include mobile-view {
+        padding: 0;
+      }
+
+      .iframe {
+        width: 650px;
+        height: 613.3px;
+        border: 0;
+        @include tablet-view {
+          width: 100%;
+
+        }
+      }
+
+
+    }
 
   }
 

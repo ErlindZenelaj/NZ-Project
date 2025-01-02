@@ -1,9 +1,9 @@
 {
   "navbar": {
     "Home": "Ballina",
-    "Details": "Detajet",
-    "Info": "Informacion",
-    "Contact": "Kontakti"
+    "Work": "Pune",
+    "Contact": "Kontakti",
+    "Gallery": "Galeria"
   },
   "slider": {
     "scroll_down": "Lëvizni poshtë",
