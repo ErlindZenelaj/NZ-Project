@@ -1,4 +1,4 @@
-import {Component, ElementRef, Renderer2, ViewChild} from '@angular/core';
+import {Component, Renderer2} from '@angular/core';
 import {CommonModule, NgOptimizedImage} from "@angular/common";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import 'swiper/swiper-bundle.css';
@@ -20,18 +20,8 @@ import {TranslateModule} from "@ngx-translate/core";
 export class HomeComponent {
   currentLayout: string = 'layout1';
   showFadeIn: boolean = true;
-  slides = [
-    {before: 'assets/images/slide-images/slide-img1.jpg', after: 'assets/images/slide-images/slide-img2.jpg'},
-    {before: 'assets/images/slide-images/slide-img3.jpg', after: 'assets/images/slide-images/slide-img3.jpg'},
-  ];
-  position: number = 50;
 
   constructor(private renderer: Renderer2) {
-  }
-
-  onSliderInput(event: Event): void {
-    const inputElement = event.target as HTMLInputElement;
-    this.position = inputElement.valueAsNumber;
   }
 
   onMouseMove(event: MouseEvent, overlayId: string): void {

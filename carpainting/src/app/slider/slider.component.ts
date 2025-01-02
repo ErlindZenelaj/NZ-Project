@@ -149,6 +149,7 @@ export class SliderComponent implements OnInit, AfterViewInit, OnDestroy {
       totalSlideNumberElement.textContent = String(this.swiper.slides.length).padStart(2, '0');
     }
   }
+
   scrollToContactForm(): void {
     const contactFormElement = document.getElementById('contact-form');
     if (contactFormElement) {

@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {LowerCasePipe, NgClass, NgForOf, NgOptimizedImage} from "@angular/common";
 import {SliderComponent} from "../slider/slider.component";
-import {LangChangeEvent, TranslateModule, TranslateService} from "@ngx-translate/core";
+import {TranslateModule, TranslateService} from "@ngx-translate/core";
 import {FormsModule} from "@angular/forms";
 
 @Component({

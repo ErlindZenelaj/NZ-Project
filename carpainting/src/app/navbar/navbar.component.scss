@@ -129,7 +129,7 @@
         transition: all 0.3s ease-in-out;
       }
       .example-2 .icon-content a:hover {
-        box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+        box-shadow: 3px 2px 45px 0 rgb(0 0 0 / 12%);
       }
       .example-2 .icon-content a svg {
         position: relative;
@@ -183,12 +183,12 @@
 
     .btn-color-mode-switch {
       display: inline-block;
-      margin: 0px;
+      margin: 0;
       position: relative;
     }
 
     .btn-color-mode-switch > label.btn-color-mode-switch-inner {
-      margin: 0px;
+      margin: 0;
       width: 140px;
       height: 40px;
       background-color: #E41B17;
@@ -239,7 +239,7 @@
       position: absolute;
       top: 0;
       z-index: 1;
-      margin: 0px;
+      margin: 0;
     }
 
     .btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner {
