@@ -3,12 +3,25 @@
 <app-slider></app-slider>
 
 
-<div class="container-fluid custom-field"  id="work">
+<div class="container-fluid custom-field" id="work">
   <div class="container c-custom">
     <div class="text">
       <h3>{{ 'home.welcome' | translate }}</h3>
       <h1>{{ 'home.heading' | translate }}</h1>
     </div>
+
+    <div class="comparison-slider-wrapper">
+      <div class="comparison-slider">
+        <div [innerHTML]="'home.overlay_after' | translate" class="overlay"></div>
+        <img alt="After Image" src="/assets/images/before-after/before1.jpg">
+        <div class="resize">
+          <div [innerHTML]="'home.overlay_before' | translate" class="overlay"></div>
+          <img alt="Before Image" class="before-img" src="/assets/images/before-after/before2.jpg">
+        </div>
+        <div class="divider"></div>
+      </div>
+    </div>
+
 
   </div>
 </div>
@@ -20,17 +33,17 @@
       <div class="left-side">
         <div class="row">
           <div class="col-lg-6 col-md-6 col-6 left">
-            <img ngSrc="assets/images/painting.jpeg" alt="Painting" height="1172" width="880">
+            <img alt="Painting" height="1172" ngSrc="assets/images/painting.jpeg" width="880">
           </div>
           <div class="col-lg-6 col-md-6 col-6 right">
-            <img ngSrc="assets/images/painting1.jpeg" alt="Painting1" class="second-img" height="900" width="820">
+            <img alt="Painting1" class="second-img" height="900" ngSrc="assets/images/painting1.jpeg" width="820">
           </div>
         </div>
       </div>
     </div>
     <div class="col-lg-5 col-md-6 col-12">
       <div class="card-body">
-        <h3>{{ 'home.fix_it' | translate}}</h3>
+        <h3>{{ 'home.fix_it' | translate }}</h3>
         <h1>{{ 'home.heading_fix' | translate }}</h1>
         <p>{{ 'home.heading_paragraph' | translate }}</p>
       </div>
@@ -48,45 +61,45 @@
 <app-contactform></app-contactform>
 
 
-<div class="container gallery"  id="gallery">
+<div class="container gallery" id="gallery">
   <ul class="navbar-nav mb-2">
-    <li class="nav-item" (click)="setLayout('layout1')">
+    <li (click)="setLayout('layout1')" class="nav-item">
       <a [class.active]="currentLayout === 'layout1'" class="nav-link">{{ 'painting.layout_1.paint' | translate }}</a>
     </li>
-    <li class="nav-item" (click)="setLayout('layout2')">
+    <li (click)="setLayout('layout2')" class="nav-item">
       <a [class.active]="currentLayout === 'layout2'" class="nav-link">{{ 'painting.layout_2.paint' | translate }}</a>
     </li>
-    <li class="nav-item" (click)="setLayout('layout3')">
+    <li (click)="setLayout('layout3')" class="nav-item">
       <a [class.active]="currentLayout === 'layout3'" class="nav-link">{{ 'painting.layout_3.paint' | translate }}</a>
     </li>
   </ul>
 
   <!-- Layout 1 -->
-  <div *ngIf="currentLayout === 'layout1'" class="all" [ngClass]="{'fade-in': showFadeIn}">
+  <div *ngIf="currentLayout === 'layout1'" [ngClass]="{'fade-in': showFadeIn}" class="all">
     <div class="col-lg-6 col-md-6 col-12">
-      <div class="image-container" (mousemove)="onMouseMove($event, 'desc1')" (mouseleave)="onMouseLeave('desc1')">
-        <img ngSrc="assets/images/gallery-first-image.webp" alt="" data-text="Image 1" height="1217" width="1920">
-        <div class="overlay" id="desc1">{{'painting.layout_1.img_1' | translate}}</div>
+      <div (mouseleave)="onMouseLeave('desc1')" (mousemove)="onMouseMove($event, 'desc1')" class="image-container">
+        <img alt="" data-text="Image 1" height="1217" ngSrc="assets/images/gallery-first-image.webp" width="1920">
+        <div class="overlay" id="desc1">{{ 'painting.layout_1.img_1' | translate }}</div>
       </div>
     </div>
     <div class="col-lg-3 col-md-6 col-12">
-      <div class="image-container" (mousemove)="onMouseMove($event, 'desc2')" (mouseleave)="onMouseLeave('desc2')">
-        <img ngSrc="assets/images/gallery-second-image.webp" alt="" height="1281" width="1920">
-        <div class="overlay" id="desc2">{{'painting.layout_1.img_2' | translate}}</div>
+      <div (mouseleave)="onMouseLeave('desc2')" (mousemove)="onMouseMove($event, 'desc2')" class="image-container">
+        <img alt="" height="1281" ngSrc="assets/images/gallery-second-image.webp" width="1920">
+        <div class="overlay" id="desc2">{{ 'painting.layout_1.img_2' | translate }}</div>
       </div>
     </div>
     <div class="col-lg-3 col-md-12 col-12">
       <div class="row right-side">
         <div class="col-md-12">
-          <div class="image-container" (mousemove)="onMouseMove($event, 'desc3')" (mouseleave)="onMouseLeave('desc3')">
-            <img ngSrc="assets/images/gallery-third-image.webp" alt="" height="1280" width="1920">
-            <div class="overlay" id="desc3">{{'painting.layout_1.img_3' | translate}}</div>
+          <div (mouseleave)="onMouseLeave('desc3')" (mousemove)="onMouseMove($event, 'desc3')" class="image-container">
+            <img alt="" height="1280" ngSrc="assets/images/gallery-third-image.webp" width="1920">
+            <div class="overlay" id="desc3">{{ 'painting.layout_1.img_3' | translate }}</div>
           </div>
         </div>
         <div class="col-md-12 col-12 special">
-          <div class="image-container" (mousemove)="onMouseMove($event, 'desc4')" (mouseleave)="onMouseLeave('desc4')">
-            <img ngSrc="assets/images/gallery-fourth-image.webp" alt="" height="1280" width="1920">
-            <div class="overlay" id="desc4">{{'painting.layout_1.img_4' | translate}}</div>
+          <div (mouseleave)="onMouseLeave('desc4')" (mousemove)="onMouseMove($event, 'desc4')" class="image-container">
+            <img alt="" height="1280" ngSrc="assets/images/gallery-fourth-image.webp" width="1920">
+            <div class="overlay" id="desc4">{{ 'painting.layout_1.img_4' | translate }}</div>
           </div>
         </div>
       </div>
@@ -94,25 +107,25 @@
   </div>
 
   <!-- Layout 2 -->
-  <div *ngIf="currentLayout === 'layout2'" class="all" [ngClass]="{'fade-in': showFadeIn}">
+  <div *ngIf="currentLayout === 'layout2'" [ngClass]="{'fade-in': showFadeIn}" class="all">
     <div class="col-lg-6 col-md-12 col-12">
-      <div class="image-container" (mousemove)="onMouseMove($event, 'desc5')" (mouseleave)="onMouseLeave('desc5')">
-        <img ngSrc="assets/images/galleryThird-third.webp" alt="" height="4723" width="7081">
-        <div class="overlay" id="desc5">{{'painting.layout_2.img_1' | translate}}</div>
+      <div (mouseleave)="onMouseLeave('desc5')" (mousemove)="onMouseMove($event, 'desc5')" class="image-container">
+        <img alt="" height="4723" ngSrc="assets/images/galleryThird-third.webp" width="7081">
+        <div class="overlay" id="desc5">{{ 'painting.layout_2.img_1' | translate }}</div>
       </div>
     </div>
     <div class="col-lg-6 col-md-12 col-12">
       <div class="row right-side-second">
         <div class="col-lg-12 col-md-6">
-          <div class="image-container" (mousemove)="onMouseMove($event, 'desc6')" (mouseleave)="onMouseLeave('desc6')">
-            <img ngSrc="assets/images/galleryThird-first.webp" alt="" height="1600" width="2560">
-            <div class="overlay" id="desc6">{{'painting.layout_2.img_2' | translate}}</div>
+          <div (mouseleave)="onMouseLeave('desc6')" (mousemove)="onMouseMove($event, 'desc6')" class="image-container">
+            <img alt="" height="1600" ngSrc="assets/images/galleryThird-first.webp" width="2560">
+            <div class="overlay" id="desc6">{{ 'painting.layout_2.img_2' | translate }}</div>
           </div>
         </div>
         <div class="col-lg-12 col-md-6 col-12 special">
-          <div class="image-container" (mousemove)="onMouseMove($event, 'desc7')" (mouseleave)="onMouseLeave('desc7')">
-            <img ngSrc="assets/images/galleryThird-second.webp" alt="" height="4480" width="6720">
-            <div class="overlay" id="desc7">{{'painting.layout_2.img_3' | translate}}</div>
+          <div (mouseleave)="onMouseLeave('desc7')" (mousemove)="onMouseMove($event, 'desc7')" class="image-container">
+            <img alt="" height="4480" ngSrc="assets/images/galleryThird-second.webp" width="6720">
+            <div class="overlay" id="desc7">{{ 'painting.layout_2.img_3' | translate }}</div>
           </div>
         </div>
       </div>
@@ -120,23 +133,23 @@
   </div>
 
   <!-- Layout 3 -->
-  <div *ngIf="currentLayout === 'layout3'" class="all" [ngClass]="{'fade-in': showFadeIn}">
+  <div *ngIf="currentLayout === 'layout3'" [ngClass]="{'fade-in': showFadeIn}" class="all">
     <div class="col-lg-4 col-md-6 col-12">
-      <div class="image-container" (mousemove)="onMouseMove($event, 'desc8')" (mouseleave)="onMouseLeave('desc8')">
-        <img ngSrc="assets/images/gallerySecond-first.webp" alt="" height="1280" width="1920">
-        <div class="overlay" id="desc8">{{'painting.layout_3.img_1' | translate}}</div>
+      <div (mouseleave)="onMouseLeave('desc8')" (mousemove)="onMouseMove($event, 'desc8')" class="image-container">
+        <img alt="" height="1280" ngSrc="assets/images/gallerySecond-first.webp" width="1920">
+        <div class="overlay" id="desc8">{{ 'painting.layout_3.img_1' | translate }}</div>
       </div>
     </div>
     <div class="col-lg-4 col-md-6 col-12">
-      <div class="image-container" (mousemove)="onMouseMove($event, 'desc9')" (mouseleave)="onMouseLeave('desc9')">
-        <img ngSrc="assets/images/gallerySecond-second.webp" alt="" height="1280" width="1920">
-        <div class="overlay" id="desc9">{{'painting.layout_3.img_2' | translate}}</div>
+      <div (mouseleave)="onMouseLeave('desc9')" (mousemove)="onMouseMove($event, 'desc9')" class="image-container">
+        <img alt="" height="1280" ngSrc="assets/images/gallerySecond-second.webp" width="1920">
+        <div class="overlay" id="desc9">{{ 'painting.layout_3.img_2' | translate }}</div>
       </div>
     </div>
     <div class="col-lg-4 col-md-12 col-12 ">
-      <div class="image-container" (mousemove)="onMouseMove($event, 'desc10')" (mouseleave)="onMouseLeave('desc10')">
-        <img ngSrc="assets/images/gallerySecond-third.webp" alt="" height="1280" width="1920">
-        <div class="overlay" id="desc10">{{'painting.layout_3.img_3' | translate}}</div>
+      <div (mouseleave)="onMouseLeave('desc10')" (mousemove)="onMouseMove($event, 'desc10')" class="image-container">
+        <img alt="" height="1280" ngSrc="assets/images/gallerySecond-third.webp" width="1920">
+        <div class="overlay" id="desc10">{{ 'painting.layout_3.img_3' | translate }}</div>
       </div>
     </div>
   </div>

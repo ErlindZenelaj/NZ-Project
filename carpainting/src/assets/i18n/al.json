@@ -23,6 +23,8 @@
   "home": {
     "welcome": "Mirë se vini te Naseri",
     "heading": "Riparime, shërbime mirëmbajtjeje, të ofruara me përvojë, kujdes, saktësi dhe ekspertizë.",
+    "overlay_after": "Dhe unë jam imazhi i <strong>mëparshëm</strong",
+    "overlay_before": "Unë jam imazhi <strong>para</strong>",
     "fix_it": "Mund ta rregullojmë",
     "heading_fix": "Ne mund të ndihmojmë me riparimin e përplasjes",
     "heading_paragraph": "Shërbimet tona përfshijnë teknika të restaurimit të bojës që ringjallin shkëlqimin e bojës së automjetit tuaj, duke hequr oksidimin dhe papërsosmëritë e vogla.",

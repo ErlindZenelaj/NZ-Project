@@ -23,6 +23,8 @@
   "home": {
     "welcome": "Welcome to Naseri",
     "heading": "Repairs, maintenance services, provided with experience, care, precision and expertise.",
+    "overlay_after": "And I am the <strong>after</strong> image.",
+    "overlay_before": "I am the <strong>before</strong> image.",
     "fix_it": "We can fix it",
     "heading_fix": "We can help with a collision repair",
     "heading_paragraph": "Our detailing services include paint restoration techniques that revive the luster of your vehicle’s paint, removing oxidation and minor imperfections.",
