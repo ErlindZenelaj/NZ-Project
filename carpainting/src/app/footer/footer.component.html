@@ -8,7 +8,7 @@
           <p class="text">{{ 'footer.welcome_p' | translate }}</p>
         </div>
         <div class="col-md-3 ml-auto">
-          <h3>{{ 'footer.office' | translate }}</h3>
+          <h1>{{ 'footer.office' | translate }}</h1>
           <ul class="list-unstyled links">
             <li><a href="">Kosova - Theranda</a></li>
             <li><a href="">Greikoc</a></li>
@@ -16,16 +16,21 @@
           </ul>
         </div>
         <div class="col-md-3 ml-auto">
-          <h3>{{ 'footer.links' | translate }}</h3>
+          <h1>{{ 'footer.links' | translate }}</h1>
           <ul class="list-unstyled links">
-            <li><a href="">Home</a></li>
-            <li><a href="">Details</a></li>
-            <li><a href="">Info</a></li>
-            <li><a href="">Contact</a></li>
+            <li *ngFor="let link of links" class="nav-item">
+              <button
+                class="nav-link"
+                [class.active]="link === 'Home'"
+                (click)="scrollTo(link)"
+              >
+                {{ getTranslatedLink(link) }}
+              </button>
+            </li>
           </ul>
         </div>
         <div class="col-md-2 ml-auto">
-          <h3>{{ 'footer.get_in' | translate }}</h3>
+          <h1>{{ 'footer.get_in' | translate }}</h1>
           <ul class="list-unstyled links">
             <li>
               <a href="https://www.facebook.com" target="_blank">

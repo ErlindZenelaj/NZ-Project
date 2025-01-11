@@ -11,14 +11,87 @@
   }
   @include mobile-view {
     padding: 0;
-    height: 79px;
+    height: 70px;
   }
 
   .container-fluid {
     padding: 0 16px;
     z-index: 1000;
     background-color: white;
+
+    @include mobile-view {
+      padding: 0 12px;
+    }
+
+    .navbar-brand {
+      img {
+        @include mobile-view {
+          max-width: 70%;
+        }
+      }
+    }
   }
+
+  .custom-ham {
+    display: none;
+    transform: scale(0.7);
+    @include tablet-view {
+      display: flex;
+    }
+    @include mobile-view {
+      display: flex;
+    }
+
+    #checkbox {
+      display: none;
+    }
+
+    .toggle {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition-duration: .3s;
+    }
+
+    .bars {
+      width: 100%;
+      height: 4px;
+      background-color: #121114;
+      border-radius: 5px;
+      transition-duration: .3s;
+    }
+
+    #checkbox:checked + .toggle .bars {
+      margin-left: 13px;
+    }
+
+    #checkbox:checked + .toggle #bar2 {
+      transform: rotate(135deg);
+      margin-left: 0;
+      transform-origin: center;
+      transition-duration: .3s;
+    }
+
+    #checkbox:checked + .toggle #bar1 {
+      transform: rotate(45deg);
+      transition-duration: .3s;
+      transform-origin: left center;
+    }
+
+    #checkbox:checked + .toggle #bar3 {
+      transform: rotate(-45deg);
+      transition-duration: .3s;
+      transform-origin: left center;
+    }
+
+  }
+
 
   .nav-item {
     position: relative;
@@ -38,21 +111,9 @@
       font-size: 17px;
       line-height: 25.5px;
       text-transform: uppercase;
+      position: relative;
 
-
-      &.active::after,
-      &:hover::after {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 2px;
-        background-color: $primary-color;
-        position: absolute;
-        bottom: 3px;
-        left: 0;
-      }
-
-      &:not(.active)::after {
+      &::after {
         content: '';
         display: block;
         width: 0;
@@ -67,20 +128,46 @@
       &:hover::after {
         width: 100%;
       }
+
+      &.active::after {
+        width: 100%;
+      }
+
+      @include tablet-view {
+        &::after {
+          display: none;
+        }
+      }
+      @include mobile-view {
+        &::after {
+          display: none;
+        }
+      }
     }
   }
 
+
   .nav-right-side {
-   @include mobile-view{
-     display: flex;
-     justify-content: start;
-     align-items: start;
-   }
-    .icons{
-      margin-right: 10px;
+    @include tablet-view {
+      align-items: flex-start;
+    }
+    @include mobile-view {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-top: 1px solid lightgray;
+      padding-top: 10px;
+    }
+
+    .links {
       ul {
         list-style: none;
-        @include mobile-view{
+        margin-right: 10px;
+        @include tablet-view {
+          padding-left: 0;
+        }
+        @include mobile-view {
           padding-left: 0;
         }
       }
@@ -90,13 +177,18 @@
         justify-content: center;
         align-items: center;
       }
+
       .example-2 .icon-content {
         margin: 0 10px;
         position: relative;
-        @include mobile-view{
+        @include tablet-view {
+          margin: 0;
+        }
+        @include mobile-view {
           margin: 0;
         }
       }
+
       .example-2 .icon-content .tooltip {
         position: absolute;
         top: -30px;
@@ -110,11 +202,13 @@
         font-size: 14px;
         transition: all 0.3s ease;
       }
+
       .example-2 .icon-content:hover .tooltip {
         opacity: 1;
         visibility: visible;
         top: -40px;
       }
+
       .example-2 .icon-content a {
         position: relative;
         overflow: hidden;
@@ -128,18 +222,26 @@
         background-color: #fff;
         transition: all 0.3s ease-in-out;
       }
+
       .example-2 .icon-content a:hover {
         box-shadow: 3px 2px 45px 0 rgb(0 0 0 / 12%);
       }
+
       .example-2 .icon-content a svg {
         position: relative;
         z-index: 1;
         width: 30px;
         height: 30px;
+        @include mobile-view{
+          width: 22px;
+          height: 22px;
+        }
       }
+
       .example-2 .icon-content a:hover {
         color: white;
       }
+
       .example-2 .icon-content a .filled {
         position: absolute;
         top: auto;
@@ -150,6 +252,7 @@
         background-color: #000;
         transition: all 0.3s ease-in-out;
       }
+
       .example-2 .icon-content a:hover .filled {
         height: 100%;
       }
@@ -258,7 +361,6 @@
     }
 
 
-
     .phone-numbers {
       display: flex;
       justify-content: center;
@@ -349,14 +451,15 @@
     }
   }
 }
+
 @media screen and (min-width: 1024px) {
-  .navbar{
+  .navbar {
     padding: 0;
   }
-  .navbar-expand-lg .navbar-collapse{
+  .navbar-expand-lg .navbar-collapse {
     gap: 40px !important;
   }
-  .img-fluid{
+  .img-fluid {
     max-width: 90%;
   }
 }

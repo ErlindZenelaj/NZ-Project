@@ -33,6 +33,13 @@ export class NavbarComponent {
     return this.translateService.instant(`navbar.${link}`);
   }
 
+  scrollTo(link: string): void {
+    const el = document.getElementById(link.toLowerCase());
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
   toggleLanguage() {
     this.isEnglish = !this.isEnglish;
     const lang = this.isEnglish ? 'en' : 'al';

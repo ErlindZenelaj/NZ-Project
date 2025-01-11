@@ -14,9 +14,8 @@ import {TranslateModule} from "@ngx-translate/core";
   imports: [ReactiveFormsModule, CommonModule, FormsModule, NgOptimizedImage, SliderComponent, ContactformComponent, FooterComponent, NavbarComponent, TranslateModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
-
-
 })
+
 export class HomeComponent implements AfterViewInit{
   currentLayout: string = 'layout1';
   showFadeIn: boolean = true;
@@ -53,13 +52,13 @@ export class HomeComponent implements AfterViewInit{
 
     const startDragging = (event: MouseEvent | TouchEvent) => {
       this.touched = event.type === 'touchstart';
-      document.body.classList.add('no-scroll'); // Disable page scroll
+      document.body.classList.add('no-scroll');
       window.addEventListener(this.touched ? 'touchmove' : 'mousemove', onMove);
       window.addEventListener(this.touched ? 'touchend' : 'mouseup', stopDragging);
     };
 
     const stopDragging = () => {
-      // document.body.classList.remove('no-scroll'); // Re-enable page scroll
+      document.body.classList.remove('no-scroll');
       window.removeEventListener(this.touched ? 'touchmove' : 'mousemove', onMove);
       window.removeEventListener(this.touched ? 'touchend' : 'mouseup', stopDragging);
     };

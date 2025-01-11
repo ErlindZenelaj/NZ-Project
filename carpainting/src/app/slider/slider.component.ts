@@ -16,7 +16,7 @@ import {LangChangeEvent, TranslateModule, TranslateService} from "@ngx-translate
   styleUrl: './slider.component.scss'
 })
 export class SliderComponent implements OnInit, AfterViewInit, OnDestroy {
-  @ViewChild('swiperContainer', { static: false }) swiperContainer!: ElementRef;
+  @ViewChild('swiperContainer', {static: false}) swiperContainer!: ElementRef;
   @ViewChild('progressBar') progressBar!: ElementRef;
   swiper: any;
   progress: number = 0;
@@ -27,7 +27,7 @@ export class SliderComponent implements OnInit, AfterViewInit, OnDestroy {
   selectedLanguage: string = '';
 
 
-  constructor(public translateService: TranslateService,private renderer: Renderer2) {
+  constructor(public translateService: TranslateService, private renderer: Renderer2) {
     this.translateService.onLangChange.subscribe((event: LangChangeEvent) => {
       this.selectedLanguage = event.lang.toUpperCase();
     });
@@ -35,7 +35,8 @@ export class SliderComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
   ngAfterViewInit(): void {
     this.initSwiper();
@@ -151,7 +152,7 @@ export class SliderComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   scrollToContactForm(): void {
-    const contactFormElement = document.getElementById('contact-form');
+    const contactFormElement = document.getElementById('contact');
     if (contactFormElement) {
       window.scrollTo({
         top: contactFormElement.offsetTop,
