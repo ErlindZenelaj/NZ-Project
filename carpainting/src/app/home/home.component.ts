@@ -66,7 +66,7 @@ export class HomeComponent implements AfterViewInit {
   }
 
   scrollToContactForm(): void {
-    const contactFormElement = document.getElementById('contact-form');
+    const contactFormElement = document.getElementById('contact');
     if (contactFormElement) {
       window.scrollTo({
         top: contactFormElement.offsetTop,

@@ -26,6 +26,9 @@
 
     .text {
       margin-top: 120px;
+      @include tablet-view{
+        margin-top: 70px;
+      }
       @include mobile-view {
         margin-top: 50px;
       }
@@ -243,7 +246,7 @@
     height: 100%;
     object-fit: cover;
     @include tablet-view {
-      width: 260px;
+      width: 100%;
     }
     @include mobile-view {
       width: 280ox;
@@ -255,9 +258,11 @@
     right: 60px;
     top: 80px;
     @include tablet-view {
-      right: 10px;
-      height: 280px;
-      top: 155px;
+      top: 0;
+      right: 0;
+      position: relative;
+      width: 100%;
+      height: 100%;
     }
     @include mobile-view {
       position: unset;
@@ -283,8 +288,8 @@
 
     h2 {
       text-transform: uppercase;
-      font-size: 57px;
-      line-height: 57px;
+      font-size: 40px;
+      line-height: 40px;
       letter-spacing: -0.6px;
       margin-bottom: 15px;
       @include tablet-view {
@@ -393,7 +398,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 0 auto;
     }
     @include mobile-view {
       font-size: 13px;

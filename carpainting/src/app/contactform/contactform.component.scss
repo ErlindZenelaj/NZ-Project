@@ -181,7 +181,6 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          margin: 0 auto;
         }
 
         @include mobile-view {
@@ -213,9 +212,9 @@
         padding: 0;
       }
 
-      .iframe {
+      iframe {
         width: 650px;
-        height: 613.3px;
+        min-height: 613.3px;
         border: 0;
         @include tablet-view {
           width: 100%;
@@ -234,22 +233,22 @@
 
 ::ng-deep {
   div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm) {
-    background-color: #FE600E;
+    background-color: #00247D;
     font-size: 16px;
     width: 90px;
   }
 
   div:where(.swal2-icon).swal2-success .swal2-success-ring {
-    border: .25em solid #fe600e66;
+    border: .25em solid rgba(0, 36, 125, 0.35);
   }
 
   div:where(.swal2-icon).swal2-success [class^=swal2-success-line] {
-    background-color: #fe600e66;
+    background-color: rgba(0, 36, 125, 0.35);
   }
 
   div:where(.swal2-icon).swal2-success {
-    border-color: #fe600e66;
-    color: #fe600e66;
+    border-color: rgba(0, 36, 125, 0.35);
+    color: rgba(0, 36, 125, 0.35);
   }
 
 }

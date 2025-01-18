@@ -43,7 +43,8 @@
     "error_2": "Email është i nevojshëm",
     "error_3": "Mesazhi është i nevojshëm",
     "email_sent_title": "Emaili juaj u dërgua me sukses.",
-    "confirm_button": "OK"
+    "confirm_button": "OK",
+    "error_msg": "Ky format i email-it është i pavlefshëm"
   },
   "painting": {
     "layout_1": {
@@ -72,6 +73,6 @@
     "office": "Zyrja",
     "links": "Linqet",
     "get_in": "Kontaktet",
-    "all_rights": "Naseri © 2024. Të gjitha të drejtat e rezervuara."
+    "all_rights": "Naseri © 2025. Të gjitha të drejtat e rezervuara."
   }
 }

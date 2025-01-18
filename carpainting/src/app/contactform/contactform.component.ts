@@ -24,9 +24,10 @@ export class ContactformComponent {
   isLoading = false;
 
   constructor(private fb: FormBuilder, private translate: TranslateService) {
+    const emailPattern = /^[-!#$%&'*+/=?^_`{|}~A-Za-z0-9]+(?:\.[-!#$%&'*+/=?^_`{|}~A-Za-z0-9]+)*@([A-Za-z0-9]([A-Za-z0-9-]*[A-Za-z0-9])?\.)+[A-Za-z0-9][A-Za-z0-9-]*[A-Za-z0-9]/;
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
+      email: ['', [Validators.required, Validators.pattern(emailPattern), Validators.email]],
       message: ['', Validators.required]
     });
   }

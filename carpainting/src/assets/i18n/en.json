@@ -43,7 +43,8 @@
     "error_2": "Email is required",
     "error_3": "Message is required",
     "email_sent_title": "Your email has been sent successfully.",
-    "confirm_button": "OK"
+    "confirm_button": "OK",
+    "error_msg": "This email format is invalid"
   },
   "painting": {
     "layout_1": {
@@ -72,6 +73,6 @@
     "office": "Office",
     "links": "Links",
     "get_in": "Get in touch",
-    "all_rights": "Naseri © 2024. All rights reserved."
+    "all_rights": "Naseri © 2025. All rights reserved."
   }
 }

@@ -23,9 +23,12 @@
                 formControlName="email" placeholder="{{'contact.email' | translate}}"
                 type="email">
               <div class="border-animation"></div>
-              <small *ngIf="contactForm.controls['email'].invalid && contactForm.controls['email'].touched"
-                     class="error-message">
-                {{ 'contact.error_2' | translate }}</small>
+              <small *ngIf="contactForm.get('email')?.hasError('required') && contactForm.get('email')?.touched" class="error-message">
+                {{ 'contact.error_2' | translate }}
+              </small>
+              <small *ngIf="!contactForm.get('email')?.hasError('required') && contactForm.get('email')?.hasError('pattern') && contactForm.get('email')?.touched" class="error-message">
+                {{ 'contact.error_msg' | translate }}
+              </small>
             </div>
             <div class="input-container">
               <i class="fa-solid fa-pencil special"></i>
@@ -52,7 +55,6 @@
       <div class="col-lg-5 col-md-12">
         <iframe
           allowfullscreen=""
-          class="iframe"
           loading="lazy"
           referrerpolicy="strict-origin-when-cross-origin"
           crossorigin="anonymous"

@@ -1,14 +1,14 @@
 <div class="swiper">
-  <div class="swiper-container" #swiperContainer>
+  <div #swiperContainer class="swiper-container">
     <div class="swiper-wrapper">
       <div class="swiper-slide" data-swiper-autoplay="6000">
         <div class="text">
           <h2>{{ 'slider.slide_1.heading_1' | translate }}</h2>
           <h1>{{ 'slider.slide_1.heading_2' | translate }}</h1>
         </div>
-        <img src="assets/images/slide-images/slide-img1.webp" alt="car-details" >
+        <img alt="car-details" src="assets/images/slide-images/slide-img1.webp">
         <div class="scroll-down">
-          <div class="scroll" (click)="scrollToContactForm()">
+          <div (click)="scrollToContactForm()" class="scroll">
             <h2 class="custom-text">{{ 'slider.scroll_down' | translate }}</h2>
             <i class="fa-solid fa-arrow-down"></i>
           </div>
@@ -19,9 +19,9 @@
           <h2>{{ 'slider.slide_2.heading_1' | translate }}</h2>
           <h1>{{ 'slider.slide_2.heading_2' | translate }}</h1>
         </div>
-        <img src="assets/images/slide-images/slide-img2.webp" alt="car-details">
+        <img alt="car-details" src="assets/images/slide-images/slide-img2.webp">
         <div class="scroll-down">
-          <div class="scroll" (click)="scrollToContactForm()">
+          <div (click)="scrollToContactForm()" class="scroll">
             <h2 class="custom-text">{{ 'slider.scroll_down' | translate }}</h2>
             <i class="fa-solid fa-arrow-down"></i>
           </div>
@@ -32,16 +32,16 @@
           <h2>{{ 'slider.slide_3.heading_1' | translate }}</h2>
           <h1>{{ 'slider.slide_3.heading_2' | translate }}</h1>
         </div>
-        <img src="assets/images/slide-images/slide-img3.webp" alt="car-detail">
-        <div class="scroll-down" >
-          <div class="scroll" (click)="scrollToContactForm()">
+        <img alt="car-detail" src="assets/images/slide-images/slide-img3.webp">
+        <div class="scroll-down">
+          <div (click)="scrollToContactForm()" class="scroll">
             <h2 class="custom-text">{{ 'slider.scroll_down' | translate }}</h2>
             <i class="fa-solid fa-arrow-down"></i>
           </div>
         </div>
       </div>
     </div>
-    <div class="progressbar" #progressBar>
+    <div #progressBar class="progressbar">
       <div class="progress-container">
         <span id="current-slide-number">01</span>
         <div aria-label="Example 1px high" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25"
