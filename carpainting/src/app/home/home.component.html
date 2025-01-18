@@ -13,10 +13,10 @@
     <div class="comparison-slider-wrapper">
       <div class="comparison-slider">
         <div [innerHTML]="'home.overlay_after' | translate" class="overlay"></div>
-        <img alt="After Image" src="/assets/images/before-after/before2.jpg">
+        <img alt="After Image" src="/assets/images/before-after/before2.webp">
         <div class="resize">
           <div [innerHTML]="'home.overlay_before' | translate" class="overlay"></div>
-          <img alt="Before Image" class="before-img" src="/assets/images/before-after/before1.jpg">
+          <img alt="Before Image" class="before-img" src="/assets/images/before-after/before1.webp">
         </div>
         <div class="divider"></div>
       </div>
@@ -32,10 +32,10 @@
       <div class="left-side">
         <div class="row">
           <div class="col-lg-6 col-md-6 col-6 left">
-            <img alt="Painting" height="1172" ngSrc="assets/images/painting.jpeg" width="880">
+            <img alt="Painting" src="assets/images/painting.webp">
           </div>
           <div class="col-lg-6 col-md-6 col-6 right">
-            <img alt="Painting1" class="second-img" height="900" ngSrc="assets/images/painting1.jpeg" width="820">
+            <img alt="Painting1" class="second-img" src="assets/images/painting1.webp">
           </div>
         </div>
       </div>
@@ -55,12 +55,12 @@
 
       <div class="phone-numbers">
         <div class="info-number">
-          <img src="/assets/images/ipko-icon.svg" alt="">
+          <img alt="ipko-icon" src="/assets/images/ipko-icon.svg">
           <p>+383 49 491 331</p>
         </div>
 
         <div class="info-number">
-          <img src="/assets/images/vala-icon.png" alt="">
+          <img alt="vala-icon" src="/assets/images/vala-icon.webp">
           <p>+383 44 102 372</p>
         </div>
       </div>
@@ -76,13 +76,19 @@
 <div class="container gallery" id="gallery">
   <ul class="navbar-nav mb-2">
     <li (click)="setLayout('layout1')" class="nav-item">
-      <button [class.active]="currentLayout === 'layout1'" class="nav-link">{{ 'painting.layout_1.paint' | translate }}</button>
+      <button [class.active]="currentLayout === 'layout1'"
+              class="nav-link">{{ 'painting.layout_1.paint' | translate }}
+      </button>
     </li>
     <li (click)="setLayout('layout2')" class="nav-item">
-      <button [class.active]="currentLayout === 'layout2'" class="nav-link">{{ 'painting.layout_2.paint' | translate }}</button>
+      <button [class.active]="currentLayout === 'layout2'"
+              class="nav-link">{{ 'painting.layout_2.paint' | translate }}
+      </button>
     </li>
     <li (click)="setLayout('layout3')" class="nav-item">
-      <button [class.active]="currentLayout === 'layout3'" class="nav-link">{{ 'painting.layout_3.paint' | translate }}</button>
+      <button [class.active]="currentLayout === 'layout3'"
+              class="nav-link">{{ 'painting.layout_3.paint' | translate }}
+      </button>
     </li>
   </ul>
 
@@ -104,7 +110,7 @@
       <div class="row right-side">
         <div class="col-md-12">
           <div (mouseleave)="onMouseLeave('desc3')" (mousemove)="onMouseMove($event, 'desc3')" class="image-container">
-            <img alt="car-painting"  src="assets/images/gallery-third-image.webp">
+            <img alt="car-painting" src="assets/images/gallery-third-image.webp">
             <div class="overlay" id="desc3">{{ 'painting.layout_1.img_3' | translate }}</div>
           </div>
         </div>
@@ -148,19 +154,19 @@
   <div *ngIf="currentLayout === 'layout3'" [ngClass]="{'fade-in': showFadeIn}" class="all">
     <div class="col-lg-4 col-md-6 col-12">
       <div (mouseleave)="onMouseLeave('desc8')" (mousemove)="onMouseMove($event, 'desc8')" class="image-container">
-        <img alt="car-repair" height="1280" ngSrc="assets/images/gallerySecond-first.webp" width="1920">
+        <img alt="car-repair" src="assets/images/gallerySecond-first.webp">
         <div class="overlay" id="desc8">{{ 'painting.layout_3.img_1' | translate }}</div>
       </div>
     </div>
     <div class="col-lg-4 col-md-6 col-12">
       <div (mouseleave)="onMouseLeave('desc9')" (mousemove)="onMouseMove($event, 'desc9')" class="image-container">
-        <img alt="car-repair" height="1280" ngSrc="assets/images/gallerySecond-second.webp" width="1920">
+        <img alt="car-repair" src="assets/images/gallerySecond-second.webp">
         <div class="overlay" id="desc9">{{ 'painting.layout_3.img_2' | translate }}</div>
       </div>
     </div>
     <div class="col-lg-4 col-md-12 col-12 ">
       <div (mouseleave)="onMouseLeave('desc10')" (mousemove)="onMouseMove($event, 'desc10')" class="image-container">
-        <img alt="car-repair" height="1280" ngSrc="assets/images/gallerySecond-third.webp" width="1920">
+        <img alt="car-repair" src="assets/images/gallerySecond-third.webp">
         <div class="overlay" id="desc10">{{ 'painting.layout_3.img_3' | translate }}</div>
       </div>
     </div>

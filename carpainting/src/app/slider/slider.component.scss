@@ -29,6 +29,10 @@
     @include mobile-view {
       height: 422px;
     }
+    img{
+      width: auto;
+      height: auto;
+    }
 
     .text.second {
       max-width: 950px;

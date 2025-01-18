@@ -16,12 +16,12 @@ import {TranslateModule} from "@ngx-translate/core";
   styleUrl: './home.component.scss',
 })
 
-export class HomeComponent implements AfterViewInit{
+export class HomeComponent implements AfterViewInit {
   currentLayout: string = 'layout1';
   showFadeIn: boolean = true;
   private touched = false;
 
-  constructor(private renderer: Renderer2,private elementRef: ElementRef) {
+  constructor(private renderer: Renderer2, private elementRef: ElementRef) {
   }
 
   ngAfterViewInit(): void {
@@ -30,49 +30,6 @@ export class HomeComponent implements AfterViewInit{
     const resize = this.elementRef.nativeElement.querySelector('.resize');
 
     this.initSlider(slider, divider, resize);
-  }
-
-  private initSlider(slider: HTMLElement, divider: HTMLElement, resize: HTMLElement) {
-    const onMove = (event: MouseEvent | TouchEvent) => {
-      const containerOffset = slider.getBoundingClientRect().left;
-      const containerWidth = slider.offsetWidth;
-      const dragWidth = divider.offsetWidth;
-
-      let moveX = this.getEventX(event);
-      let leftValue = moveX - containerOffset - dragWidth / 2;
-
-      if (leftValue < 0) leftValue = 0;
-      if (leftValue > containerWidth - dragWidth) leftValue = containerWidth - dragWidth;
-
-      const widthValue = ((leftValue + dragWidth / 2) * 100) / containerWidth + '%';
-
-      divider.style.left = widthValue;
-      resize.style.width = widthValue;
-    };
-
-    const startDragging = (event: MouseEvent | TouchEvent) => {
-      this.touched = event.type === 'touchstart';
-      document.body.classList.add('no-scroll');
-      window.addEventListener(this.touched ? 'touchmove' : 'mousemove', onMove);
-      window.addEventListener(this.touched ? 'touchend' : 'mouseup', stopDragging);
-    };
-
-    const stopDragging = () => {
-      document.body.classList.remove('no-scroll');
-      window.removeEventListener(this.touched ? 'touchmove' : 'mousemove', onMove);
-      window.removeEventListener(this.touched ? 'touchend' : 'mouseup', stopDragging);
-    };
-
-    divider.addEventListener('mousedown', startDragging);
-    divider.addEventListener('touchstart', startDragging);
-  }
-
-  private getEventX(event: MouseEvent | TouchEvent): number {
-    if (event instanceof MouseEvent) {
-      return event.pageX;
-    } else {
-      return event.touches[0].pageX;
-    }
   }
 
   onMouseMove(event: MouseEvent, overlayId: string): void {
@@ -117,6 +74,50 @@ export class HomeComponent implements AfterViewInit{
       });
     } else {
       console.log('Contact form element not found.');
+    }
+  }
+
+  private initSlider(slider: HTMLElement, divider: HTMLElement, resize: HTMLElement) {
+    const onMove = (event: MouseEvent | TouchEvent) => {
+      const containerOffset = slider.getBoundingClientRect().left;
+      const containerWidth = slider.offsetWidth;
+      const dragWidth = divider.offsetWidth;
+
+      let moveX = this.getEventX(event);
+      let leftValue = moveX - containerOffset - dragWidth / 2;
+
+      if (leftValue < 0) leftValue = 0;
+      if (leftValue > containerWidth - dragWidth) leftValue = containerWidth - dragWidth;
+
+      const widthValue = ((leftValue + dragWidth / 2) * 100) / containerWidth + '%';
+
+      divider.style.left = widthValue;
+      resize.style.width = widthValue;
+    };
+
+    const startDragging = (event: MouseEvent | TouchEvent) => {
+      this.touched = event.type === 'touchstart';
+      document.body.classList.add('no-scroll');
+      window.addEventListener(this.touched ? 'touchmove' : 'mousemove', onMove, { passive: true });
+      window.addEventListener(this.touched ? 'touchend' : 'mouseup', stopDragging, { passive: true });
+    };
+
+    const stopDragging = () => {
+      document.body.classList.remove('no-scroll');
+      window.removeEventListener(this.touched ? 'touchmove' : 'mousemove', onMove);
+      window.removeEventListener(this.touched ? 'touchend' : 'mouseup', stopDragging);
+    };
+
+    divider.addEventListener('mousedown', startDragging, { passive: true });
+    divider.addEventListener('touchstart', startDragging, { passive: true });
+  }
+
+
+  private getEventX(event: MouseEvent | TouchEvent): number {
+    if (event instanceof MouseEvent) {
+      return event.pageX;
+    } else {
+      return event.touches[0].pageX;
     }
   }
 }
