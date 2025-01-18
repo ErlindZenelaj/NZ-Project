@@ -3,6 +3,7 @@ import {LowerCasePipe, NgClass, NgForOf, NgOptimizedImage} from "@angular/common
 import {SliderComponent} from "../slider/slider.component";
 import {TranslateModule, TranslateService} from "@ngx-translate/core";
 import {FormsModule} from "@angular/forms";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-navbar',
@@ -14,7 +15,8 @@ import {FormsModule} from "@angular/forms";
     SliderComponent,
     NgClass,
     TranslateModule,
-    FormsModule
+    FormsModule,
+    RouterLink
   ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
@@ -33,12 +35,6 @@ export class NavbarComponent {
     return this.translateService.instant(`navbar.${link}`);
   }
 
-  scrollTo(link: string): void {
-    const el = document.getElementById(link.toLowerCase());
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
 
   toggleLanguage() {
     this.isEnglish = !this.isEnglish;

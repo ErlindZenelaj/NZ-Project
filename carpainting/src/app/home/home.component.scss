@@ -309,6 +309,7 @@
         font-size: 16px;
       }
     }
+
   }
 
   .features-list {
@@ -337,6 +338,30 @@
   .checkmark {
     color: #f37321;
     margin-right: 10px;
+  }
+
+  .phone-numbers{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 25px 0 25px 0;
+    .info-number{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    img{
+      width: 30px;
+      height: 30px;
+    }
+    h3{
+      font-family: "DM Sans", sans-serif;
+      font-size: 14px;
+      line-height: 18px;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      margin: 0;
+    }
   }
 
   .book-now {

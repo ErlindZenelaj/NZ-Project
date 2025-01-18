@@ -24,9 +24,18 @@
     }
 
     .navbar-brand {
+      @include mobile-view{
+        padding: 0;
+      }
       img {
-        @include mobile-view {
-          max-width: 70%;
+        max-width: 200px;
+        height: 100px;
+        border-radius: 10px;
+        @include tablet-view{
+          height: 100px;
+        }
+        @include mobile-view{
+          height: 80px;
         }
       }
     }
@@ -106,6 +115,7 @@
 
     .nav-link {
       text-decoration: none;
+      cursor: pointer;
       color: $primary-color;
       font-weight: 600;
       font-size: 17px;

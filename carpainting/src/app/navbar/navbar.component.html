@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg ">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-      <img alt="Bootstrap" class="img-fluid" height="309" ngSrc="assets/images/Logo.png" width="250">
+      <img alt="Bootstrap" class="img-fluid" src="assets/images/logo-2.png" >
     </a>
     <div class="custom-ham">
       <input data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" id="checkbox" type="checkbox">
@@ -14,13 +14,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mb-2 mb-lg-0">
         <li *ngFor="let link of links" class="nav-item">
-          <button
-            class="nav-link"
+          <a
+            [href]="'#' + link.toLowerCase()"
             [class.active]="link === 'Home'"
-            (click)="scrollTo(link)"
+            class="nav-link"
           >
             {{ getTranslatedLink(link) }}
-          </button>
+          </a>
         </li>
       </ul>
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nav-right-side icons">

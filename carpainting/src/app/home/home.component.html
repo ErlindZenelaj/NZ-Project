@@ -51,6 +51,19 @@
         <li><i class="fas fa-check checkmark"></i> {{ 'home.features_list_2' | translate }}</li>
         <li><i class="fas fa-check checkmark"></i> {{ 'home.features_list_3' | translate }}</li>
       </ul>
+
+
+      <div class="phone-numbers">
+        <div class="info-number">
+          <img src="/assets/images/ipko-icon.svg" alt="">
+          <h3>+383 49 491 331</h3>
+        </div>
+
+        <div class="info-number">
+          <img src="/assets/images/vala-icon.png" alt="">
+          <h3>+383 44 102 372</h3>
+        </div>
+      </div>
       <button (click)="scrollToContactForm()" class="book-now">{{ 'home.book_now' | translate }}</button>
     </div>
   </div>
@@ -63,13 +76,13 @@
 <div class="container gallery" id="gallery">
   <ul class="navbar-nav mb-2">
     <li (click)="setLayout('layout1')" class="nav-item">
-      <a [class.active]="currentLayout === 'layout1'" class="nav-link">{{ 'painting.layout_1.paint' | translate }}</a>
+      <button [class.active]="currentLayout === 'layout1'" class="nav-link">{{ 'painting.layout_1.paint' | translate }}</button>
     </li>
     <li (click)="setLayout('layout2')" class="nav-item">
-      <a [class.active]="currentLayout === 'layout2'" class="nav-link">{{ 'painting.layout_2.paint' | translate }}</a>
+      <button [class.active]="currentLayout === 'layout2'" class="nav-link">{{ 'painting.layout_2.paint' | translate }}</button>
     </li>
     <li (click)="setLayout('layout3')" class="nav-item">
-      <a [class.active]="currentLayout === 'layout3'" class="nav-link">{{ 'painting.layout_3.paint' | translate }}</a>
+      <button [class.active]="currentLayout === 'layout3'" class="nav-link">{{ 'painting.layout_3.paint' | translate }}</button>
     </li>
   </ul>
 

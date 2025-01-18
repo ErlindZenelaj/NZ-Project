@@ -56,17 +56,15 @@ a {
       li {
         font-size: 17px;
         margin-bottom: 10px;
-        a {
-          color: #D6D6D6;
-          text-transform: uppercase;
-          display: flex;
-          gap: 10px;
-          align-items: center;
-          &:hover {
-            color: $white-color;
-          }
+        color: #D6D6D6;
+        text-transform: uppercase;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        &:hover {
+          color: $white-color;
         }
-        button{
+        a {
           color: #D6D6D6;
           text-transform: uppercase;
           display: flex;

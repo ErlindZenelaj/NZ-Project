@@ -10,22 +10,22 @@
         <div class="col-md-3 ml-auto">
           <h1>{{ 'footer.office' | translate }}</h1>
           <ul class="list-unstyled links">
-            <li><a href="">Kosova - Theranda</a></li>
-            <li><a href="">Greikoc</a></li>
-            <li><a href="">naserzenelagmail.com</a></li>
+            <li>Kosova - Theranda</li>
+            <li>Greikoc</li>
+            <li>naserzenelagmail.com</li>
           </ul>
         </div>
         <div class="col-md-3 ml-auto">
           <h1>{{ 'footer.links' | translate }}</h1>
           <ul class="list-unstyled links">
             <li *ngFor="let link of links" class="nav-item">
-              <button
-                class="nav-link"
+              <a
                 [class.active]="link === 'Home'"
-                (click)="scrollTo(link)"
+                [href]="'#' + link.toLowerCase()"
+                class="nav-link"
               >
                 {{ getTranslatedLink(link) }}
-              </button>
+              </a>
             </li>
           </ul>
         </div>
@@ -60,10 +60,10 @@
         </div>
         <div class="col-md-6 text-md-right">
           <ul class="list-unstyled social nav-right">
-            <li><a><span class="icon-twitter"></span></a></li>
-            <li><a><span class="icon-instagram"></span></a></li>
-            <li><a><span class="icon-facebook"></span></a></li>
-            <li><a><span class="icon-pinterest"></span></a></li>
+            <li><span class="icon-twitter"></span></li>
+            <li><span class="icon-instagram"></span></li>
+            <li><span class="icon-facebook"></span></li>
+            <li><span class="icon-pinterest"></span></li>
           </ul>
         </div>
       </div>
