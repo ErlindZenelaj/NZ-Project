@@ -60,7 +60,7 @@
 
         .invalid-input {
           border-bottom: 0.8px solid red !important;
-          @include mobile-view{
+          @include mobile-view {
             border-bottom: 0.5px solid red !important;
           }
         }
@@ -85,7 +85,7 @@
           background-color: black;
           width: 0;
           transition: width 0.4s ease-in-out;
-          @include mobile-view{
+          @include mobile-view {
             bottom: 5.3px;
           }
         }
@@ -173,6 +173,10 @@
         letter-spacing: 1.4px;
         font-weight: 300;
 
+        &:hover {
+          background-color: rgba(0, 36, 125, 0.85);
+        }
+
         @include tablet-view {
           display: flex;
           justify-content: center;
@@ -227,7 +231,8 @@
   }
 
 }
-::ng-deep{
+
+::ng-deep {
   div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm) {
     background-color: #FE600E;
     font-size: 16px;

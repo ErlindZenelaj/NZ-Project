@@ -2,6 +2,7 @@ import {AfterViewInit, Component, ElementRef, OnDestroy, OnInit, Renderer2, View
 import {NgClass, NgOptimizedImage} from "@angular/common";
 import Swiper from "swiper";
 import 'swiper/swiper-bundle.css';
+
 import {LangChangeEvent, TranslateModule, TranslateService} from "@ngx-translate/core";
 
 @Component({

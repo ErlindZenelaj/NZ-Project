@@ -340,27 +340,31 @@
     margin-right: 10px;
   }
 
-  .phone-numbers{
+  .phone-numbers {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin: 25px 0 25px 0;
-    .info-number{
+
+    .info-number {
       display: flex;
       align-items: center;
       gap: 10px;
     }
-    img{
+
+    img {
       width: 30px;
       height: 30px;
     }
-    p{
+
+    p {
       font-family: "DM Sans", sans-serif;
       font-size: 14px;
       line-height: 18px;
       text-transform: uppercase;
       letter-spacing: 1.4px;
       margin: 0;
+      text-decoration: none;
     }
   }
 
@@ -380,6 +384,11 @@
     line-height: 21px;
     letter-spacing: 1.4px;
     font-weight: 300;
+
+    &:hover {
+      background-color: rgba(0, 36, 125, 0.85);
+    }
+
     @include tablet-view {
       display: flex;
       justify-content: center;
@@ -394,9 +403,6 @@
 
   }
 
-  .book-now:hover {
-    background-color: #d95f1b;
-  }
 }
 
 
