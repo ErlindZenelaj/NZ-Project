@@ -1,8 +1,9 @@
 import {Component} from '@angular/core';
 import {JsonPipe, NgClass, NgIf} from "@angular/common";
 import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
-import {TranslateModule} from "@ngx-translate/core";
+import {TranslateModule, TranslateService} from "@ngx-translate/core";
 import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-contactform',
@@ -22,7 +23,7 @@ export class ContactformComponent {
   contactForm: FormGroup;
   isLoading = false;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private translate: TranslateService) {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -42,9 +43,13 @@ export class ContactformComponent {
           email: this.contactForm.value.email,
           message: this.contactForm.value.message,
         });
-        console.log('Form Submitted', this.contactForm.value);
+
+        Swal.fire({
+          icon: 'success',
+          title: this.translate.instant('contact.email_sent_title'),
+          confirmButtonText: this.translate.instant('contact.confirm_button'),
+        });
       } catch (error) {
-        console.error('Form Submission Failed', error);
       } finally {
         this.isLoading = false;
         this.contactForm.reset();
@@ -53,5 +58,6 @@ export class ContactformComponent {
       this.contactForm.markAllAsTouched();
     }
   }
+
 
 }

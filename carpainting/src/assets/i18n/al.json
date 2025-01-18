@@ -41,7 +41,9 @@
     "button": "NA KONTAKTONI",
     "error_1": "Emri është i nevojshëm",
     "error_2": "Email është i nevojshëm",
-    "error_3": "Mesazhi është i nevojshëm"
+    "error_3": "Mesazhi është i nevojshëm",
+    "email_sent_title": "Emaili juaj u dërgua me sukses.",
+    "confirm_button": "OK"
   },
   "painting": {
     "layout_1": {
