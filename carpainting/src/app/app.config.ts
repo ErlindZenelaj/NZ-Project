@@ -4,7 +4,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
-import { HttpClient, HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
+import {HttpClient, HttpClientModule, provideHttpClient, withFetch} from '@angular/common/http';
 import { provideAnimations } from '@angular/platform-browser/animations';
 
 
