@@ -1,5 +1,5 @@
 import {AfterViewInit, Component, ElementRef, Renderer2} from '@angular/core';
-import {CommonModule, NgOptimizedImage} from "@angular/common";
+import { CommonModule, NgOptimizedImage } from "@angular/common";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import 'swiper/swiper-bundle.css';
 import {SliderComponent} from "../slider/slider.component";

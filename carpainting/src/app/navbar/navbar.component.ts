@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {LowerCasePipe, NgClass, NgForOf, NgOptimizedImage} from "@angular/common";
+import { LowerCasePipe, NgClass, NgOptimizedImage } from "@angular/common";
 import {SliderComponent} from "../slider/slider.component";
 import {TranslateModule, TranslateService} from "@ngx-translate/core";
 import {FormsModule} from "@angular/forms";
@@ -9,14 +9,13 @@ import {RouterLink} from "@angular/router";
   selector: 'app-navbar',
   imports: [
     LowerCasePipe,
-    NgForOf,
     NgOptimizedImage,
     SliderComponent,
     NgClass,
     TranslateModule,
     FormsModule,
     RouterLink
-  ],
+],
   templateUrl: './navbar.component.html',
   standalone: true,
   styleUrl: './navbar.component.scss'

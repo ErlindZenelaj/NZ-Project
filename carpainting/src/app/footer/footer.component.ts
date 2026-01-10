@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import {TranslateModule, TranslateService} from "@ngx-translate/core";
-import {NgForOf} from "@angular/common";
+
 
 @Component({
   selector: 'app-footer',
   imports: [
-    TranslateModule,
-    NgForOf
-  ],
+    TranslateModule
+],
   templateUrl: './footer.component.html',
   standalone: true,
   styleUrl: './footer.component.scss'

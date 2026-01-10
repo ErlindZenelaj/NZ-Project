@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {JsonPipe, NgClass, NgIf} from "@angular/common";
+import { JsonPipe, NgClass } from "@angular/common";
 import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
 import {TranslateModule, TranslateService} from "@ngx-translate/core";
 import emailjs from '@emailjs/browser';
@@ -8,13 +8,12 @@ import Swal from 'sweetalert2';
 @Component({
   selector: 'app-contactform',
   imports: [
-    NgIf,
     ReactiveFormsModule,
     FormsModule,
     NgClass,
     TranslateModule,
     JsonPipe
-  ],
+],
   templateUrl: './contactform.component.html',
   standalone: true,
   styleUrl: './contactform.component.scss'

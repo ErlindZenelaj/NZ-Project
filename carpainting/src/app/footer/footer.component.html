@@ -20,15 +20,17 @@
         <div class="col-md-3 ml-auto">
           <h1>{{ 'footer.links' | translate }}</h1>
           <ul class="list-unstyled links">
-            <li *ngFor="let link of links" class="nav-item">
-              <a
-                [class.active]="link === 'Home'"
-                [href]="'#' + link.toLowerCase()"
-                class="nav-link"
-              >
-                {{ getTranslatedLink(link) }}
-              </a>
-            </li>
+            @for (link of links; track link) {
+              <li class="nav-item">
+                <a
+                  [class.active]="link === 'Home'"
+                  [href]="'#' + link.toLowerCase()"
+                  class="nav-link"
+                  >
+                  {{ getTranslatedLink(link) }}
+                </a>
+              </li>
+            }
           </ul>
         </div>
         <div class="col-md-2 ml-auto">

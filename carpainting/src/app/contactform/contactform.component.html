@@ -12,9 +12,11 @@
                 formControlName="name" placeholder="{{'contact.name' | translate}}"
                 type="text">
               <div class="border-animation"></div>
-              <small *ngIf="contactForm.controls['name'].invalid && contactForm.controls['name'].touched"
-                     class="error-message">
+              @if (contactForm.controls['name'].invalid && contactForm.controls['name'].touched) {
+                <small
+                  class="error-message">
                 {{ 'contact.error_1' | translate }}</small>
+              }
             </div>
             <div class="input-container">
               <i class="fa-regular fa-envelope"></i>
@@ -23,12 +25,16 @@
                 formControlName="email" placeholder="{{'contact.email' | translate}}"
                 type="email">
               <div class="border-animation"></div>
-              <small *ngIf="contactForm.get('email')?.hasError('required') && contactForm.get('email')?.touched" class="error-message">
-                {{ 'contact.error_2' | translate }}
-              </small>
-              <small *ngIf="!contactForm.get('email')?.hasError('required') && contactForm.get('email')?.hasError('pattern') && contactForm.get('email')?.touched" class="error-message">
-                {{ 'contact.error_msg' | translate }}
-              </small>
+              @if (contactForm.get('email')?.hasError('required') && contactForm.get('email')?.touched) {
+                <small class="error-message">
+                  {{ 'contact.error_2' | translate }}
+                </small>
+              }
+              @if (!contactForm.get('email')?.hasError('required') && contactForm.get('email')?.hasError('pattern') && contactForm.get('email')?.touched) {
+                <small class="error-message">
+                  {{ 'contact.error_msg' | translate }}
+                </small>
+              }
             </div>
             <div class="input-container">
               <i class="fa-solid fa-pencil special"></i>
@@ -36,17 +42,20 @@
                 [ngClass]="{ 'invalid-input': contactForm.get('message')?.invalid && contactForm.get('message')?.touched }"
                 cols="30" formControlName="message"
                 id="" placeholder="{{'contact.description' | translate}}"
-                rows="10"></textarea>
+              rows="10"></textarea>
               <div class="border-animation special-s"></div>
-              <small *ngIf="contactForm.controls['message'].invalid && contactForm.controls['message'].touched"
-                     class="error-message">
+              @if (contactForm.controls['message'].invalid && contactForm.controls['message'].touched) {
+                <small
+                  class="error-message">
                 {{ 'contact.error_3' | translate }}</small>
+              }
             </div>
             <button [disabled]="isLoading" class="get-in-touch" type="submit">
-              <ng-container *ngIf="isLoading; else buttonText">
+              @if (isLoading) {
                 <span aria-hidden="true" class="spinner-border spinner-border-sm" role="status"></span>
-              </ng-container>
-              <ng-template #buttonText>{{ 'contact.button' | translate }}</ng-template>
+              } @else {
+                {{ 'contact.button' | translate }}
+              }
             </button>
           </div>
         </form>
