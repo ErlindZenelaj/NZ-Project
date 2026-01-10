@@ -4,12 +4,12 @@ import {NgForOf} from "@angular/common";
 
 @Component({
   selector: 'app-footer',
-  standalone: true,
   imports: [
     TranslateModule,
     NgForOf
   ],
   templateUrl: './footer.component.html',
+  standalone: true,
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {

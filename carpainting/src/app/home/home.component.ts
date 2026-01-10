@@ -10,10 +10,10 @@ import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-home',
-  standalone: true,
   imports: [ReactiveFormsModule, CommonModule, FormsModule, NgOptimizedImage, SliderComponent, ContactformComponent, FooterComponent, NavbarComponent, TranslateModule],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
+  standalone: true,
+  styleUrl: './home.component.scss'
 })
 
 export class HomeComponent implements AfterViewInit {

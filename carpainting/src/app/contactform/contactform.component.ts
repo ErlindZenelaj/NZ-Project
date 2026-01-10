@@ -7,7 +7,6 @@ import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-contactform',
-  standalone: true,
   imports: [
     NgIf,
     ReactiveFormsModule,
@@ -17,6 +16,7 @@ import Swal from 'sweetalert2';
     JsonPipe
   ],
   templateUrl: './contactform.component.html',
+  standalone: true,
   styleUrl: './contactform.component.scss'
 })
 export class ContactformComponent {

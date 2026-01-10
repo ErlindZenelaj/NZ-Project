@@ -7,13 +7,13 @@ import {LangChangeEvent, TranslateModule, TranslateService} from "@ngx-translate
 
 @Component({
   selector: 'app-slider',
-  standalone: true,
   imports: [
     NgOptimizedImage,
     NgClass,
     TranslateModule
   ],
   templateUrl: './slider.component.html',
+  standalone: true,
   styleUrl: './slider.component.scss'
 })
 export class SliderComponent implements OnInit, AfterViewInit, OnDestroy {
