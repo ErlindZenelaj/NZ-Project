@@ -1,24 +1,24 @@
-@import "../../styles/breakpoints";
-@import "../../styles/colors";
-@import "../../styles/index";
+@use "../../styles/breakpoints" as bp;
+@use "../../styles/colors" as c;
+@use "../../styles/index";
 
 .container-fluid {
-  @include tablet-view {
+  @include bp.tablet-view {
     padding: 0 20px;
   }
 
   .contact-form {
     max-width: 1200px;
     margin-top: 200px;
-    @include tablet-view {
+    @include bp.tablet-view {
       margin-top: 100px;
     }
-    @include mobile-view {
+    @include bp.mobile-view {
       margin-top: 40px;
     }
 
     .form-row {
-      @include mobile-view {
+      @include bp.mobile-view {
         flex-direction: column;
         gap: 16px;
       }
@@ -32,12 +32,12 @@
       padding: 15% 11%;
       background-color: #F4F4F4;
       border: none;
-      @include tablet-view {
+      @include bp.tablet-view {
         max-width: 100%;
         padding: 10% 7%;
         margin-bottom: 16px;
       }
-      @include mobile-view {
+      @include bp.mobile-view {
         padding: 10% 4%;
         gap: 20px;
       }
@@ -60,7 +60,7 @@
 
         .invalid-input {
           border-bottom: 0.8px solid red !important;
-          @include mobile-view {
+          @include bp.mobile-view {
             border-bottom: 0.5px solid red !important;
           }
         }
@@ -85,7 +85,7 @@
           background-color: black;
           width: 0;
           transition: width 0.4s ease-in-out;
-          @include mobile-view {
+          @include bp.mobile-view {
             bottom: 5.3px;
           }
         }
@@ -104,7 +104,7 @@
           padding-left: 45px;
           border-bottom: 1px solid #c9c9c9;
           outline: none;
-          @include mobile-view {
+          @include bp.mobile-view {
             border-radius: 0;
           }
         }
@@ -145,7 +145,7 @@
         font-size: 46px;
         line-height: 47px;
         font-weight: 600;
-        @include mobile-view {
+        @include bp.mobile-view {
           font-size: 24px;
         }
       }
@@ -160,7 +160,7 @@
         max-width: 187px;
         width: 100%;
         height: 56px;
-        background-color: $secondary-color;
+        background-color: c.$secondary-color;
         color: #fff;
         border: none;
         padding: 10px 20px;
@@ -177,13 +177,13 @@
           background-color: rgba(0, 36, 125, 0.85);
         }
 
-        @include tablet-view {
+        @include bp.tablet-view {
           display: flex;
           justify-content: center;
           align-items: center;
         }
 
-        @include mobile-view {
+        @include bp.mobile-view {
           font-size: 13px;
           max-width: 170px;
           width: 100%;
@@ -192,10 +192,10 @@
     }
 
     .col-lg-7 {
-      @include tablet-view {
+      @include bp.tablet-view {
         padding: 0;
       }
-      @include mobile-view {
+      @include bp.mobile-view {
         padding: 0;
       }
     }
@@ -205,10 +205,10 @@
       padding-left: 15px;
       display: flex;
       align-items: center;
-      @include tablet-view {
+      @include bp.tablet-view {
         padding: 0;
       }
-      @include mobile-view {
+      @include bp.mobile-view {
         padding: 0;
       }
 
@@ -216,19 +216,15 @@
         width: 650px;
         min-height: 613.3px;
         border: 0;
-        @include tablet-view {
+        @include bp.tablet-view {
           width: 100%;
         }
-        @include mobile-view {
+        @include bp.mobile-view {
           height: 500px;
         }
       }
-
-
     }
-
   }
-
 }
 
 ::ng-deep {

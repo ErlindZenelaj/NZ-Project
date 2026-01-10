@@ -1,7 +1,6 @@
-@import "../../styles/breakpoints";
-@import "../../styles/colors";
-@import "../../styles/index";
-
+@use "../../styles/breakpoints" as bp;
+@use "../../styles/colors" as c;
+@use "../../styles/index";
 
 .custom-field {
   background-image: url("../../assets/images/up-section.webp");
@@ -14,11 +13,11 @@
     align-items: center;
     text-align: center;
     flex-direction: column;
-    @include tablet-view {
+    @include bp.tablet-view {
       padding: 0;
       margin: 0 auto;
     }
-    @include mobile-view {
+    @include bp.mobile-view {
       padding: 0;
       margin: 0 auto;
 
@@ -26,10 +25,10 @@
 
     .text {
       margin-top: 120px;
-      @include tablet-view{
+      @include bp.tablet-view{
         margin-top: 70px;
       }
-      @include mobile-view {
+      @include bp.mobile-view {
         margin-top: 50px;
       }
 
@@ -37,8 +36,8 @@
         font-family: "DM Sans", sans-serif;
         text-transform: uppercase;
         font-size: 18px;
-        color: $primary-color;
-        @include mobile-view {
+        color: c.$primary-color;
+        @include bp.mobile-view {
           font-size: 13px;
         }
       }
@@ -46,12 +45,11 @@
       h1 {
         max-width: 928px;
         font-size: 57px;
-        color: $primary-color;
+        color: c.$primary-color;
         text-transform: uppercase;
-        @include mobile-view {
+        @include bp.mobile-view {
           font-size: 26px;
         }
-
       }
     }
 
@@ -88,10 +86,10 @@
           box-sizing: border-box;
           color: #DDD;
           text-align: right;
-          @include tablet-view {
+          @include bp.tablet-view {
             display: block;
           }
-          @include mobile-view {
+          @include bp.mobile-view {
             display: none;
           }
         }
@@ -105,12 +103,10 @@
           overflow: hidden;
           user-select: none;
 
-
           > img {
             display: block;
             height: inherit;
             user-select: none;
-
           }
 
           .overlay {
@@ -205,11 +201,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  @include tablet-view {
+  @include bp.tablet-view {
     margin-top: 50px;
     padding: 0 20px;
   }
-  @include mobile-view {
+  @include bp.mobile-view {
     margin-top: 40px;
     padding: 0 12px;
   }
@@ -217,25 +213,25 @@
   .col-lg-6 {
     padding: 0 8px;
     position: relative;
-    @include tablet-view {
+    @include bp.tablet-view {
       padding: 0 12px;
     }
   }
 
   .left-side {
-    @include tablet-view {
+    @include bp.tablet-view {
       margin: 20px auto;
     }
   }
 
   .left {
-    @include mobile-view {
+    @include bp.mobile-view {
       padding: 0 4px 0 12px;
     }
   }
 
   .right {
-    @include mobile-view {
+    @include bp.mobile-view {
       padding: 0 12px 0 4px;
     }
   }
@@ -245,10 +241,10 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    @include tablet-view {
+    @include bp.tablet-view {
       width: 100%;
     }
-    @include mobile-view {
+    @include bp.mobile-view {
       width: 280ox;
     }
   }
@@ -257,23 +253,23 @@
     position: absolute;
     right: 60px;
     top: 80px;
-    @include tablet-view {
+    @include bp.tablet-view {
       top: 0;
       right: 0;
       position: relative;
       width: 100%;
       height: 100%;
     }
-    @include mobile-view {
+    @include bp.mobile-view {
       position: unset;
     }
   }
 
   .card-body {
-    @include tablet-view {
+    @include bp.tablet-view {
       margin-top: 20px;
     }
-    @include mobile-view {
+    @include bp.mobile-view {
       margin-top: 20px;
 
     }
@@ -292,12 +288,12 @@
       line-height: 40px;
       letter-spacing: -0.6px;
       margin-bottom: 15px;
-      @include tablet-view {
+      @include bp.tablet-view {
         font-size: 38px;
         line-height: 42px;
         letter-spacing: -0.6px;
       }
-      @include mobile-view {
+      @include bp.mobile-view {
         max-width: 290px;
         font-size: 26px;
         line-height: 35px;
@@ -306,11 +302,11 @@
     }
 
     p {
-      color: $gray-color;
+      color: c.$gray-color;
       font-size: 18px;
       line-height: 29.16px;
       letter-spacing: 0.1px;
-      @include mobile-view {
+      @include bp.mobile-view {
         font-size: 16px;
       }
     }
@@ -332,10 +328,10 @@
     line-height: 29px;
     letter-spacing: 0.1px;
     gap: 8px;
-    @include tablet-view {
+    @include bp.tablet-view {
       line-height: 20px;
     }
-    @include mobile-view {
+    @include bp.mobile-view {
       font-size: 16px;
     }
   }
@@ -377,7 +373,7 @@
     max-width: 187px;
     width: 100%;
     height: 56px;
-    background-color: $secondary-color;
+    background-color: c.$secondary-color;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -394,12 +390,12 @@
       background-color: rgba(0, 36, 125, 0.85);
     }
 
-    @include tablet-view {
+    @include bp.tablet-view {
       display: flex;
       justify-content: center;
       align-items: center;
     }
-    @include mobile-view {
+    @include bp.mobile-view {
       font-size: 13px;
       max-width: 170px;
       width: 100%;
@@ -429,11 +425,11 @@
 
   .all {
     display: flex;
-    @include tablet-view {
+    @include bp.tablet-view {
       display: flex;
       flex-wrap: wrap;
     }
-    @include mobile-view {
+    @include bp.mobile-view {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
@@ -444,7 +440,7 @@
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
-    @include tablet-view {
+    @include bp.tablet-view {
       padding-left: 10px;
     }
   }
@@ -455,7 +451,7 @@
 
     .nav-link {
       text-decoration: none;
-      color: $primary-color;
+      color: c.$primary-color;
       font-weight: 600;
       font-size: 17px;
       line-height: 25.5px;
@@ -469,7 +465,7 @@
         display: block;
         width: 100%;
         height: 2px;
-        background-color: $primary-color;
+        background-color: c.$primary-color;
         position: absolute;
         bottom: 3px;
         left: 0;
@@ -480,7 +476,7 @@
         display: block;
         width: 0;
         height: 2px;
-        background-color: $primary-color;
+        background-color: c.$primary-color;
         position: absolute;
         bottom: 3px;
         left: 0;
@@ -497,13 +493,13 @@
   .col-lg-6,
   .col-lg-3 {
     padding: 0 8px 0 0;
-    @include tablet-view {
+    @include bp.tablet-view {
       padding: 0 8px 0 8px;
     }
   }
 
   .col-md-6 {
-    @include tablet-view {
+    @include bp.tablet-view {
       margin-bottom: 12px;
     }
   }
@@ -513,7 +509,7 @@
   }
 
   .col-12 {
-    @include mobile-view {
+    @include bp.mobile-view {
       padding: 0;
     }
   }
@@ -533,11 +529,11 @@
     height: 635px;
     object-fit: cover;
     transition: transform 0.3s ease;
-    @include tablet-view {
+    @include bp.tablet-view {
       max-width: 100%;
       height: 535px;
     }
-    @include mobile-view {
+    @include bp.mobile-view {
       max-width: 100%;
       height: 260px;
     }
@@ -550,10 +546,10 @@
   .overlay {
     position: absolute;
     display: none;
-    @include tablet-view {
+    @include bp.tablet-view {
       display: flex;
     }
-    @include mobile-view {
+    @include bp.mobile-view {
       display: flex;
     }
   }
@@ -571,12 +567,12 @@
     white-space: nowrap;
     background-color: black;
     padding: 10px;
-    @include tablet-view {
+    @include bp.tablet-view {
       position: absolute;
       z-index: 99;
       bottom: 25px;
     }
-    @include mobile-view {
+    @include bp.mobile-view {
       position: absolute;
       z-index: 99;
       bottom: 25px;
@@ -599,13 +595,13 @@
   .right-side-second {
     display: flex;
     gap: 8px;
-    @include tablet-view {
+    @include bp.tablet-view {
       gap: 0;
       margin-top: 12px;
     }
 
     .col-md-6 {
-      @include tablet-view {
+      @include bp.tablet-view {
         margin-bottom: 0;
         padding: 0 12px;
       }
@@ -627,9 +623,7 @@
   //.image {
   //  max-width: 935px !important;
   //}
-
 }
-
 
 @media (min-width: 1024px) and (max-width: 1200px) {
   .carousel-control-next {

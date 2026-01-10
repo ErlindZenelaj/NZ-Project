@@ -1,6 +1,6 @@
-@import "../../styles/breakpoints";
-@import "../../styles/colors";
-@import "../../styles/index";
+@use "sass:color";
+@use "../../styles/breakpoints" as bp;
+@use "../../styles/colors" as c;
 
 a {
   transition: .3s all ease;
@@ -23,14 +23,14 @@ a {
     padding-bottom: 10px;
     background: #000;
     color: #777;
-    @include tablet-view{
+    @include bp.tablet-view{
       padding: 64px 12px 10px 12px;
     }
     .container{
       max-width: 1200px;
     }
     .footer-site-logo {
-      color: $white-color;
+      color: c.$white-color;
       font-size: 26px;
       font-weight: bold;
       margin-bottom: 30px;
@@ -43,7 +43,7 @@ a {
     }
     h1 {
       font-family: "Barlow Condensed", sans-serif;
-      color: $white-color;
+      color: c.$white-color;
       font-size: 21px;
       font-weight: 600;
       line-height: 21px;
@@ -62,7 +62,7 @@ a {
         gap: 10px;
         align-items: center;
         &:hover {
-          color: $white-color;
+          color: c.$white-color;
         }
         a {
           color: #D6D6D6;
@@ -71,7 +71,7 @@ a {
           gap: 10px;
           align-items: center;
           &:hover {
-            color: $white-color;
+            color: c.$white-color;
           }
         }
       }
@@ -80,7 +80,7 @@ a {
       li {
         display: inline-block;
         a {
-          color: $white-color;
+          color: c.$white-color;
           display: inline-block;
           padding: 10px;
         }
@@ -105,7 +105,7 @@ a {
       }
     }
     .line {
-      border-top: 1px solid rgba($white-color, .2);
+      border-top: 1px solid rgba(c.$white-color, .2);
     }
   }
 
@@ -122,7 +122,7 @@ a {
   // footer 5
   .footer-59391 {
     border-top: 1px solid #efefef;
-    background-color: $white-color;
+    background-color: c.$white-color;
     padding: 4rem 0;
     .site-logo {
       a {
@@ -144,8 +144,8 @@ a {
           display: inline-block;
           margin: 0;
           padding: 0;
-          background-color: lighten(#ccc, 10%);
-          color: darken(#ccc, 60%);
+          background-color: color.adjust(#ccc, $lightness: 10%);
+          color: color.adjust(#ccc, $lightness: -60%);
           > span {
             position: absolute;
             top: 50%;

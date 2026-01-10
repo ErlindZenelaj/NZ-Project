@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import { JsonPipe, NgClass } from "@angular/common";
+import {NgClass } from "@angular/common";
 import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
 import {TranslateModule, TranslateService} from "@ngx-translate/core";
 import emailjs from '@emailjs/browser';
@@ -12,7 +12,6 @@ import Swal from 'sweetalert2';
     FormsModule,
     NgClass,
     TranslateModule,
-    JsonPipe
 ],
   templateUrl: './contactform.component.html',
   standalone: true,

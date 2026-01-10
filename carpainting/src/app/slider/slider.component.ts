@@ -1,15 +1,11 @@
 import {AfterViewInit, Component, ElementRef, OnDestroy, OnInit, Renderer2, ViewChild} from '@angular/core';
-import {NgClass, NgOptimizedImage} from "@angular/common";
 import Swiper from "swiper";
 import 'swiper/swiper-bundle.css';
-
 import {LangChangeEvent, TranslateModule, TranslateService} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-slider',
   imports: [
-    NgOptimizedImage,
-    NgClass,
     TranslateModule
   ],
   templateUrl: './slider.component.html',

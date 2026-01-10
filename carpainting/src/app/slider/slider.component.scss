@@ -1,16 +1,17 @@
-@import "../../styles/breakpoints";
-@import "../../styles/colors";
-@import "../../styles/index";
+@use "../../styles/breakpoints" as bp;
+@use "../../styles/colors" as c;
+@use "../../styles/index";
+
 .swiper {
 
   .swiper-container {
     width: 100%;
     height: 806px;
     position: relative;
-    @include tablet-view {
+    @include bp.tablet-view {
       height: 592px;
     }
-    @include mobile-view {
+    @include bp.mobile-view {
       height: 422px;
     }
   }
@@ -22,10 +23,10 @@
     justify-content: center;
     position: relative;
     height: 806px;
-    @include tablet-view {
+    @include bp.tablet-view {
       height: 592px;
     }
-    @include mobile-view {
+    @include bp.mobile-view {
       height: 422px;
     }
     img{
@@ -35,11 +36,11 @@
 
     .text.second {
       max-width: 950px;
-      @include tablet-view{
+      @include bp.tablet-view{
         max-width: 600px;
         width: 100%;
       }
-      @include mobile-view{
+      @include bp.mobile-view{
         max-width: 285px;
         width: 100%;
       }
@@ -57,12 +58,12 @@
       left: 0;
       top: 0;
       z-index: 100;
-      color: $white-color;
-      @include tablet-view {
+      color: c.$white-color;
+      @include bp.tablet-view {
         max-width: 540px;
         padding-left: 30px;
       }
-      @include mobile-view {
+      @include bp.mobile-view {
         margin: 90px auto;
         max-width: 250px;
         padding-left: 19px;
@@ -73,11 +74,11 @@
         font-size: 150px;
         line-height: 155px;
         font-family: "Bebas Neue", sans-serif;
-        @include tablet-view {
+        @include bp.tablet-view {
           font-size: 97px;
           line-height: 96px;
         }
-        @include mobile-view {
+        @include bp.mobile-view {
           font-size: 46px;
           line-height: 56px;
         }
@@ -88,7 +89,7 @@
         font-weight: 300;
         line-height: 40px;
         font-family: "DM Sans", sans-serif;
-        @include mobile-view {
+        @include bp.mobile-view {
           font-size: 16px;
           line-height: 19px;
         }
@@ -109,10 +110,10 @@
     max-width: 230px;
     width: 100%;
     z-index: 1;
-    @include tablet-view {
+    @include bp.tablet-view {
       left: 67%;
     }
-    @include mobile-view {
+    @include bp.mobile-view {
       left: 19px;
       bottom: 4%;
     }
@@ -121,14 +122,14 @@
       display: flex;
       gap: 10px;
       justify-content: center;
-      @include mobile-view {
+      @include bp.mobile-view {
         align-items: center;
       }
 
       span {
-        color: $white-color;
+        color: c.$white-color;
         padding-top: 3px;
-        @include mobile-view {
+        @include bp.mobile-view {
           padding-top: 0;
         }
       }
@@ -137,15 +138,15 @@
         max-width: 230px;
         width: 100%;
         margin-top: 15px;
-        background-color: $gray-color;
-        @include mobile-view {
+        background-color: c.$gray-color;
+        @include bp.mobile-view {
           max-width: 230px;
           width: 100%;
           margin-top: 0;
         }
 
         .progress-bar {
-          background-color: $white-color;
+          background-color: c.$white-color;
         }
       }
     }
@@ -158,10 +159,10 @@
     left: 80px;
     bottom: 10%;
     z-index: 1;
-    @include tablet-view{
+    @include bp.tablet-view{
       left: 35px;
     }
-    @include mobile-view {
+    @include bp.mobile-view {
       bottom: 18%;
       left: 19px;
     }
@@ -173,13 +174,13 @@
 
       .custom-text {
         font-family: "Barlow Condensed", sans-serif;
-        color: $white-color;
+        color: c.$white-color;
         line-height: 25px;
         font-size: 16px;
       }
 
       i {
-        color: $white-color;
+        color: c.$white-color;
         padding-top: 10px;
         display: inline-block;
         animation: upDown 1s ease-in-out infinite;

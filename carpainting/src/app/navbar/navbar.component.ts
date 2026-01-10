@@ -1,20 +1,14 @@
 import {Component} from '@angular/core';
-import { LowerCasePipe, NgClass, NgOptimizedImage } from "@angular/common";
-import {SliderComponent} from "../slider/slider.component";
+import {NgOptimizedImage } from "@angular/common";
 import {TranslateModule, TranslateService} from "@ngx-translate/core";
 import {FormsModule} from "@angular/forms";
-import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-navbar',
   imports: [
-    LowerCasePipe,
     NgOptimizedImage,
-    SliderComponent,
-    NgClass,
     TranslateModule,
     FormsModule,
-    RouterLink
 ],
   templateUrl: './navbar.component.html',
   standalone: true,
