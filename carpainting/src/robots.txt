@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /admin/
 Allow: /
 
-Sitemap: https://autongjyrosje-naseri.netlify.app/sitemap.xml
+Sitemap: https://autongjyrosjenaseri.com//sitemap.xml
